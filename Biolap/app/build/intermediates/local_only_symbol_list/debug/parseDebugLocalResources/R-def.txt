@@ -9,11 +9,13 @@ id boton_registrar
 id contrasenaTxt
 id linearLayout
 id main
+id textView
 id textView2
 id textView3
 id textView4
 id usuarioTxt
 layout activity_main
+layout activity_menup
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name

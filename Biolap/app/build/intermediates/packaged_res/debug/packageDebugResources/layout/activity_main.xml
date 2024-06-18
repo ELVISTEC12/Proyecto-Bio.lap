@@ -83,6 +83,7 @@
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:backgroundTint="#22C55E"
+        android:onClick="ingresar"
         android:text="Ingresar"
         android:textSize="24sp"
         app:cornerRadius="5dp"
