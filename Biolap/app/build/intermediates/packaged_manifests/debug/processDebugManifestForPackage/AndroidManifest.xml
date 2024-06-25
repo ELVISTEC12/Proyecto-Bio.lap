@@ -28,6 +28,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Biolap" >
         <activity
+            android:name="com.example.biolap.registrarUsuario"
+            android:exported="false" />
+        <activity
             android:name="com.example.biolap.menup"
             android:exported="false" />
         <activity

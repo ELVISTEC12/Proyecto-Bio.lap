@@ -3,6 +3,20 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Bio.lap</string>
+    <string name="caja_contra">Repita la contraseña</string>
+    <string name="caja_contrasena">Ingrese la contraseña</string>
+    <string name="caja_correo">Ingrese un correo electrónico</string>
+    <string name="caja_usuario">Ingrese el nombre de usuario</string>
+    <string name="caja_usuario2">Ingrese un nombre de usuario</string>
+    <string name="cambio_contrasena">¿Olvidó su contraseña?</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="correo_electronico">Correo electronico</string>
+    <string name="iniciar_sesion">Iniciar Sesion</string>
+    <string name="name_email">Usuario</string>
+    <string name="nombre_usuario">Nombre de usuario</string>
+    <string name="nuevo_registro">Registrar usuario</string>
+    <string name="registrar">Registrar</string>
+    <string name="repetir_contra">Repetir la contraseña</string>
     <style name="Base.Theme.Biolap" parent="Theme.Material3.DayNight.NoActionBar">
         
         

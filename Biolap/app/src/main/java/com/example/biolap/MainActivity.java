@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         contraTXT = findViewById(R.id.contrasenaTxt);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom); 
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
     }
@@ -34,9 +34,15 @@ public class MainActivity extends AppCompatActivity {
         if(v1.equals("Pablo") && v2.equals("riverplate")){
             Intent m = new Intent(this,menup.class);
             startActivity(m);
+            usuarioTXT.setText("");
+            contraTXT.setText("");
         }
         else{
             Toast.makeText(this, "Los datos no coinciden", Toast.LENGTH_SHORT).show();
         }
+    }
+    public void registrar(View view){
+        Intent r = new Intent(this,registrarUsuario.class);
+        startActivity(r);
     }
 }
