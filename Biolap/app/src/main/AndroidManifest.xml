@@ -13,6 +13,30 @@
         android:theme="@style/Theme.Biolap"
         tools:targetApi="31">
         <activity
+            android:name=".gestionarAnalisis"
+            android:exported="false" />
+        <activity
+            android:name=".cuestaAjustes"
+            android:exported="false" />
+        <activity
+            android:name=".cuentaAjuste"
+            android:exported="false" />
+        <activity
+            android:name=".ajustes"
+            android:exported="false" />
+        <activity
+            android:name=".nuevaNomenclatura"
+            android:exported="false" />
+        <activity
+            android:name=".analisisRutina"
+            android:exported="false" />
+        <activity
+            android:name=".rutina"
+            android:exported="false" />
+        <activity
+            android:name=".formPacientes"
+            android:exported="false" />
+        <activity
             android:name=".registrarUsuario"
             android:exported="false" />
         <activity

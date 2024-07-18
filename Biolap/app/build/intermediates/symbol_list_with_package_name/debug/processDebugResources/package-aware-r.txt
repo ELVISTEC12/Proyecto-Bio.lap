@@ -3200,6 +3200,7 @@ id button
 id button2
 id button3
 id button4
+id button5
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3213,6 +3214,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id checkBox
 id checkbox
 id checked
 id chronometer
@@ -3275,6 +3277,9 @@ id easeOut
 id east
 id edge
 id editTextText
+id editTextText2
+id editTextTextPassword
+id editTextTextPassword2
 id edit_query
 id edit_text_id
 id elastic
@@ -3325,6 +3330,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id immediateStop
 id included
 id indeterminate
@@ -3561,6 +3567,10 @@ id textView
 id textView2
 id textView3
 id textView4
+id textView5
+id textView6
+id textView7
+id textView8
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3864,6 +3874,7 @@ string cambio_contrasena
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
+string check
 string clear_text_end_icon_content_description
 string contrasena
 string correo_electronico
@@ -3872,6 +3883,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string guardar
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string iniciar_sesion

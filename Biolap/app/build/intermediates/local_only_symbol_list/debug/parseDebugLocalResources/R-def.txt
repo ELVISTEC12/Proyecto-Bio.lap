@@ -10,8 +10,14 @@ id button
 id button2
 id button3
 id button4
+id button5
+id checkBox
 id contrasenaTxt
 id editTextText
+id editTextText2
+id editTextTextPassword
+id editTextTextPassword2
+id imageView
 id linearLayout
 id linearLayout2
 id linearLayout3
@@ -20,6 +26,10 @@ id textView
 id textView2
 id textView3
 id textView4
+id textView5
+id textView6
+id textView7
+id textView8
 id usuarioTxt
 layout activity_main
 layout activity_menup
@@ -33,8 +43,10 @@ string caja_correo
 string caja_usuario
 string caja_usuario2
 string cambio_contrasena
+string check
 string contrasena
 string correo_electronico
+string guardar
 string iniciar_sesion
 string name_email
 string nombre_usuario

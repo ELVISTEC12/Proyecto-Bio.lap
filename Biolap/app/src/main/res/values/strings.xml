@@ -13,5 +13,16 @@
     <string name="correo_electronico">Correo electronico</string>
     <string name="caja_correo">Ingrese un correo electrónico</string>
     <string name="repetir_contra">Repetir la contraseña</string>
-    <string name="caja_contra">Repita la contraseña</string>
+    <string name="caja_contra">Ingrese una contraseña</string>
+    <string name="check">Acepto los términos y condiciones</string>
+    <string name="guardar">Listo</string>
+    <string name="ingreso_pacientes">Ingreso de pacientes</string>
+    <string name="nombre_paciente">Ingrese el nombre completo del paciente</string>
+    <string name="edad_paciente">Ingrese la edad del paciente</string>
+    <string name="dni_paciente">Ingrese el DNI del paciente</string>
+    <string name="telefono_paciente">Ingrese el N° telefonico del paciente</string>
+    <string name="medico">Ingrese el nombre del medico</string>
+    <string name="fecha">Fecha</string>
+    <string name="sig">Siguiente</string>
+    <string name="cod">Seleccione la rutina</string>
 </resources>
