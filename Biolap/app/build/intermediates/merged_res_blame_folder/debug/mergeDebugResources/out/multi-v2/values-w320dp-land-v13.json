@@ -4,7 +4,7 @@
             "outputFile": "com.example.biolap.app-mergeDebugResources-29:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\75fa905ae4c1810e680a5616507a0811\\transformed\\material-1.12.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
+                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\75fa905ae4c1810e680a5616507a0811\\transformed\\material-1.12.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
