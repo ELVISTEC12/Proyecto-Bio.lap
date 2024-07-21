@@ -3183,6 +3183,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id b_r
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3196,7 +3197,6 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id button5
 id button6
 id button7
 id button8
@@ -3233,8 +3233,11 @@ id content
 id contentPanel
 id contiguous
 id continuousVelocity
+id contra1_r
+id contra2_r
 id contrasenaTxt
 id coordinator
+id correo_r
 id cos
 id counterclockwise
 id cradle
@@ -3278,11 +3281,9 @@ id east
 id edge
 id editTextDate
 id editTextNumber
-id editTextText
 id editTextText10
 id editTextText11
 id editTextText12
-id editTextText2
 id editTextText3
 id editTextText4
 id editTextText5
@@ -3292,8 +3293,6 @@ id editTextText8
 id editTextText9
 id editTextTextMultiLine
 id editTextTextMultiLine2
-id editTextTextPassword
-id editTextTextPassword2
 id editTextTextPassword3
 id edit_query
 id edit_text_id
@@ -3454,6 +3453,7 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id nuser_r
 id obra_social
 id off
 id on
