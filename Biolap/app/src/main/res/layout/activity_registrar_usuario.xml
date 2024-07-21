@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.0"></LinearLayout>
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/nuser_r"
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:ems="10"
@@ -89,7 +89,7 @@
         app:layout_constraintVertical_bias="0.429" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/correo_r"
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:ems="10"
@@ -102,7 +102,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/contra1_r"
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:ems="10"
@@ -116,7 +116,7 @@
         app:layout_constraintVertical_bias="0.648" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/contra2_r"
         android:layout_width="330dp"
         android:layout_height="45dp"
         android:ems="10"
@@ -158,11 +158,10 @@
         app:layout_constraintVertical_bias="0.712" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/b_r"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#22C55E"
-        android:onClick="menu"
         android:text="@string/guardar"
         android:textColor="#FFFFFF"
         app:cornerRadius="5dp"
