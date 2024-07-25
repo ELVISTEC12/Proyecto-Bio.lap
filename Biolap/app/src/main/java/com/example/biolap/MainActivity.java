@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                // String url = "http://192.168.1.4/bio.lap/validar_usuario.php";
-                ingresar("http://192.168.1.4/bio.lap/validar_usuario.php");
+                ingresar("http://192.168.0.108/bio.lap/validar_usuario.php");
             }
         });
 
