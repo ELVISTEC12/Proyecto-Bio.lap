@@ -50,7 +50,8 @@ public class nuevaNomenclatura extends AppCompatActivity {
     }
     public void enviarDatos(View view){
         if(validar()){
-            datos("http://192.168.0.108/bio.lap/insertar_nomenclatura.php");
+            //datos("http://192.168.0.108/bio.lap/insertar_nomenclatura.php");
+            datos("http://192.168.1.4/bio.lap/insertar_nomenclatura.php");
         }
     }
 

@@ -51,6 +51,7 @@ public class registrarUsuario extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (validarDatos()) {
+                    //enviarDatos("http://192.168.1.4/bio.lap/insertar.php");
                     enviarDatos("http://192.168.1.4/bio.lap/insertar.php");
                 }
             }
@@ -66,7 +67,7 @@ public class registrarUsuario extends AppCompatActivity {
 
     private boolean validarDatos() {
         String nombreUsuario = nombre.getText().toString().trim();
-        String correoUsuario = correo.getText().toString().trim();
+        String correoUsuario = correo.getText().toString().trim();//Quita los espacios iniciales, finales y repetidos del texto.
         String contrasena = contra.getText().toString().trim();
         String confirmacionContrasena = conta1.getText().toString().trim();
 

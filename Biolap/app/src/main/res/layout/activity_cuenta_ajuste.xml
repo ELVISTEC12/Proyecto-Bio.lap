@@ -8,7 +8,7 @@
     tools:context=".cuentaAjuste">
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/perfil"
         android:layout_width="380dp"
         android:layout_height="55dp"
         android:text=" Cambiar foto    >"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.366" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/perfil"
         android:layout_width="380dp"
         android:layout_height="55dp"
         android:text=" Cambia nombre  >"

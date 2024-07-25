@@ -1,6 +1,7 @@
 package com.example.biolap;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,29 +25,42 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText usuarioTXT;
-    private EditText contraTXT;
-
-    private Button ing;
+     EditText usuarioTXT;
+     EditText contraTXT;
+     Button ing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Verificar el estado de inicio de sesión
+        SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
+        boolean isUserLoggedIn = sharedPreferences.getBoolean("isUserLoggedIn", false);
+
+        if (isUserLoggedIn) {
+            // Usuario ya está registrado/iniciado sesión, redirigir a menup
+            Intent intent = new Intent(this, menup.class);
+            startActivity(intent);
+            finish();
+            return;
+        }
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
         usuarioTXT = findViewById(R.id.usuarioTxt);
         contraTXT = findViewById(R.id.contrasenaTxt);
-        ing= findViewById(R.id.boton_ingresar);
+        ing = findViewById(R.id.boton_ingresar);
+
         ing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // String url = "http://192.168.1.4/bio.lap/validar_usuario.php";
-                ingresar("http://192.168.0.108/bio.lap/validar_usuario.php");
+                //ingresar("http://192.168.0.108/bio.lap/validar_usuario.php");
+                ingresar("http://192.168.1.3/bio.lap/validar_usuario.php");
             }
         });
 
@@ -68,9 +82,17 @@ public class MainActivity extends AppCompatActivity {
 
                     if (success) {
                         Toast.makeText(getApplicationContext(), "Operación exitosa", Toast.LENGTH_SHORT).show();
+
+                        // Guardar estado de inicio de sesión en SharedPreferences
+                        SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putBoolean("isUserLoggedIn", true);
+                        editor.apply();
+
                         // Navegar a la nueva actividad
                         Intent intent = new Intent(getApplicationContext(), menup.class);
                         startActivity(intent);
+                        finish();
                     } else {
                         Toast.makeText(getApplicationContext(), jsonResponse.getString("message"), Toast.LENGTH_SHORT).show();
                     }
@@ -91,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> parametro = new HashMap<String, String>();
+                Map<String, String> parametro = new HashMap<>();
                 parametro.put("nombre", usuarioTXT.getText().toString());
                 parametro.put("contra", contraTXT.getText().toString());
                 return parametro;
@@ -101,19 +123,6 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(sr);
     }
-
-
-        /*String v1 = usuarioTXT.getText().toString();
-        String v2 = contraTXT.getText().toString();
-        if(v1.equals("Pablo") && v2.equals("riverplate")){
-            Intent m = new Intent(this,menup.class);
-            startActivity(m);
-            usuarioTXT.setText("");
-            contraTXT.setText("");
-        }
-        else{
-            Toast.makeText(this, "Los datos no coinciden", Toast.LENGTH_SHORT).show();
-        }*/
 
     public void registrar(View view){
         Intent r = new Intent(this,registrarUsuario.class);
