@@ -3200,7 +3200,6 @@ int id bounceStart 0x7f080064
 int id button6 0x7f080065
 int id button7 0x7f080066
 int id button8 0x7f080067
-int id button9 0x7f080068
 int id buttonPanel 0x7f080069
 int id cache_measures 0x7f08006a
 int id callMeasure 0x7f08006b
@@ -3211,6 +3210,7 @@ int id centerCrop 0x7f08006f
 int id centerInside 0x7f080070
 int id center_horizontal 0x7f080071
 int id center_vertical 0x7f080072
+int id cerrar 0x7f080237
 int id chain 0x7f080073
 int id chain2 0x7f080074
 int id chains 0x7f080075
@@ -3458,6 +3458,7 @@ int id obra_social 0x7f080168
 int id off 0x7f080169
 int id on 0x7f08016a
 int id onInterceptTouchReturnSwipe 0x7f08016b
+int id op 0x7f080238
 int id open_search_bar_text_view 0x7f08016c
 int id open_search_view_background 0x7f08016d
 int id open_search_view_clear_button 0x7f08016e

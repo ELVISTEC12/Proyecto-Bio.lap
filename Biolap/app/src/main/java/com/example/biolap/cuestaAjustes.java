@@ -1,12 +1,17 @@
 package com.example.biolap;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -22,9 +27,11 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 public class cuestaAjustes extends AppCompatActivity {
 
     TextView name_user, correo, contra;
+    Button cerrar;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -36,6 +43,7 @@ public class cuestaAjustes extends AppCompatActivity {
         name_user = findViewById(R.id.name_user);
         correo = findViewById(R.id.correo_user);
         contra = findViewById(R.id.Contraseña_user);
+        cerrar = findViewById(R.id.cerrar);
 
         // Obtener el ID del usuario desde SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
@@ -49,6 +57,13 @@ public class cuestaAjustes extends AppCompatActivity {
             // Manejar el caso de ID no válido
             Toast.makeText(this, "Usuario no encontrado", Toast.LENGTH_SHORT).show();
         }
+
+        cerrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cerrar(v);
+            }
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -93,5 +108,29 @@ public class cuestaAjustes extends AppCompatActivity {
         // Añadir la solicitud a la cola de solicitudes
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+    }
+
+    private void cerrar(View v) {
+        new AlertDialog.Builder(this)
+                .setTitle("Cerrar sesión")
+                .setMessage("¿Estás seguro de que deseas cerrar sesión?")
+                .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Limpiar SharedPreferences
+                        SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.remove("USER_ID");
+                        editor.putBoolean("isUserLoggedIn", false);
+                        editor.apply();
+
+                        // Navegar a la actividad de inicio de sesión
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(intent);
+                        finish(); // Finaliza la actividad actual
+                    }
+                })
+                .setNegativeButton("No", null)
+                .show();
     }
 }

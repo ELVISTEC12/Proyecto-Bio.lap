@@ -11,7 +11,7 @@ id boton_registrar
 id button6
 id button7
 id button8
-id button9
+id cerrar
 id checkBox
 id codNomTXT
 id contactos
@@ -45,6 +45,7 @@ id name_user
 id nomNomTXT
 id nuser_r
 id obra_social
+id op
 id perfil
 id spinner
 id textView

@@ -3201,7 +3201,6 @@ id bounceStart
 id button6
 id button7
 id button8
-id button9
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3212,6 +3211,7 @@ id centerCrop
 id centerInside
 id center_horizontal
 id center_vertical
+id cerrar
 id chain
 id chain2
 id chains
@@ -3459,6 +3459,7 @@ id obra_social
 id off
 id on
 id onInterceptTouchReturnSwipe
+id op
 id open_search_bar_text_view
 id open_search_view_background
 id open_search_view_clear_button

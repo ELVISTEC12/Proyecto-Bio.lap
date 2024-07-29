@@ -85,7 +85,7 @@
         app:layout_constraintVertical_bias="0.53" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/op"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#22C55E"
@@ -94,10 +94,25 @@
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.216"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.739" />
+        app:layout_constraintVertical_bias="0.746" />
+
+    <Button
+        android:id="@+id/cerrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#22C55E"
+        android:text="Cerrar"
+        android:textColor="#FFFFFF"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
 
     <EditText
         android:id="@+id/Contraseña_user"
