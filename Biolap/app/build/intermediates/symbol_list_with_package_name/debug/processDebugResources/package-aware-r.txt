@@ -3100,6 +3100,7 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id Contraseña_user
 id FUNCTION
 id META
 id NO_DEBUG
@@ -3197,7 +3198,6 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id button
 id button6
 id button7
 id button8
@@ -3230,6 +3230,7 @@ id collapseActionView
 id compress
 id confirm_button
 id constraint
+id contactos
 id container
 id content
 id contentPanel
@@ -3240,9 +3241,11 @@ id contra2_r
 id contrasenaTxt
 id coordinator
 id correo_r
+id correo_user
 id cos
 id counterclockwise
 id cradle
+id cuenta
 id currentState
 id custom
 id customPanel
@@ -3283,16 +3286,12 @@ id east
 id edge
 id editTextDate
 id editTextNumber
-id editTextText10
-id editTextText11
 id editTextText12
 id editTextText3
 id editTextText5
 id editTextText6
 id editTextText7
-id editTextText9
 id editTextTextMultiLine
-id editTextTextPassword3
 id edit_query
 id edit_text_id
 id elastic
@@ -3435,6 +3434,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id name_user
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3487,6 +3487,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id perfil
 id pin
 id position
 id postLayout
@@ -3593,13 +3594,11 @@ id textView11
 id textView12
 id textView13
 id textView14
-id textView15
 id textView16
 id textView17
 id textView18
 id textView19
 id textView2
-id textView21
 id textView3
 id textView4
 id textView5

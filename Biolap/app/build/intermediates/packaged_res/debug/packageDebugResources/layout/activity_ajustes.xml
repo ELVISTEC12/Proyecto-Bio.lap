@@ -8,11 +8,11 @@
     tools:context=".ajustes">
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/perfil"
         android:layout_width="380dp"
         android:layout_height="55dp"
         android:onClick="perfil"
-        android:text="   Perfil       >"
+        android:text="   Perfil             >"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,12 +21,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.269" />
 
+
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/cuenta"
         android:layout_width="380dp"
         android:layout_height="55dp"
         android:onClick="cuenta"
-        android:text="   Cuenta    >"
+        android:text="   Cuenta       >"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +49,7 @@
         app:layout_constraintVertical_bias="0.0"></LinearLayout>
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/contactos"
         android:layout_width="380dp"
         android:layout_height="55dp"
         android:text="   Contáctanos  >"

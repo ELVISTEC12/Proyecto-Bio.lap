@@ -29,9 +29,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-     EditText usuarioTXT;
-     EditText contraTXT;
-     Button ing;
+    EditText usuarioTXT;
+    EditText contraTXT;
+    Button ing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
         ing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //ingresar("http://192.168.0.108/bio.lap/validar_usuario.php");
                 ingresar("http://192.168.1.3/bio.lap/validar_usuario.php");
             }
         });
@@ -83,10 +82,14 @@ public class MainActivity extends AppCompatActivity {
                     if (success) {
                         Toast.makeText(getApplicationContext(), "Operación exitosa", Toast.LENGTH_SHORT).show();
 
-                        // Guardar estado de inicio de sesión en SharedPreferences
+                        // Obtener el ID del usuario desde la respuesta JSON
+                        int userId = jsonResponse.getInt("userId");
+
+                        // Guardar estado de inicio de sesión y el ID del usuario en SharedPreferences
                         SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putBoolean("isUserLoggedIn", true);
+                        editor.putInt("USER_ID", userId);
                         editor.apply();
 
                         // Navegar a la nueva actividad
@@ -124,8 +127,8 @@ public class MainActivity extends AppCompatActivity {
         requestQueue.add(sr);
     }
 
-    public void registrar(View view){
-        Intent r = new Intent(this,registrarUsuario.class);
+    public void registrar(View view) {
+        Intent r = new Intent(this, registrarUsuario.class);
         startActivity(r);
     }
 }
