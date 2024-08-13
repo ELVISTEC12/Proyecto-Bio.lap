@@ -28,7 +28,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class cuestaAjustes extends AppCompatActivity {
+public class cuentaAjustes extends AppCompatActivity {
 
     TextView name_user, correo, contra;
     Button cerrar;
@@ -38,7 +38,7 @@ public class cuestaAjustes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_cuesta_ajustes);
+        setContentView(R.layout.activity_cuenta_ajustes);
 
         name_user = findViewById(R.id.name_user);
         correo = findViewById(R.id.correo_user);

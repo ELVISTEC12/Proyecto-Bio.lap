@@ -28,8 +28,8 @@ public class menup extends AppCompatActivity {
         Intent nr = new Intent(this, formPacientes.class);
         startActivity(nr);
     }
-    public void nuevaNom(View view){
-        Intent nn = new Intent(this, nuevaNomenclatura.class);
+    public void nomenclatura(View view){
+        Intent nn = new Intent(this, nomenclaturas.class);
         startActivity(nn);
     }
     public void buscar(View view){

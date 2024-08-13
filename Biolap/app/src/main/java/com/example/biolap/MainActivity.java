@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         ing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ingresar("http://192.168.1.3/bio.lap/validar_usuario.php");
+                ingresar("http://192.168.0.120/bio.lap/validar_usuario.php");
             }
         });
 
@@ -81,16 +81,6 @@ public class MainActivity extends AppCompatActivity {
 
                     if (success) {
                         Toast.makeText(getApplicationContext(), "Operación exitosa", Toast.LENGTH_SHORT).show();
-
-                        // Obtener el ID del usuario desde la respuesta JSON
-                        int userId = jsonResponse.getInt("userId");
-
-                        // Guardar estado de inicio de sesión y el ID del usuario en SharedPreferences
-                        SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putBoolean("isUserLoggedIn", true);
-                        editor.putInt("USER_ID", userId);
-                        editor.apply();
 
                         // Navegar a la nueva actividad
                         Intent intent = new Intent(getApplicationContext(), menup.class);

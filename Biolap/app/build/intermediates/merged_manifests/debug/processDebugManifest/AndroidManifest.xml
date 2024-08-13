@@ -31,13 +31,16 @@
         android:theme="@style/Theme.Biolap"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.biolap.nomenclaturas"
+            android:exported="false" />
+        <activity
             android:name="com.example.biolap.gestionarAnalisis"
             android:exported="false" />
         <activity
-            android:name="com.example.biolap.cuestaAjustes"
+            android:name="com.example.biolap.cuentaAjustes"
             android:exported="false" />
         <activity
-            android:name="com.example.biolap.cuentaAjuste"
+            android:name="com.example.biolap.perfilAjuste"
             android:exported="false" />
         <activity
             android:name="com.example.biolap.ajustes"

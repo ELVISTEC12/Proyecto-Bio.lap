@@ -24,11 +24,11 @@ public class ajustes extends AppCompatActivity {
         });
     }
     public void cuenta(View view){
-        Intent c = new Intent(this, cuentaAjuste.class);
+        Intent c = new Intent(this, perfilAjuste.class);
         startActivity(c);
     }
     public void perfil(View view){
-        Intent p = new Intent(this, cuestaAjustes.class);
+        Intent p = new Intent(this, cuentaAjustes.class);
         startActivity(p);
     }
 }

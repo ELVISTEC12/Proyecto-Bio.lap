@@ -4,7 +4,9 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -19,9 +21,15 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,7 +59,7 @@ public class nuevaNomenclatura extends AppCompatActivity {
     public void enviarDatos(View view){
         if(validar()){
             //datos("http://192.168.0.108/bio.lap/insertar_nomenclatura.php");
-            datos("http://192.168.1.4/bio.lap/insertar_nomenclatura.php");
+            datos("http://192.168.0.120/bio.lap/insertar_nomenclatura.php");
         }
     }
 
@@ -100,4 +108,6 @@ public class nuevaNomenclatura extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(sr);
     }
+
+
 }

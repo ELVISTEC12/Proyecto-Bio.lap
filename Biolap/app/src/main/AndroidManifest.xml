@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,15 +13,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Biolap"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".nomenclaturas"
+            android:exported="false" />
         <activity
             android:name=".gestionarAnalisis"
             android:exported="false" />
         <activity
-            android:name=".cuestaAjustes"
+            android:name=".cuentaAjustes"
             android:exported="false" />
         <activity
-            android:name=".cuentaAjuste"
+            android:name=".perfilAjuste"
             android:exported="false" />
         <activity
             android:name=".ajustes"

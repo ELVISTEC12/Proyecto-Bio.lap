@@ -5,36 +5,9 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".ajustes">
 
-    <TextView
-        android:id="@+id/perfil"
-        android:layout_width="380dp"
-        android:layout_height="55dp"
-        android:onClick="perfil"
-        android:text="   Perfil             >"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
-
-
-    <TextView
-        android:id="@+id/cuenta"
-        android:layout_width="380dp"
-        android:layout_height="55dp"
-        android:onClick="cuenta"
-        android:text="   Cuenta       >"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -48,17 +21,42 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"></LinearLayout>
 
-    <TextView
-        android:id="@+id/contactos"
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="380dp"
-        android:layout_height="55dp"
-        android:text="   Contáctanos  >"
-        android:textSize="48sp"
+        android:layout_height="60dp"
+        android:onClick="perfil"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514" />
+        app:layout_constraintVertical_bias="0.345"
+        app:srcCompat="@mipmap/perfil_ajuste" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:onClick="cuenta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        app:srcCompat="@mipmap/cuenta_ajuste" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.661"
+        app:srcCompat="@mipmap/contactos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3198,6 +3198,9 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id buscar_nom
+id button
+id button2
 id button6
 id button7
 id button8
@@ -3230,7 +3233,6 @@ id collapseActionView
 id compress
 id confirm_button
 id constraint
-id contactos
 id container
 id content
 id contentPanel
@@ -3245,7 +3247,6 @@ id correo_user
 id cos
 id counterclockwise
 id cradle
-id cuenta
 id currentState
 id custom
 id customPanel
@@ -3348,6 +3349,11 @@ id imageButton3
 id imageButton4
 id imageButton5
 id imageView
+id imageView2
+id imageView3
+id imageView4
+id imageView5
+id imageView6
 id immediateStop
 id included
 id indeterminate
@@ -3488,7 +3494,6 @@ id path
 id pathRelative
 id peekHeight
 id percent
-id perfil
 id pin
 id position
 id postLayout
@@ -3595,6 +3600,7 @@ id textView11
 id textView12
 id textView13
 id textView14
+id textView15
 id textView16
 id textView17
 id textView18
@@ -3775,13 +3781,14 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_ajustes
 layout activity_analisis_rutina
-layout activity_cuenta_ajuste
-layout activity_cuesta_ajustes
+layout activity_cuenta_ajustes
 layout activity_form_pacientes
 layout activity_gestionar_analisis
 layout activity_main
 layout activity_menup
+layout activity_nomenclaturas
 layout activity_nueva_nomenclatura
+layout activity_perfil_ajuste
 layout activity_registrar_usuario
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3864,10 +3871,15 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 mipmap ajuste
 mipmap analisis
+mipmap contactos
+mipmap cuenta_ajuste
+mipmap foto_perfil
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap nombre_perfil
 mipmap nomenclaturas
 mipmap nuevo_re
+mipmap perfil_ajuste
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
 string abc_action_bar_up_description
