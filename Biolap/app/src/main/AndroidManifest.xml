@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".cambiar_datos"
+            android:exported="false" />
+        <activity
             android:name=".nomenclaturas"
             android:exported="false" />
         <activity
@@ -36,9 +39,7 @@
         <activity
             android:name=".analisisRutina"
             android:exported="false" />
-        <activity
-            android:name=".rutina"
-            android:exported="false" />
+
         <activity
             android:name=".formPacientes"
             android:exported="false" />
