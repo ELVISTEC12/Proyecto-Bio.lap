@@ -37,10 +37,6 @@
             android:name=".nuevaNomenclatura"
             android:exported="false" />
         <activity
-            android:name=".analisisRutina"
-            android:exported="false" />
-
-        <activity
             android:name=".formPacientes"
             android:exported="false" />
         <activity
