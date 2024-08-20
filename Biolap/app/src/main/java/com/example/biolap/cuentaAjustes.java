@@ -125,7 +125,7 @@ public class cuentaAjustes extends AppCompatActivity {
                         editor.apply();
 
                         // Navegar a la actividad de inicio de sesión
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), LogIn.class);
                         startActivity(intent);
                         finish(); // Finaliza la actividad actual
                     }

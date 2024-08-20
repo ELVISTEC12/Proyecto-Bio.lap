@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Bio.lap</string>
+    <string name="titulo1">Inicio de sesión</string>
     <string name="registrar">Registrar</string>
     <string name="iniciar_sesion">Iniciar Sesion</string>
     <string name="contrasena">Contraseña</string>
-    <string name="name_email">Usuario</string>
+    <string name="name">Usuario</string>
     <string name="caja_contrasena">Ingrese la contraseña</string>
     <string name="caja_usuario">Ingrese el nombre de usuario</string>
     <string name="cambio_contrasena">¿Olvidó su contraseña?</string>
@@ -16,6 +17,8 @@
     <string name="caja_contra">Ingrese una contraseña</string>
     <string name="check">Acepto los términos y condiciones</string>
     <string name="guardar">Listo</string>
+    <string name="menu">Menú principal</string>
+    <string name="bienv">¡Hola!</string>
     <string name="ingreso_pacientes">Ingreso de pacientes</string>
     <string name="nombre_paciente">Ingrese el nombre completo del paciente</string>
     <string name="edad_paciente">Ingrese la edad del paciente</string>

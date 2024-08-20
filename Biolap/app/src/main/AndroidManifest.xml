@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -27,6 +27,7 @@
         <activity
             android:name=".cuentaAjustes"
             android:exported="false" />
+
         <activity
             android:name=".perfilAjuste"
             android:exported="false" />
@@ -43,10 +44,10 @@
             android:name=".registrarUsuario"
             android:exported="false" />
         <activity
-            android:name=".menup"
+            android:name=".menuPrincipal"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LogIn"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

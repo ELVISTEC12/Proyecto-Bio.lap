@@ -1424,6 +1424,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2987,6 +2988,10 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable borde_inferior
+drawable borde_superior
+drawable bordes
+drawable bordes_layout
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3240,7 +3245,7 @@ id contiguous
 id continuousVelocity
 id contra1_r
 id contra2_r
-id contrasenaTxt
+id contrasenaTXT
 id coordinator
 id correo_r
 id correo_user
@@ -3349,6 +3354,7 @@ id imageButton3
 id imageButton4
 id imageButton5
 id imageView
+id imageView10
 id imageView2
 id imageView3
 id imageView4
@@ -3360,6 +3366,7 @@ id indeterminate
 id info
 id invisible
 id inward
+id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
@@ -3376,6 +3383,9 @@ id linearLayout
 id linearLayout2
 id linearLayout3
 id linearLayout4
+id linearLayout5
+id linearLayout6
+id linearLayout7
 id listMode
 id listView
 id list_item
@@ -3453,6 +3463,7 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id noScroll
 id noState
+id nomList
 id nomNomTXT
 id none
 id normal
@@ -3495,6 +3506,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
@@ -3606,6 +3618,9 @@ id textView17
 id textView18
 id textView19
 id textView2
+id textView20
+id textView21
+id textView22
 id textView3
 id textView4
 id textView5
@@ -3646,7 +3661,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
-id usuarioTxt
+id usuarioTXT
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3784,8 +3799,8 @@ layout activity_analisis_rutina
 layout activity_cuenta_ajustes
 layout activity_form_pacientes
 layout activity_gestionar_analisis
-layout activity_main
-layout activity_menup
+layout activity_login
+layout activity_menuprincipal
 layout activity_nomenclaturas
 layout activity_nueva_nomenclatura
 layout activity_perfil_ajuste
@@ -3871,10 +3886,13 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 mipmap ajuste
 mipmap analisis
+mipmap candado
 mipmap contactos
 mipmap cuenta_ajuste
+mipmap footer
 mipmap foto_perfil
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 mipmap nombre_perfil
 mipmap nomenclaturas
@@ -3911,6 +3929,7 @@ string abc_toolbar_collapse_description
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
+string bienv
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
@@ -3991,6 +4010,7 @@ string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
 string medico
+string menu
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -4053,7 +4073,7 @@ string mtrl_switch_track_decoration_path
 string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
-string name_email
+string name
 string nombre_paciente
 string nombre_usuario
 string nuevo_registro
@@ -4073,6 +4093,7 @@ string side_sheet_behavior
 string sig
 string status_bar_notification_info_overflow
 string telefono_paciente
+string titulo1
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

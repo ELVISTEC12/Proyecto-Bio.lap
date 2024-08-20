@@ -137,7 +137,7 @@ public class registrarUsuario extends AppCompatActivity {
                         editor.apply();
 
                         // Navegar a la actividad de menú
-                        Intent intent = new Intent(getApplicationContext(), menup.class);
+                        Intent intent = new Intent(getApplicationContext(), menuPrincipal.class);
                         startActivity(intent);
                         finish();
                     } else {
