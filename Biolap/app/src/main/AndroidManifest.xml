@@ -25,6 +25,9 @@
             android:name=".cuentaAjustes"
             android:exported="false" />
         <activity
+            android:name=".analisisRutina"
+            android:exported="false"/>
+        <activity
             android:name=".perfilAjuste"
             android:exported="false" />
         <activity
@@ -32,9 +35,6 @@
             android:exported="false" />
         <activity
             android:name=".nuevaNomenclatura"
-            android:exported="false" />
-        <activity
-            android:name=".analisisRutina"
             android:exported="false" />
         <activity
             android:name=".formPacientes"

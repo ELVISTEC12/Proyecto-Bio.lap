@@ -49,7 +49,7 @@ public class LogIn extends AppCompatActivity {
         }
 
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_main);
 
         usuarioTXT = findViewById(R.id.usuarioTXT);
         contraTXT = findViewById(R.id.contrasenaTXT);
