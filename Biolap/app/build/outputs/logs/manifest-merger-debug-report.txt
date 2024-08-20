@@ -1,22 +1,23 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-62:12
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-59:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-59:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Usuario\.gradle\caches\transforms-4\75fa905ae4c1810e680a5616507a0811\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Usuario\.gradle\caches\transforms-4\b837ad81ff39873ba69b851967d25721\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Usuario\.gradle\caches\transforms-4\1e1883a8e7a3fe6c55131605d7fbf95d\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Usuario\.gradle\caches\transforms-4\d590f66e3d1b4d795735dd4ce6db4afb\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\a454e0effd6b3ccfc6fb4275e989e8f9\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\76bc057ce49f739532536599981e1557\transformed\recyclerview-1.3.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\Usuario\.gradle\caches\transforms-4\8deb737eed62407c081e4e48e2d116b4\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Usuario\.gradle\caches\transforms-4\9f3b519d923eab40f6d5424c9b40215c\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.9.0] C:\Users\Usuario\.gradle\caches\transforms-4\dbaccfdb96d327609aaee5a602a133e1\transformed\activity-1.9.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.volley:volley:1.2.1] C:\Users\Usuario\.gradle\caches\transforms-4\07409e331c1c45e57c110a9cb8d91e25\transformed\volley-1.2.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\adb5865d3d4be53eab1a4e3d2a9f5b4c\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\336dd2e76cf83c49c1551b0bfa0fe717\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\8cb4658ac47fe4170bba78a47cea572d\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Usuario\.gradle\caches\transforms-4\4382412224cd57a2a44c108f941fe766\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\adb5865d3d4be53eab1a4e3d2a9f5b4c\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-4\765b76d878b9e65642a303c638a2d949\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.5.0] C:\Users\Usuario\.gradle\caches\transforms-4\56c29d7c1ab03874d788bfbfa9cef44a\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-4\893d99cabf8de27160f9a861c548046f\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
@@ -25,8 +26,8 @@ MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Usuario\
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\37df954adc7c3872831549201b3442d2\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\2e7248056e833fcc68b51736d63f205b\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\319dd500712485a81ba7a3656e81a604\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-4\be09256df8e6a92c46e89bfbc4230f63\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-4\ac238557b6b0717b1cb5a5a566be7cf1\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\25798bd9cc09f35c871fe28ce77a5f11\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Usuario\.gradle\caches\transforms-4\281e9027d6b2a737a455e1870f6a56d6\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\Usuario\.gradle\caches\transforms-4\a9d4cab571e17fc149539f719328b2f8\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Usuario\.gradle\caches\transforms-4\0b007138df18b49eb95baaf5cb9e222c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:17:1-35:12
@@ -57,12 +58,12 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\Usuario
 	xmlns:android
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:5-66
 	android:name
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:7:5-60:19
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:7:5-60:19
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:7:5-57:19
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:7:5-57:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Usuario\.gradle\caches\transforms-4\75fa905ae4c1810e680a5616507a0811\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Usuario\.gradle\caches\transforms-4\75fa905ae4c1810e680a5616507a0811\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Usuario\.gradle\caches\transforms-4\b837ad81ff39873ba69b851967d25721\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -145,46 +146,40 @@ ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\sr
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:38:13-37
 	android:name
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:37:13-43
-activity#com.example.biolap.rutina
+activity#com.example.biolap.formPacientes
 ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:39:9-41:40
 	android:exported
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:41:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:40:13-35
-activity#com.example.biolap.formPacientes
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:40:13-42
+activity#com.example.biolap.registrarUsuario
 ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:42:9-44:40
 	android:exported
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:44:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:43:13-42
-activity#com.example.biolap.registrarUsuario
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:43:13-45
+activity#com.example.biolap.menuPrincipal
 ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:45:9-47:40
 	android:exported
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:47:13-37
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:46:13-45
-activity#com.example.biolap.menup
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:48:9-50:40
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:46:13-42
+activity#com.example.biolap.LogIn
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:48:9-56:20
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:50:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:50:13-36
 	android:name
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:49:13-34
-activity#com.example.biolap.MainActivity
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:51:9-59:20
-	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:53:13-36
-	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:52:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:54:13-58:29
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:51:13-55:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:55:17-69
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:52:17-69
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:55:25-66
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:52:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:57:17-77
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:54:17-77
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:57:27-74
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:54:27-74
 uses-sdk
 INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml
@@ -197,14 +192,18 @@ MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Usuario\.gra
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Usuario\.gradle\caches\transforms-4\1e1883a8e7a3fe6c55131605d7fbf95d\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Usuario\.gradle\caches\transforms-4\d590f66e3d1b4d795735dd4ce6db4afb\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Usuario\.gradle\caches\transforms-4\d590f66e3d1b4d795735dd4ce6db4afb\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\a454e0effd6b3ccfc6fb4275e989e8f9\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\a454e0effd6b3ccfc6fb4275e989e8f9\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\76bc057ce49f739532536599981e1557\transformed\recyclerview-1.3.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\76bc057ce49f739532536599981e1557\transformed\recyclerview-1.3.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\Usuario\.gradle\caches\transforms-4\8deb737eed62407c081e4e48e2d116b4\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] C:\Users\Usuario\.gradle\caches\transforms-4\8deb737eed62407c081e4e48e2d116b4\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Usuario\.gradle\caches\transforms-4\9f3b519d923eab40f6d5424c9b40215c\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Usuario\.gradle\caches\transforms-4\9f3b519d923eab40f6d5424c9b40215c\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.9.0] C:\Users\Usuario\.gradle\caches\transforms-4\dbaccfdb96d327609aaee5a602a133e1\transformed\activity-1.9.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.activity:activity:1.9.0] C:\Users\Usuario\.gradle\caches\transforms-4\dbaccfdb96d327609aaee5a602a133e1\transformed\activity-1.9.0\AndroidManifest.xml:20:5-44
 MERGED from [com.android.volley:volley:1.2.1] C:\Users\Usuario\.gradle\caches\transforms-4\07409e331c1c45e57c110a9cb8d91e25\transformed\volley-1.2.1\AndroidManifest.xml:5:5-43
 MERGED from [com.android.volley:volley:1.2.1] C:\Users\Usuario\.gradle\caches\transforms-4\07409e331c1c45e57c110a9cb8d91e25\transformed\volley-1.2.1\AndroidManifest.xml:5:5-43
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\adb5865d3d4be53eab1a4e3d2a9f5b4c\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\adb5865d3d4be53eab1a4e3d2a9f5b4c\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\336dd2e76cf83c49c1551b0bfa0fe717\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\336dd2e76cf83c49c1551b0bfa0fe717\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\8cb4658ac47fe4170bba78a47cea572d\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
@@ -213,8 +212,6 @@ MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\trans
 MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Usuario\.gradle\caches\transforms-4\4382412224cd57a2a44c108f941fe766\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Usuario\.gradle\caches\transforms-4\4382412224cd57a2a44c108f941fe766\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\adb5865d3d4be53eab1a4e3d2a9f5b4c\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\adb5865d3d4be53eab1a4e3d2a9f5b4c\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-4\765b76d878b9e65642a303c638a2d949\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-4\765b76d878b9e65642a303c638a2d949\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.5.0] C:\Users\Usuario\.gradle\caches\transforms-4\56c29d7c1ab03874d788bfbfa9cef44a\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
@@ -231,10 +228,10 @@ MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Usuario\.
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\2e7248056e833fcc68b51736d63f205b\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\319dd500712485a81ba7a3656e81a604\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\319dd500712485a81ba7a3656e81a604\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-4\be09256df8e6a92c46e89bfbc4230f63\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-4\be09256df8e6a92c46e89bfbc4230f63\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-4\ac238557b6b0717b1cb5a5a566be7cf1\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\Usuario\.gradle\caches\transforms-4\ac238557b6b0717b1cb5a5a566be7cf1\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\25798bd9cc09f35c871fe28ce77a5f11\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Usuario\.gradle\caches\transforms-4\25798bd9cc09f35c871fe28ce77a5f11\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Usuario\.gradle\caches\transforms-4\281e9027d6b2a737a455e1870f6a56d6\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Usuario\.gradle\caches\transforms-4\281e9027d6b2a737a455e1870f6a56d6\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\Usuario\.gradle\caches\transforms-4\a9d4cab571e17fc149539f719328b2f8\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44

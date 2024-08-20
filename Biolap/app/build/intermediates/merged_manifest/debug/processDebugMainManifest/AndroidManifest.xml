@@ -52,19 +52,16 @@
             android:name="com.example.biolap.analisisRutina"
             android:exported="false" />
         <activity
-            android:name="com.example.biolap.rutina"
-            android:exported="false" />
-        <activity
             android:name="com.example.biolap.formPacientes"
             android:exported="false" />
         <activity
             android:name="com.example.biolap.registrarUsuario"
             android:exported="false" />
         <activity
-            android:name="com.example.biolap.menup"
+            android:name="com.example.biolap.menuPrincipal"
             android:exported="false" />
         <activity
-            android:name="com.example.biolap.MainActivity"
+            android:name="com.example.biolap.LogIn"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

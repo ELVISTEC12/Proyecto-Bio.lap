@@ -24,7 +24,7 @@ public class analisisRutina extends AppCompatActivity {
         });
     }
     public void menu(View view){
-        Intent m = new Intent(this, menup.class);
+        Intent m = new Intent(this, menuPrincipal.class);
         startActivity(m);
     }
 }
