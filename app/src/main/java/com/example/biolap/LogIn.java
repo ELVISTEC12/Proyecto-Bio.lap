@@ -79,7 +79,8 @@ public class LogIn extends AppCompatActivity {
                         }
                     });
                 } else {
-                    ingresar("https://192.168.1.2/bio.lap/validar_usuario.php");
+                    //ingresar("https://192.168.1.2/bio.lap/validar_usuario.php");
+                    saltar();
 
                 }
             }
@@ -182,6 +183,10 @@ public class LogIn extends AppCompatActivity {
 
     public void registrar() {
         Intent r = new Intent(this, registrarUsuario.class);
+        startActivity(r);
+    }
+    public void saltar() {
+        Intent r = new Intent(this, menuPrincipal.class);
         startActivity(r);
     }
 }

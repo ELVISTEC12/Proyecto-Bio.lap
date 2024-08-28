@@ -1,5 +1,6 @@
 package com.example.biolap;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -20,5 +21,9 @@ public class cambiar_datos extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void user(){
+        Intent p = new Intent(this, cuentaAjustes.class);
+        startActivity(p);
     }
 }
