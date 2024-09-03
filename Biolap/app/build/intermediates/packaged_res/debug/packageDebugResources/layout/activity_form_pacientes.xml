@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"
+    android:textAlignment="center"
+    tools:context=".formPacientes">
+
+  <TextView
+      android:id="@+id/textView13"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/ingreso_pacientes"
+      android:textColor="#FFFFFF"
+      android:textSize="34sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.164"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.083" />
+
+  <Button
+      android:id="@+id/button6"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:backgroundTint="#22C55E"
+      android:onClick="rutina"
+      android:text="@string/sig"
+      android:textColor="#FFFFFF"
+      android:textSize="24sp"
+      app:cornerRadius="7dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.973" />
+
+  <LinearLayout
+      android:layout_width="380dp"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.483"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.585">
+
+    <EditText
+        android:id="@+id/editTextText3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bordes"
+        android:ems="10"
+        android:hint="@string/nombre_paciente"
+        android:inputType="text"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#80FFFFFF" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bordes"
+        android:ems="10"
+        android:hint="@string/edad_paciente"
+        android:inputType="number"
+        android:textColor="#000000"
+        android:textColorHint="#80FFFFFF" />
+
+    <EditText
+        android:id="@+id/editTextText6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bordes"
+        android:ems="10"
+        android:hint="@string/edad_paciente"
+        android:inputType="text"
+        android:textColorHint="#80FFFFFF" />
+
+    <EditText
+        android:id="@+id/editTextText5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bordes"
+        android:ems="10"
+        android:hint="@string/telefono_paciente"
+        android:inputType="text"
+        android:textColorHint="#80FFFFFF" />
+
+    <EditText
+        android:id="@+id/editTextText7"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bordes"
+        android:ems="10"
+        android:hint="@string/medico"
+        android:inputType="text"
+        android:textColorHint="#80FFFFFF" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bordes"
+        android:ems="10"
+        android:hint="@string/fecha"
+        android:inputType="date"
+        android:textColorHint="#80FFFFFF" />
+
+    <Spinner
+        android:id="@+id/obra_social"
+        android:layout_width="196dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/spinner_arrow" />
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

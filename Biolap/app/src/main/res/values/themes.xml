@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Biolap" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryVariant">#000000</item>
+        <!-- Secondary color -->
+        <item name="colorSecondary">#FFFFFF</item>
+    </style>
+
+    <style name="Theme.Biolap" parent="Base.Theme.Biolap" />
+</resources>
