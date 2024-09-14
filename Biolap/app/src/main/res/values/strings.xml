@@ -32,4 +32,7 @@
     <string name="fecha">Fecha</string>
     <string name="sig">Siguiente</string>
     <string name="cod">Seleccione la rutina</string>
+    <string name="ajuste">Ajustes</string>
+    <string name="cambiarN">Cambiar nombre de usuario</string>
+    <string name="cambiarC">Cambiar correo electrónico</string>
 </resources>

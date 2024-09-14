@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-85:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-85:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-85:12
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-85:12
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-89:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-89:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-89:12
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:1-89:12
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Usuario\.gradle\caches\transforms-4\75fa905ae4c1810e680a5616507a0811\transformed\material-1.12.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Usuario\.gradle\caches\transforms-4\b837ad81ff39873ba69b851967d25721\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Usuario\.gradle\caches\transforms-4\1e1883a8e7a3fe6c55131605d7fbf95d\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
@@ -57,12 +57,12 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.0] C:\Users\Usuario
 	xmlns:android
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:5-66
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:5-67
 	android:name
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:7:5-83:19
-INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:7:5-83:19
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:7:5-87:19
+INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:7:5-87:19
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Usuario\.gradle\caches\transforms-4\75fa905ae4c1810e680a5616507a0811\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] C:\Users\Usuario\.gradle\caches\transforms-4\75fa905ae4c1810e680a5616507a0811\transformed\material-1.12.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Usuario\.gradle\caches\transforms-4\b837ad81ff39873ba69b851967d25721\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -84,155 +84,161 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Us
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] C:\Users\Usuario\.gradle\caches\transforms-4\7cde9b2fad8251f47ef560a4d3144059\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:15:9-35
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:12:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:11:9-54
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:10:9-54
 	android:roundIcon
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:14:9-54
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:13:9-54
 	tools:targetApi
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:18:9-29
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:17:9-29
 	android:icon
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
 		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:16:9-44
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:15:9-44
 	android:dataExtractionRules
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:10:9-65
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:9:9-65
 	android:usesCleartextTraffic
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:17:9-44
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:16:9-44
+activity#com.example.biolap.nomenclaturaMenu
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:18:9-20:40
+	android:exported
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:20:13-37
+	android:name
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:19:13-45
 activity#com.example.biolap.cambiar_datos
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:19:9-23:56
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:21:9-25:56
 	android:screenOrientation
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:22:13-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:24:13-49
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:21:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:23:13-37
 	tools:ignore
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:23:13-53
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:25:13-53
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:20:13-42
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:22:13-42
 activity#com.example.biolap.nomenclaturas
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:24:9-28:56
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:26:9-30:56
 	android:screenOrientation
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:27:13-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:29:13-49
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:26:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:28:13-37
 	tools:ignore
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:28:13-53
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:30:13-53
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:25:13-42
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:27:13-42
 activity#com.example.biolap.gestionarAnalisis
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:29:9-33:56
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:31:9-35:56
 	android:screenOrientation
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:32:13-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:34:13-49
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:31:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:33:13-37
 	tools:ignore
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:33:13-53
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:35:13-53
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:30:13-46
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:32:13-46
 activity#com.example.biolap.cuentaAjustes
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:34:9-38:56
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:36:9-40:56
 	android:screenOrientation
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:37:13-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:39:13-49
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:36:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:38:13-37
 	tools:ignore
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:38:13-53
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:40:13-53
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:35:13-42
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:37:13-42
 activity#com.example.biolap.perfilAjuste
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:39:9-43:56
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:41:9-45:56
 	android:screenOrientation
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:42:13-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:44:13-49
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:41:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:43:13-37
 	tools:ignore
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:43:13-53
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:45:13-53
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:40:13-41
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:42:13-41
 activity#com.example.biolap.ajustes
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:44:9-48:56
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:46:9-50:56
 	android:screenOrientation
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:47:13-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:49:13-49
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:46:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:48:13-37
 	tools:ignore
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:48:13-53
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:50:13-53
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:45:13-36
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:47:13-36
 activity#com.example.biolap.nuevaNomenclatura
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:49:9-53:56
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:51:9-55:56
 	android:screenOrientation
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:52:13-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:54:13-49
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:51:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:53:13-37
 	tools:ignore
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:53:13-53
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:55:13-53
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:50:13-46
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:52:13-46
 activity#com.example.biolap.formPacientes
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:54:9-58:56
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:56:9-60:56
 	android:screenOrientation
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:57:13-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:59:13-49
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:56:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:58:13-37
 	tools:ignore
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:58:13-53
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:60:13-53
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:55:13-42
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:57:13-42
 activity#com.example.biolap.registrarUsuario
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:59:9-63:56
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:61:9-65:56
 	android:screenOrientation
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:62:13-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:64:13-49
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:61:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:63:13-37
 	tools:ignore
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:63:13-53
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:65:13-53
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:60:13-45
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:62:13-45
 activity#com.example.biolap.menuPrincipal
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:64:9-68:56
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:66:9-70:56
 	android:screenOrientation
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:67:13-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:69:13-49
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:66:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:68:13-37
 	tools:ignore
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:68:13-53
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:70:13-53
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:65:13-42
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:67:13-42
 activity#com.example.biolap.analisisRutina
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:69:9-72:56
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:71:9-75:56
 	android:screenOrientation
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:71:13-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:74:13-49
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:70:13-37
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:73:13-37
 	tools:ignore
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:72:13-53
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:75:13-53
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:69:19-49
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:72:13-43
 activity#com.example.biolap.LogIn
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:73:9-82:20
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:76:9-86:20
 	android:screenOrientation
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:75:37-73
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:79:13-49
 	android:exported
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:75:13-36
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:78:13-36
 	tools:ignore
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:76:13-53
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:80:13-53
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:74:13-34
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:77:13-34
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:77:13-81:29
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:81:13-85:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:78:17-69
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:82:17-69
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:78:25-66
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:82:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:80:17-77
+ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:84:17-77
 	android:name
-		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:80:27-74
+		ADDED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:84:27-74
 uses-sdk
 INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml
