@@ -31,6 +31,12 @@
         android:theme="@style/Theme.Biolap"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.biolap.olvidar"
+            android:exported="false" />
+        <activity
+            android:name="com.example.biolap.nomenclaturaMenu"
+            android:exported="false" />
+        <activity
             android:name="com.example.biolap.cambiar_datos"
             android:exported="false"
             android:screenOrientation="portrait" />

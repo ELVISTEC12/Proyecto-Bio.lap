@@ -19,4 +19,5 @@ public class usuarioData implements Serializable {
     public String getNombre(){
         return nombre;
     }
+
 }

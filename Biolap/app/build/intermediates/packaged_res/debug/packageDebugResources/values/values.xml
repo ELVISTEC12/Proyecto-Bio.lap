@@ -3,6 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="ic_launcher_background">#00FF47</color>
     <color name="white">#FFFFFFFF</color>
+    <string name="ajuste">Ajustes</string>
     <string name="app_name">Bio.lap</string>
     <string name="bienv">¡Bienvenido/a!</string>
     <string name="buscNom">Buscador</string>
@@ -11,6 +12,8 @@
     <string name="caja_correo">Ingrese un correo electrónico</string>
     <string name="caja_usuario">Ingrese el nombre de usuario</string>
     <string name="caja_usuario2">Ingrese un nombre de usuario</string>
+    <string name="cambiarC">Cambiar correo electrónico</string>
+    <string name="cambiarN">Cambiar nombre de usuario</string>
     <string name="cambio_contrasena">¿Olvidó su contraseña?</string>
     <string name="check">Acepto los términos y condiciones</string>
     <string name="cod">Seleccione la rutina</string>
@@ -37,7 +40,7 @@
     <string name="titulo1">Inicio de sesión</string>
     <string name="user">User</string>
     <style name="Base.Theme.Biolap" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimary">#FFFFFF</item>
         <item name="colorPrimaryVariant">#000000</item>
         
         <item name="colorSecondary">#FFFFFF</item>

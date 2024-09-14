@@ -3208,6 +3208,9 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id buscador
+id button
+id button2
 id button3
 id button6
 id button7
@@ -3235,6 +3238,7 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
+id codBuscador
 id codNomTXT
 id collapseActionView
 id compress
@@ -3327,7 +3331,9 @@ id fixed
 id flip
 id floating
 id floatingActionButton
+id floatingActionButton3
 id forever
+id formBusc
 id formNomTXT
 id fragment_container_view_tag
 id frost
@@ -3359,9 +3365,6 @@ id imageButton4
 id imageButton5
 id imageView
 id imageView10
-id imageView2
-id imageView3
-id imageView4
 id imageView5
 id imageView6
 id imageView7
@@ -3467,6 +3470,7 @@ id neverCompleteToStart
 id noScroll
 id noState
 id nomNomTXT
+id nombreBusc
 id nombreTXT
 id none
 id normal
@@ -3623,6 +3627,11 @@ id textView20
 id textView21
 id textView22
 id textView23
+id textView24
+id textView25
+id textView26
+id textView28
+id textView29
 id textView3
 id textView4
 id textView5
@@ -3804,6 +3813,7 @@ layout activity_form_pacientes
 layout activity_gestionar_analisis
 layout activity_main
 layout activity_menuprincipal
+layout activity_nomenclaturamenu
 layout activity_nomenclaturas
 layout activity_nueva_nomenclatura
 layout activity_perfil_ajuste
@@ -3931,6 +3941,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string ajuste
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3954,6 +3965,8 @@ string call_notification_hang_up_action
 string call_notification_incoming_text
 string call_notification_ongoing_text
 string call_notification_screening_text
+string cambiarC
+string cambiarN
 string cambio_contrasena
 string character_counter_content_description
 string character_counter_overflowed_content_description

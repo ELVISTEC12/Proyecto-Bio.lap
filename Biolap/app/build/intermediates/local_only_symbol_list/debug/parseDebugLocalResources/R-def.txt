@@ -18,11 +18,15 @@ id a
 id b_r
 id boton_ingresar
 id boton_registrar
+id buscador
+id button
+id button2
 id button3
 id button6
 id button7
 id cerrar
 id checkBox
+id codBuscador
 id codNomTXT
 id contra1_r
 id contra2_r
@@ -39,6 +43,8 @@ id editTextText6
 id editTextText7
 id editTextTextMultiLine
 id floatingActionButton
+id floatingActionButton3
+id formBusc
 id formNomTXT
 id imageButton2
 id imageButton3
@@ -46,9 +52,6 @@ id imageButton4
 id imageButton5
 id imageView
 id imageView10
-id imageView2
-id imageView3
-id imageView4
 id imageView5
 id imageView6
 id imageView7
@@ -62,6 +65,7 @@ id listView
 id main
 id name_user
 id nomNomTXT
+id nombreBusc
 id nombreTXT
 id nuser_r
 id obra_social
@@ -82,6 +86,11 @@ id textView20
 id textView21
 id textView22
 id textView23
+id textView24
+id textView25
+id textView26
+id textView28
+id textView29
 id textView3
 id textView4
 id textView5
@@ -98,6 +107,7 @@ layout activity_form_pacientes
 layout activity_gestionar_analisis
 layout activity_main
 layout activity_menuprincipal
+layout activity_nomenclaturamenu
 layout activity_nomenclaturas
 layout activity_nueva_nomenclatura
 layout activity_perfil_ajuste
@@ -118,6 +128,7 @@ mipmap nombre_perfil
 mipmap nomenclaturas
 mipmap nuevo_re
 mipmap perfil_ajuste
+string ajuste
 string app_name
 string bienv
 string buscNom
@@ -126,6 +137,8 @@ string caja_contrasena
 string caja_correo
 string caja_usuario
 string caja_usuario2
+string cambiarC
+string cambiarN
 string cambio_contrasena
 string check
 string cod

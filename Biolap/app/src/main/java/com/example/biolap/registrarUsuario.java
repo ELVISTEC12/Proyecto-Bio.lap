@@ -14,12 +14,20 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.biolap.sqlCod.registarCod;
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.biolap.modelo.usuarioData;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -84,14 +92,50 @@ public class registrarUsuario extends AppCompatActivity {
             Toast.makeText(this, "Debe aceptar los términos", Toast.LENGTH_SHORT).show();
             verificaded = false;
         }
-        registarCod rd = new registarCod();
-        if (verificaded) {
-            boolean v = rd.registro(nombreUsuario, correoUsuario, contrasena);
-            if (v) {
-                Toast.makeText(this, "Registrado", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(this, "No", Toast.LENGTH_SHORT).show();
+        String URL = "http://192.168.1.5/bio.lap/insertar.php";
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonResponse = new JSONObject(response);
+                    boolean success = jsonResponse.getBoolean("success");
+                    if (success) {
+//                        int id = jsonResponse.getInt("id");
+//                        String nombre = jsonResponse.getString("nombre");
+//                        usuarioData ud = new usuarioData();
+//                        ud.setNombre(nombre);
+//                        ud.setUsuarioId(id);
+                        Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
+//                        mp.putExtra("nombre", ud.getNombre());
+                        startActivity(mp);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Error al registrarse", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
+                }
             }
-        }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(registrarUsuario.this, "error: "+error, Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> parametros = new HashMap<>();
+                parametros.put("usuarios", nombre.getText().toString());
+                parametros.put("correo", correo.getText().toString());
+                parametros.put("contra", contra.getText().toString());
+                return parametros;
+            }
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
+
+
+
 }

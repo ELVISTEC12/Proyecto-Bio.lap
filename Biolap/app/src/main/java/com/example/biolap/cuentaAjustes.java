@@ -17,10 +17,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
 
 public class cuentaAjustes extends AppCompatActivity {
 
@@ -34,6 +39,7 @@ public class cuentaAjustes extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_cuenta_ajustes);
 
+        // Inicializar los TextView y Button
         name_user = findViewById(R.id.name_user);
         correo = findViewById(R.id.correo_user);
         contra = findViewById(R.id.Contraseña_user);
@@ -45,27 +51,31 @@ public class cuentaAjustes extends AppCompatActivity {
 
         if (userId != -1) {
             // URL con el ID del usuario
-            String url = "http://192.168.1.3/bio.lap/selec_user.php?id=" + userId;
-            //fetchUserData(url);
+            String url = "http://192.168.1.5/bio.lap/selec_user.php?id=" + userId;
+            fetchUserData(url);  // Llamar a fetchUserData con la URL correcta
         } else {
             // Manejar el caso de ID no válido
             Toast.makeText(this, "Usuario no encontrado", Toast.LENGTH_SHORT).show();
         }
 
+
+        // Evento al hacer clic en el botón cerrar sesión
         cerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //cerrar(v);
+                cerrar(v); // Llama al método para cerrar sesión
             }
         });
 
+        // Ajustar los márgenes del sistema
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
     }
-/*
+
+    // Método para obtener los datos del usuario
     private void fetchUserData(String url) {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
@@ -104,6 +114,7 @@ public class cuentaAjustes extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
+    // Método para cerrar sesión
     private void cerrar(View v) {
         new AlertDialog.Builder(this)
                 .setTitle("Cerrar sesión")
@@ -126,5 +137,5 @@ public class cuentaAjustes extends AppCompatActivity {
                 })
                 .setNegativeButton("No", null)
                 .show();
-    }*/
+    }
 }

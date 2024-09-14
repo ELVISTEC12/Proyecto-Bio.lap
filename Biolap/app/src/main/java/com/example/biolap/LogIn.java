@@ -2,8 +2,8 @@ package com.example.biolap;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,8 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.biolap.conexion.Conexion;
-import com.example.biolap.sqlCod.usuarioCod;
+import com.example.biolap.modelo.usuarioData;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
@@ -27,6 +26,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,9 +36,8 @@ public class LogIn extends AppCompatActivity {
     EditText usuarioTXT;
     EditText contraTXT;
     Button ing;
-    String usuario,contrasena;
     TextView errorT;
-    boolean verificared=true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,8 +52,7 @@ public class LogIn extends AppCompatActivity {
         ing.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                //enviarDatos("http://bio-lab.byethost13.com/validar_usuario.php");
-                validar();
+                enviarDatos("http://192.168.1.5/bio.lap/validar_usuario.php");
             }
         });
 
@@ -63,68 +63,81 @@ public class LogIn extends AppCompatActivity {
         });
     }
 
-
-    public boolean validar(){
-        usuario = usuarioTXT.getText().toString().trim();
-        contrasena = contraTXT.getText().toString().trim();
-        if(TextUtils.isEmpty(usuario)){
-            usuarioTXT.setError("Campo obligatorio");
-            return false;
-        }
-        if(TextUtils.isEmpty(contrasena)){
-            contraTXT.setError("Campo obligatorio");
-            return false;
-        }
-        usuarioCod uc = new usuarioCod();
-        boolean v = uc.verificar(usuario,contrasena);
-        if(!v){
-            Intent mp = new Intent(this, menuPrincipal.class);
-            startActivity(mp);
-        }
-        else{
-            Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
-        }
-        return true;
-    }
     public void enviarDatos(String URL){
-        boolean verificacion = validar();
-        if (verificacion){
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    if(!response.isEmpty()){
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+
+                try {
+                    JSONObject jsonResponse = new JSONObject(response);
+                    boolean success = jsonResponse.getBoolean("success");
+
+                    if (success) {
+                        // Si el login es exitoso, obtener los datos
+                        int id = jsonResponse.getInt("id");
+                        String nombre = jsonResponse.getString("usuarios");
+
+                        // Guardar el ID del usuario en SharedPreferences
+                        SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putInt("USER_ID", id);  // Guardar ID
+                        editor.putBoolean("isUserLoggedIn", true);  // Marcar usuario como logueado
+                        editor.apply();
+
+                        // Crear un objeto de usuarioData para almacenar la información temporalmente
+                        usuarioData ud = new usuarioData();
+                        ud.setNombre(nombre);
+                        ud.setUsuarioId(id);
+
+                        // Iniciar una nueva actividad (menuPrincipal)
                         Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
+                        mp.putExtra("usuarios", ud.getNombre());
                         startActivity(mp);
                     }
-                    else{
-                        Toast.makeText(LogIn.this, "Datos erroneos", Toast.LENGTH_SHORT).show();
-                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(LogIn.this, "Error en el servidor", Toast.LENGTH_SHORT).show();
                 }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    errorT.setText(error.toString());
-                }
-            }){
-                @Nullable
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-                    Map<String,String>parametros= new HashMap<String,String>();
-                    parametros.put("nombre",usuarioTXT.getText().toString());
-                    parametros.put("contra",contraTXT.getText().toString());
-                    return parametros;
-                }
-            };
-            RequestQueue requestQueue = Volley.newRequestQueue(this);
-            requestQueue.add(stringRequest);
-        }
-        else{
-            Toast.makeText(this, "Error en validacion", Toast.LENGTH_SHORT).show();
-        }
+
+            }
+
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                errorT.setText(error.toString());
+            }
+        }) {
+
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> parametros = new HashMap<>();
+                parametros.put("usuarios", usuarioTXT.getText().toString());
+                parametros.put("contra", contraTXT.getText().toString());
+                return parametros;
+            }
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
     }
 
     public void registrar(View view) {
         Intent r = new Intent(this, registrarUsuario.class);
         startActivity(r);
     }
+
+    public void recu(){
+        Intent r = new Intent(this, perfilAjuste.class);
+        startActivity(r);
+    }
+
 }
+ /* int id = jsonResponse.getInt("id");
+                        String nombre = jsonResponse.getString("usuarios");
+                        usuarioData ud = new usuarioData();
+                        ud.setNombre(nombre);
+                        ud.setUsuarioId(id);
+                        Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
+                        mp.putExtra("usuarios", ud.getNombre());
+                        startActivity(mp);*/

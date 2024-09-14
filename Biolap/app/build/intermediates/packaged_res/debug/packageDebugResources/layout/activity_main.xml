@@ -30,6 +30,7 @@
         android:layout_height="wrap_content"
         android:text="@string/cambio_contrasena"
         android:textColor="#FFFFFF"
+        android:onClick="recu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.056"
