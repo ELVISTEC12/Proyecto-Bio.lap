@@ -94,6 +94,8 @@ public class LogIn extends AppCompatActivity {
                         Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
                         mp.putExtra("usuarios", ud.getNombre());
                         startActivity(mp);
+                    }else{
+                        Toast.makeText(LogIn.this, "No se encuentran coincidencias", Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (JSONException e) {
