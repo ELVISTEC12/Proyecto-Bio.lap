@@ -60,7 +60,7 @@ public class cuentaAjustes extends AppCompatActivity {
 
         if (userId != -1) {
             // URL con el ID del usuario
-            String url = "http://192.168.1.5/bio.lap/selec_user.php?id=" + userId;
+            String url = "http://192.168.125.224/bio.lap/selec_user.php?id=" + userId;
             fetchUserData(url);  // Llamar a fetchUserData con la URL correcta
         } else {
             // Manejar el caso de ID no válido
@@ -208,7 +208,7 @@ public class cuentaAjustes extends AppCompatActivity {
         }
 
         // URL del archivo PHP que se encargará de actualizar los datos
-        String url = "http://192.168.1.5/bio.lap/acc.php";
+        String url = "http://192.168.125.224/bio.lap/acc.php";
 
         // Obtener los datos que el usuario desea cambiar
         String user = name_user.getText().toString();

@@ -26,6 +26,7 @@
     <string name="ingreso_pacientes">Ingreso de pacientes</string>
     <string name="nombre_paciente">Ingrese el nombre completo del paciente</string>
     <string name="edad_paciente">Ingrese la edad del paciente</string>
+    <string name="obra_social">Ingrese la obra social del paciente</string>
     <string name="dni_paciente">Ingrese el DNI del paciente</string>
     <string name="telefono_paciente">Ingrese el N° telefonico del paciente</string>
     <string name="medico">Ingrese el nombre del medico</string>
