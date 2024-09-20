@@ -32,6 +32,7 @@
     <string name="nombre_usuario">Nombre de usuario</string>
     <string name="nomen">Nomenclaturas</string>
     <string name="nuevo_registro">Registrar usuario</string>
+    <string name="obra_social">Ingrese la obra social del paciente</string>
     <string name="politica">Políticas de seguridad</string>
     <string name="registrar">Registrar</string>
     <string name="repetir_contra">Repetir la contraseña</string>

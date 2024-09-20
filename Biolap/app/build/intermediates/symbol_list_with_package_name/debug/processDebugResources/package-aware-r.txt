@@ -3130,7 +3130,6 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
-id a
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3205,6 +3204,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id b_r
+id barradeprogreso
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3293,6 +3293,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id dnipa
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3306,15 +3307,10 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id edad
 id edge
-id editTextDate
-id editTextNumber
 id editTextText
 id editTextText12
-id editTextText3
-id editTextText5
-id editTextText6
-id editTextText7
 id editTextTextMultiLine
 id edit_query
 id edit_text_id
@@ -3329,6 +3325,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id fecha
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3382,8 +3379,6 @@ id imageView
 id imageView10
 id imageView5
 id imageView6
-id imageView7
-id imageView8
 id immediateStop
 id included
 id indeterminate
@@ -3437,6 +3432,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id med
 id message
 id middle
 id mini
@@ -3471,6 +3467,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id n_p
 id name_user
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
@@ -3493,7 +3490,9 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id nu_p
 id nuser_r
+id obra
 id obra_social
 id off
 id on
@@ -3822,7 +3821,6 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_ajustes
 layout activity_analisis_rutina
-layout activity_cambiar_datos
 layout activity_cuenta_ajustes
 layout activity_form_pacientes
 layout activity_gestionar_analisis
@@ -4132,6 +4130,7 @@ string nombre_paciente
 string nombre_usuario
 string nomen
 string nuevo_registro
+string obra_social
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

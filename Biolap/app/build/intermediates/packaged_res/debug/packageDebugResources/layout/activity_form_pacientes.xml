@@ -42,18 +42,18 @@
       app:layout_constraintVertical_bias="0.973" />
 
   <LinearLayout
-      android:layout_width="380dp"
-      android:layout_height="wrap_content"
+      android:layout_width="388dp"
+      android:layout_height="555dp"
       android:orientation="vertical"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.483"
+      app:layout_constraintHorizontal_bias="0.478"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.585">
+      app:layout_constraintVertical_bias="0.579">
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/n_p"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
@@ -65,7 +65,7 @@
         android:textColorHint="#80FFFFFF" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/edad"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
@@ -77,29 +77,29 @@
         android:textColorHint="#80FFFFFF" />
 
     <EditText
-        android:id="@+id/editTextText6"
+        android:id="@+id/obra"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
         android:background="@drawable/bordes"
         android:ems="10"
-        android:hint="@string/edad_paciente"
+        android:hint="@string/obra_social"
         android:inputType="text"
         android:textColorHint="#80FFFFFF" />
 
     <EditText
-        android:id="@+id/editTextText5"
+        android:id="@+id/nu_p"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
         android:background="@drawable/bordes"
         android:ems="10"
         android:hint="@string/telefono_paciente"
-        android:inputType="text"
+        android:inputType="number"
         android:textColorHint="#80FFFFFF" />
 
     <EditText
-        android:id="@+id/editTextText7"
+        android:id="@+id/med"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
@@ -110,7 +110,7 @@
         android:textColorHint="#80FFFFFF" />
 
     <EditText
-        android:id="@+id/editTextDate"
+        android:id="@+id/fecha"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
@@ -118,6 +118,17 @@
         android:ems="10"
         android:hint="@string/fecha"
         android:inputType="date"
+        android:textColorHint="#80FFFFFF" />
+
+    <EditText
+        android:id="@+id/dnipa"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bordes"
+        android:ems="10"
+        android:hint="@string/dni_paciente"
+        android:inputType="number"
         android:textColorHint="#80FFFFFF" />
 
     <Spinner

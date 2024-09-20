@@ -1,12 +1,14 @@
 package com.example.biolap;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,7 +39,9 @@ public class LogIn extends AppCompatActivity {
     EditText contraTXT;
     Button ing;
     TextView errorT;
+    ProgressBar n;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,10 +52,12 @@ public class LogIn extends AppCompatActivity {
         contraTXT = findViewById(R.id.contrasenaTXT);
         ing = findViewById(R.id.boton_ingresar);
         errorT = findViewById(R.id.textView23);
+        n=findViewById(R.id.barradeprogreso);
 
         ing.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+                n.setVisibility(View.VISIBLE);//mostrar barra de progreso
                 enviarDatos("http://192.168.1.5/bio.lap/validar_usuario.php");
             }
         });
@@ -64,6 +70,7 @@ public class LogIn extends AppCompatActivity {
     }
 
     public void enviarDatos(String URL){
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -84,7 +91,7 @@ public class LogIn extends AppCompatActivity {
                         editor.putInt("USER_ID", id);  // Guardar ID
                         editor.putBoolean("isUserLoggedIn", true);  // Marcar usuario como logueado
                         editor.apply();
-
+                        n.setVisibility(View.GONE);//ocultar barra de progreso
                         // Crear un objeto de usuarioData para almacenar la información temporalmente
                         usuarioData ud = new usuarioData();
                         ud.setNombre(nombre);
@@ -95,10 +102,12 @@ public class LogIn extends AppCompatActivity {
                         mp.putExtra("usuarios", ud.getNombre());
                         startActivity(mp);
                     }else{
+                        n.setVisibility(View.GONE);
                         Toast.makeText(LogIn.this, "No se encuentran coincidencias", Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (JSONException e) {
+                    n.setVisibility(View.GONE);
                     e.printStackTrace();
                     Toast.makeText(LogIn.this, "Error en el servidor", Toast.LENGTH_SHORT).show();
                 }
