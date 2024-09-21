@@ -3319,6 +3319,7 @@ int id end 0x7f0900cd
 int id endToStart 0x7f0900ce
 int id enterAlways 0x7f0900cf
 int id enterAlwaysCollapsed 0x7f0900d0
+int id error 0x7f09025a
 int id escape 0x7f0900d1
 int id exitUntilCollapsed 0x7f0900d2
 int id expand_activities_button 0x7f0900d3
@@ -3921,6 +3922,7 @@ int mipmap foto_perfil 0x7f0e0007
 int mipmap ic_launcher 0x7f0e0008
 int mipmap ic_launcher_foreground 0x7f0e0009
 int mipmap ic_launcher_round 0x7f0e000a
+int mipmap no_encontrado 0x7f0e0010
 int mipmap nombre 0x7f0e000b
 int mipmap nombre_perfil 0x7f0e000c
 int mipmap nomenclaturas 0x7f0e000d

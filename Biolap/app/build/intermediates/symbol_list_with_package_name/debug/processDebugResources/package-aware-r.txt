@@ -3320,6 +3320,7 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id error
 id escape
 id exitUntilCollapsed
 id expand_activities_button
@@ -3922,6 +3923,7 @@ mipmap foto_perfil
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap no_encontrado
 mipmap nombre
 mipmap nombre_perfil
 mipmap nomenclaturas

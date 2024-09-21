@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,6 +41,7 @@ public class LogIn extends AppCompatActivity {
     Button ing;
     TextView errorT;
     ProgressBar n;
+    ImageView no;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -53,6 +55,7 @@ public class LogIn extends AppCompatActivity {
         ing = findViewById(R.id.boton_ingresar);
         errorT = findViewById(R.id.textView23);
         n=findViewById(R.id.barradeprogreso);
+        no=findViewById(R.id.error);
 
         ing.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -103,6 +106,7 @@ public class LogIn extends AppCompatActivity {
                         startActivity(mp);
                     }else{
                         n.setVisibility(View.GONE);
+                        no.setVisibility(View.VISIBLE);
                         Toast.makeText(LogIn.this, "No se encuentran coincidencias", Toast.LENGTH_SHORT).show();
                     }
 

@@ -39,6 +39,7 @@ id edad
 id editTextText
 id editTextText12
 id editTextTextMultiLine
+id error
 id fecha
 id floatingActionButton
 id floatingActionButton3
@@ -122,6 +123,7 @@ mipmap foto_perfil
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap no_encontrado
 mipmap nombre
 mipmap nombre_perfil
 mipmap nomenclaturas

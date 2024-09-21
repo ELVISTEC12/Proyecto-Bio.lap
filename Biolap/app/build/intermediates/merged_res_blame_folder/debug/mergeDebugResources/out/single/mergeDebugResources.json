@@ -192,6 +192,10 @@
         "source": "C:\\Users\\coron\\.gradle\\daemon\\8.6\\com.example.biolap.app-main-34:\\mipmap-hdpi\\foto.png"
     },
     {
+        "merged": "com.example.biolap.app-debug-32:/mipmap-hdpi_no_encontrado.jpg.flat",
+        "source": "com.example.biolap.app-main-34:/mipmap-hdpi/no_encontrado.jpg"
+    },
+    {
         "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.6\\com.example.biolap.app-debug-32:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\coron\\.gradle\\daemon\\8.6\\com.example.biolap.app-main-34:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
