@@ -52,6 +52,7 @@ public class LogIn extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 enviarDatos("http://192.168.0.108/bio.lap/validar_usuario.php");
+
             }
         });
 
@@ -60,6 +61,11 @@ public class LogIn extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void ini (View view){
+        Intent mp = new Intent(this, menuPrincipal.class);
+        startActivity(mp);
     }
 
     public void enviarDatos(String URL){

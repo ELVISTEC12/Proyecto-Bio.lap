@@ -40,7 +40,7 @@ public class menuPrincipal extends AppCompatActivity {
         startActivity(nr);
     }
     public void nomenclatura(View view){
-        Intent nu = new Intent(this, nomenclaturaMenu.class);
+        Intent nu = new Intent(this, gestionNom.class);
         startActivity(nu);
     }
     public void buscar(View view){
