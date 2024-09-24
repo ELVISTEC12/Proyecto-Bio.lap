@@ -52,30 +52,33 @@ public class nuevaNomenclatura extends AppCompatActivity {
         Intent m = new Intent(this, menuPrincipal.class);
         startActivity(m);
     }
-    public void enviarDatos(View view){
-        if(validar()){
-            //cinematica con scratch, observador, sistema de referencia, estatico o dinamico, y explicar lo que pidio
-            datos("http://192.168.0.108/bio.lap/insertar_nomenclatura.php");
-        }
-    }
+//    public void enviarDatos(View view){
+//        if(validar()){
+//            //cinematica con scratch, observador, sistema de referencia, estatico o dinamico, y explicar lo que pidio
+//
+//        }
+//    }
 
-    private boolean validar(){
+    public void validar(View view){
+        boolean val = true;
         String codigo = codNom.getText().toString();
         String nombre = nomNom.getText().toString();
         String form = formNom.getText().toString();
         if(TextUtils.isEmpty(codigo)){
             codNom.setError("Campo obligatorio");
-            return false;
+            val = false;
         }
         if(TextUtils.isEmpty(nombre)){
             nomNom.setError("Campo obligatorio");
-            return false;
+            val = false;
         }
         if(TextUtils.isEmpty(form)){
             formNom.setError("Campo obligatorio");
-            return false;
+            val = false;
         }
-        return true;
+        if(val){
+            datos("http://192.168.0.108/bio.lap/insertar_nomenclatura.php");
+        }
     }
 
     private void datos(String url){
@@ -112,11 +115,8 @@ public class nuevaNomenclatura extends AppCompatActivity {
 
                 return datos;
             }
-
         };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(sr);
     }
-
-
 }

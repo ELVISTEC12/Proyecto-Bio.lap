@@ -72,6 +72,11 @@ public class LogIn extends AppCompatActivity {
         });
     }
 
+    public void ini (View view){
+        Intent mp = new Intent(this, menuPrincipal.class);
+        startActivity(mp);
+    }
+
     public void enviarDatos(String URL){
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {

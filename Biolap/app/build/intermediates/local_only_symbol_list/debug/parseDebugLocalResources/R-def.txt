@@ -18,7 +18,6 @@ id b_r
 id barradeprogreso
 id boton_ingresar
 id boton_registrar
-id buscador
 id button
 id button2
 id button3
@@ -27,7 +26,7 @@ id button7
 id cambiar_datos
 id cerrar
 id checkBox
-id codBuscador
+id codNomBus
 id codNomTXT
 id contra1_r
 id contra2_r
@@ -42,9 +41,10 @@ id editTextTextMultiLine
 id error
 id fecha
 id floatingActionButton
-id floatingActionButton3
-id formBusc
+id floatingActionButton2
 id formNomTXT
+id formResult
+id imageButton
 id imageButton2
 id imageButton3
 id imageButton4
@@ -64,7 +64,7 @@ id med
 id n_p
 id name_user
 id nomNomTXT
-id nombreBusc
+id nombreResult
 id nombreTXT
 id nu_p
 id nuser_r
@@ -104,10 +104,10 @@ layout activity_ajustes
 layout activity_analisis_rutina
 layout activity_cuenta_ajustes
 layout activity_form_pacientes
+layout activity_gestion_nom
 layout activity_gestionar_analisis
 layout activity_main
 layout activity_menuprincipal
-layout activity_nomenclaturamenu
 layout activity_nomenclaturas
 layout activity_nueva_nomenclatura
 layout activity_perfil_ajuste
