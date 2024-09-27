@@ -61,7 +61,7 @@ public class LogIn extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 n.setVisibility(View.VISIBLE);//mostrar barra de progreso
-                enviarDatos("http://192.168.1.5/bio.lap/validar_usuario.php");
+                enviarDatos("http://192.168.1.2/bio.lap/validar_usuario.php");
             }
         });
 

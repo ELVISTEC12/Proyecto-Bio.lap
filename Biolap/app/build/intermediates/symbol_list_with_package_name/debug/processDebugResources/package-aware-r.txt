@@ -3229,6 +3229,7 @@ id cache_measures
 id callMeasure
 id cambiar_datos
 id cancel_button
+id carga_registro
 id carryVelocity
 id center
 id centerCrop
@@ -3326,7 +3327,6 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
-id fecha
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3345,6 +3345,7 @@ id flip
 id floating
 id floatingActionButton
 id floatingActionButton3
+id flow
 id forever
 id formBusc
 id formNomTXT
@@ -3482,6 +3483,7 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id noScroll
 id noState
+id no_carga
 id nomNomTXT
 id nombreBusc
 id nombreTXT
@@ -3923,6 +3925,7 @@ mipmap foto_perfil
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap no_carga
 mipmap no_encontrado
 mipmap nombre
 mipmap nombre_perfil

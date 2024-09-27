@@ -25,6 +25,7 @@ id button3
 id button6
 id button7
 id cambiar_datos
+id carga_registro
 id cerrar
 id checkBox
 id codBuscador
@@ -40,9 +41,9 @@ id editTextText
 id editTextText12
 id editTextTextMultiLine
 id error
-id fecha
 id floatingActionButton
 id floatingActionButton3
+id flow
 id formBusc
 id formNomTXT
 id imageButton2
@@ -63,6 +64,7 @@ id main
 id med
 id n_p
 id name_user
+id no_carga
 id nomNomTXT
 id nombreBusc
 id nombreTXT
@@ -123,6 +125,7 @@ mipmap foto_perfil
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap no_carga
 mipmap no_encontrado
 mipmap nombre
 mipmap nombre_perfil

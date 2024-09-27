@@ -179,7 +179,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/no_encontrado" />/>
+        app:srcCompat="@mipmap/no_encontrado" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

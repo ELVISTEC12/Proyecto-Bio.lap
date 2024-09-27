@@ -65,6 +65,17 @@
         android:textColorHint="#80FFFFFF" />
 
     <EditText
+        android:id="@+id/obra"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bordes"
+        android:ems="10"
+        android:hint="@string/obra_social"
+        android:inputType="text"
+        android:textColorHint="#80FFFFFF" />
+
+    <EditText
         android:id="@+id/edad"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -77,14 +88,14 @@
         android:textColorHint="#80FFFFFF" />
 
     <EditText
-        android:id="@+id/obra"
+        android:id="@+id/dnipa"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
         android:background="@drawable/bordes"
         android:ems="10"
-        android:hint="@string/obra_social"
-        android:inputType="text"
+        android:hint="@string/dni_paciente"
+        android:inputType="number"
         android:textColorHint="#80FFFFFF" />
 
     <EditText
@@ -109,28 +120,6 @@
         android:inputType="text"
         android:textColorHint="#80FFFFFF" />
 
-    <EditText
-        android:id="@+id/fecha"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/bordes"
-        android:ems="10"
-        android:hint="@string/fecha"
-        android:inputType="date"
-        android:textColorHint="#80FFFFFF" />
-
-    <EditText
-        android:id="@+id/dnipa"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/bordes"
-        android:ems="10"
-        android:hint="@string/dni_paciente"
-        android:inputType="number"
-        android:textColorHint="#80FFFFFF" />
-
     <Spinner
         android:id="@+id/obra_social"
         android:layout_width="196dp"
@@ -138,5 +127,10 @@
         android:layout_margin="10dp"
         android:background="@drawable/spinner_arrow" />
   </LinearLayout>
+
+  <androidx.constraintlayout.helper.widget.Flow
+      android:id="@+id/flow"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,13 +4,17 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -40,6 +44,8 @@ public class registrarUsuario extends AppCompatActivity {
     Button b1;
     CheckBox check;
     boolean verificaded = true;
+    ProgressBar cr;
+    ImageView no;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -53,6 +59,8 @@ public class registrarUsuario extends AppCompatActivity {
         conta1 = findViewById(R.id.contra2_r);
         b1 = findViewById(R.id.b_r);
         check = findViewById(R.id.checkBox);
+        no=findViewById(R.id.no_carga);
+        cr=findViewById(R.id.carga_registro);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -62,11 +70,16 @@ public class registrarUsuario extends AppCompatActivity {
     }
 
     public void registrar(View view) {
+        // Inicializamos verificaded como verdadero
+        boolean verificaded = true;
+
+        // Obtén los valores de los campos
         String nombreUsuario = nombre.getText().toString().trim();
         String correoUsuario = correo.getText().toString().trim();
         String contrasena = contra.getText().toString().trim();
         String confirmacionContrasena = conta1.getText().toString().trim();
 
+        // Validaciones de los campos
         if (TextUtils.isEmpty(nombreUsuario)) {
             nombre.setError("Campo obligatorio");
             verificaded = false;
@@ -74,7 +87,6 @@ public class registrarUsuario extends AppCompatActivity {
         if (TextUtils.isEmpty(correoUsuario) || !Patterns.EMAIL_ADDRESS.matcher(correoUsuario).matches()) {
             correo.setError("Correo electrónico inválido");
             verificaded = false;
-
         }
         if (TextUtils.isEmpty(contrasena)) {
             contra.setError("Campo obligatorio");
@@ -92,49 +104,75 @@ public class registrarUsuario extends AppCompatActivity {
             Toast.makeText(this, "Debe aceptar los términos", Toast.LENGTH_SHORT).show();
             verificaded = false;
         }
-        String URL = "http://192.168.1.5/bio.lap/insertar.php";
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    JSONObject jsonResponse = new JSONObject(response);
-                    boolean success = jsonResponse.getBoolean("success");
-                    if (success) {
-//                        int id = jsonResponse.getInt("id");
-//                        String nombre = jsonResponse.getString("nombre");
-//                        usuarioData ud = new usuarioData();
-//                        ud.setNombre(nombre);
-//                        ud.setUsuarioId(id);
-                        Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
-//                        mp.putExtra("nombre", ud.getNombre());
-                        startActivity(mp);
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Error al registrarse", Toast.LENGTH_SHORT).show();
+
+        // Solo procedemos si verificaded es verdadero
+        if (verificaded) {
+            cr.setVisibility(View.VISIBLE);
+            String URL = "http://192.168.1.5/bio.lap/insertar.php";
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        JSONObject jsonResponse = new JSONObject(response);
+                        boolean success = jsonResponse.getBoolean("success");
+                        if (success) {
+                            // Registro exitoso, navegar a la siguiente pantalla
+                            cr.setVisibility(View.GONE);
+                            Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
+                            startActivity(mp);
+                        } else {
+                            cr.setVisibility(View.GONE);
+                             nombre.setText("");
+                             correo.setText("");
+                             contra.setText("");
+                             conta1.setText("");
+                            // Error al registrarse, mostrar mensaje y bloquear la pantalla
+                            Toast.makeText(getApplicationContext(), "Error al registrarse", Toast.LENGTH_SHORT).show();
+                            no.setVisibility(View.VISIBLE);
+
+                            // Bloquea la pantalla por 3 segundos
+                            getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
+                                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    // Desbloquear la pantalla y recargar actividad
+                                    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+                                    recreate();
+                                }
+                            }, 3000);
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                        Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
                 }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(registrarUsuario.this, "error: "+error, Toast.LENGTH_SHORT).show();
-            }
-        }) {
-            @Nullable
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> parametros = new HashMap<>();
-                parametros.put("usuarios", nombre.getText().toString());
-                parametros.put("correo", correo.getText().toString());
-                parametros.put("contra", contra.getText().toString());
-                return parametros;
-            }
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(registrarUsuario.this, "Error: "+error, Toast.LENGTH_SHORT).show();
+                }
+            }) {
+                @Nullable
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String, String> parametros = new HashMap<>();
+                    parametros.put("usuarios", nombreUsuario);
+                    parametros.put("correo", correoUsuario);
+                    parametros.put("contra", contrasena);
+                    return parametros;
+                }
+            };
+
+            RequestQueue requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
+        } else {
+            // Si verificaded es falso, no se procede con la solicitud
+            Toast.makeText(this, "Debe completar todos los campos correctamente", Toast.LENGTH_SHORT).show();
+        }
     }
+
 
 
 
