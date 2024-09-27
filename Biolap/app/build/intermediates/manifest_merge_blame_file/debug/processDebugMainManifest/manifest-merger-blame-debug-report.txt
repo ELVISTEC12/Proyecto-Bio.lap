@@ -22,22 +22,22 @@
 14-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:22-64
 15
 16    <permission
-16-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\7cde9b2fad8251f47ef560a4d3144059\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+16-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\278a9b808b4179588646977873ecae28\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
 17        android:name="com.example.biolap.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-17-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\7cde9b2fad8251f47ef560a4d3144059\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+17-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\278a9b808b4179588646977873ecae28\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
 18        android:protectionLevel="signature" />
-18-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\7cde9b2fad8251f47ef560a4d3144059\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+18-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\278a9b808b4179588646977873ecae28\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
 19
 20    <uses-permission android:name="com.example.biolap.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-20-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\7cde9b2fad8251f47ef560a4d3144059\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
-20-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\7cde9b2fad8251f47ef560a4d3144059\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+20-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\278a9b808b4179588646977873ecae28\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\278a9b808b4179588646977873ecae28\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
 21
 22    <application
 22-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:13:5-96:19
 23        android:allowBackup="true"
 23-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:14:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\7cde9b2fad8251f47ef560a4d3144059\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+24-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\278a9b808b4179588646977873ecae28\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
 25        android:dataExtractionRules="@xml/data_extraction_rules"
 25-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:15:9-65
 26        android:debuggable="true"
@@ -178,68 +178,68 @@
 98        </activity>
 99
 100        <provider
-100-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+100-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\cc2e8825541d2f049875470b16a9c3ac\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 101            android:name="androidx.startup.InitializationProvider"
-101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\cc2e8825541d2f049875470b16a9c3ac\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
 102            android:authorities="com.example.biolap.androidx-startup"
-102-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+102-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\cc2e8825541d2f049875470b16a9c3ac\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
 103            android:exported="false" >
-103-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+103-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\cc2e8825541d2f049875470b16a9c3ac\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 104            <meta-data
-104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\cc2e8825541d2f049875470b16a9c3ac\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 105                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\cc2e8825541d2f049875470b16a9c3ac\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 106                android:value="androidx.startup" />
-106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\coron\.gradle\caches\transforms-4\cc2e8825541d2f049875470b16a9c3ac\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
 107            <meta-data
-107-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\coron\.gradle\caches\transforms-4\0b007138df18b49eb95baaf5cb9e222c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+107-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\coron\.gradle\caches\transforms-4\7205d6621e920d716cad5cc16545168f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
 108                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-108-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\coron\.gradle\caches\transforms-4\0b007138df18b49eb95baaf5cb9e222c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+108-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\coron\.gradle\caches\transforms-4\7205d6621e920d716cad5cc16545168f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
 109                android:value="androidx.startup" />
-109-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\coron\.gradle\caches\transforms-4\0b007138df18b49eb95baaf5cb9e222c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+109-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\coron\.gradle\caches\transforms-4\7205d6621e920d716cad5cc16545168f\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
 110            <meta-data
-110-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+110-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
 111                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-111-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+111-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
 112                android:value="androidx.startup" />
-112-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
 113        </provider>
 114
 115        <receiver
-115-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+115-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
 116            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-116-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+116-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
 117            android:directBootAware="false"
-117-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+117-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
 118            android:enabled="true"
-118-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+118-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
 119            android:exported="true"
-119-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+119-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
 120            android:permission="android.permission.DUMP" >
-120-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+120-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
 121            <intent-filter>
-121-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+121-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
 122                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-122-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-122-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
 123            </intent-filter>
 124            <intent-filter>
-124-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+124-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
 125                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
 126            </intent-filter>
 127            <intent-filter>
-127-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+127-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
 128                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-128-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-128-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
 129            </intent-filter>
 130            <intent-filter>
-130-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+130-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
 131                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-131-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-131-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\coron\.gradle\caches\transforms-4\f3a968569c4cf0cc8a6c4325c0d95466\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
 132            </intent-filter>
 133        </receiver>
 134    </application>

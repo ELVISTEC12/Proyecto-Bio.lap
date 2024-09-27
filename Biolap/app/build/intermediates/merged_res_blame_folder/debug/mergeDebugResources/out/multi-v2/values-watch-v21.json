@@ -4,7 +4,7 @@
             "outputFile": "com.example.biolap.app-mergeDebugResources-30:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\d590f66e3d1b4d795735dd4ce6db4afb\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\27eae03ad5f0ce559b975cb126674c84\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",
