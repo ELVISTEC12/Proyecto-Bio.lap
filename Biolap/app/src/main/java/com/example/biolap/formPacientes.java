@@ -32,7 +32,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class formPacientes extends AppCompatActivity {
-    EditText n, ob, ed, dni, fe, num, medi;
+    EditText n, ob, ed, dni, num, medi;
      boolean verificaded = true;
 
     @SuppressLint("MissingInflatedId")
