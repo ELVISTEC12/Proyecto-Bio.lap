@@ -40,6 +40,12 @@
             android:exported="false" />
         -->
         <activity
+            android:name="com.example.biolap.gestionNom"
+            android:exported="false" />
+        <activity
+            android:name="com.example.biolap.modelo.gestionarNom"
+            android:exported="false" />
+        <activity
             android:name="com.example.biolap.nomenclaturaMenu"
             android:exported="false" />
         <activity
