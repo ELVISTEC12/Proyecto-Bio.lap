@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.biolap.app-mergeDebugResources-30:/values-v26/values-v26.xml",
+            "outputFile": "com.example.biolap.app-mergeDebugResources-31:/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\d590f66e3d1b4d795735dd4ce6db4afb\\transformed\\appcompat-1.6.1\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\a1f16d5c77c1abe08cf8d957eb963441\\transformed\\appcompat-1.6.1\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

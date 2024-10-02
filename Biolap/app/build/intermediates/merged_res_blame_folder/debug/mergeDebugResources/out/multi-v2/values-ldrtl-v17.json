@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.biolap.app-mergeDebugResources-30:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "outputFile": "com.example.biolap.app-mergeDebugResources-31:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\75fa905ae4c1810e680a5616507a0811\\transformed\\material-1.12.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\d6cc62455fe6ca766f811522bf44ab24\\transformed\\material-1.12.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

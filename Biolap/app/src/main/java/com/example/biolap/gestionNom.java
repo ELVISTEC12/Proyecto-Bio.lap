@@ -5,7 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -21,11 +24,20 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.biolap.modelo.Nomenclaturas;
 
+import org.chromium.base.task.AsyncTask;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import android.content.DialogInterface;
@@ -39,6 +51,8 @@ public class gestionNom extends AppCompatActivity {
     private EditText nombre;
     private EditText formulario;
     private String id;
+    private Spinner codigos;
+    private List<Nomenclaturas> listaNom;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -49,25 +63,27 @@ public class gestionNom extends AppCompatActivity {
         codigo = findViewById(R.id.codNomBus);
         nombre = findViewById(R.id.nombreResult);
         formulario = findViewById(R.id.formResult);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
     }
-    public void busqueda(View view){
+
+    public void busqueda(View view) {
         boolean verificar = true;
         String cod = codigo.getText().toString();
-        if(cod.equals("")){
+        if (cod.equals("")) {
             codigo.setError("Campo obligatorio para la búsqueda");
-            verificar=false;
+            verificar = false;
         }
-        if(verificar){
+        if (verificar) {
             resultados("http://192.168.0.108/bio.lap/mostrar_nom.php");
         }
     }
 
-    private void resultados(String url){
+    private void resultados(String url) {
         StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -91,13 +107,13 @@ public class gestionNom extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), error.toString(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
             }
-        }){
+        }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> datos = new HashMap<String,String>();
-                datos.put("codigo",codigo.getText().toString());
+                Map<String, String> datos = new HashMap<String, String>();
+                datos.put("codigo", codigo.getText().toString());
                 return datos;
             }
         };
@@ -105,24 +121,24 @@ public class gestionNom extends AppCompatActivity {
         requestQueue.add(sr);
     }
 
-    public void modificar(View view){
+    public void modificar(View view) {
         boolean verificar = true;
         String nom = nombre.getText().toString();
         String form = formulario.getText().toString();
-        if(nom.equals("")){
+        if (nom.equals("")) {
             nombre.setError("Campo obligatorio");
-            verificar=false;
+            verificar = false;
         }
-        if(form.equals("")){
+        if (form.equals("")) {
             formulario.setError("Campo obligatorio");
-            verificar=false;
+            verificar = false;
         }
-        if(verificar){
+        if (verificar) {
             modDatos("http://192.168.0.108/bio.lap/modificar_nom.php");
         }
     }
 
-    private void modDatos(String url){
+    private void modDatos(String url) {
         StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -145,16 +161,16 @@ public class gestionNom extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), error.toString(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
             }
-        }){
+        }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> datos = new HashMap<String,String>();
-                datos.put("id",id);
-                datos.put("codigo",codigo.getText().toString());
-                datos.put("nombre",nombre.getText().toString());
-                datos.put("formulario",formulario.getText().toString());
+                Map<String, String> datos = new HashMap<String, String>();
+                datos.put("id", id);
+                datos.put("codigo", codigo.getText().toString());
+                datos.put("nombre", nombre.getText().toString());
+                datos.put("formulario", formulario.getText().toString());
                 return datos;
             }
         };
@@ -162,10 +178,10 @@ public class gestionNom extends AppCompatActivity {
         requestQueue.add(sr);
     }
 
-    public void eliminarNom(View view){
+    public void eliminarNom(View view) {
         String n = nombre.getText().toString();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("¿Estás seguro que deseas eliminar '"+n+"' ?")
+        builder.setMessage("¿Estás seguro que deseas eliminar '" + n + "' ?")
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         eliDatos("http://192.168.0.108/bio.lap/eliminar_nom.php");
@@ -180,7 +196,7 @@ public class gestionNom extends AppCompatActivity {
         alert.show();
     }
 
-    private void eliDatos(String url){
+    private void eliDatos(String url) {
         StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -203,13 +219,13 @@ public class gestionNom extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), error.toString(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
             }
-        }){
+        }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String,String> datos = new HashMap<String,String>();
-                datos.put("id",id);
+                Map<String, String> datos = new HashMap<String, String>();
+                datos.put("id", id);
                 return datos;
             }
         };

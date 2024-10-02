@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.biolap.app-mergeDebugResources-30:/values-mr/values-mr.xml",
+            "outputFile": "com.example.biolap.app-mergeDebugResources-31:/values-mr/values-mr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\7cde9b2fad8251f47ef560a4d3144059\\transformed\\core-1.13.0\\res\\values-mr\\values-mr.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,155,259,360,463,565,670,787",
-                        "endColumns": "99,103,100,102,101,104,116,100",
-                        "endOffsets": "150,254,355,458,560,665,782,883"
-                    },
-                    "to": {
-                        "startLines": "40,41,42,43,44,45,46,136",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3722,3822,3926,4027,4130,4232,4337,12379",
-                        "endColumns": "99,103,100,102,101,104,116,100",
-                        "endOffsets": "3817,3921,4022,4125,4227,4332,4449,12475"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\75fa905ae4c1810e680a5616507a0811\\transformed\\material-1.12.0\\res\\values-mr\\values-mr.xml",
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\d6cc62455fe6ca766f811522bf44ab24\\transformed\\material-1.12.0\\res\\values-mr\\values-mr.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\d590f66e3d1b4d795735dd4ce6db4afb\\transformed\\appcompat-1.6.1\\res\\values-mr\\values-mr.xml",
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\a1f16d5c77c1abe08cf8d957eb963441\\transformed\\appcompat-1.6.1\\res\\values-mr\\values-mr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\34fc42405a40b86d14b5e48a9a6fbc2e\\transformed\\biometric-1.2.0-alpha04\\res\\values-mr\\values-mr.xml",
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\7a7e6e14f9c0a68aa4d134b4febf605a\\transformed\\biometric-1.2.0-alpha04\\res\\values-mr\\values-mr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -71,6 +54,23 @@
                         "startOffsets": "2999,3161,4752,4859,5157,5308,5426,5539,5661,5790,5919,6053,6185,6319,6415,6579,6711,6855,7000,11930,12480,12576,12705,12790,12908,13006,13137",
                         "endColumns": "161,128,106,86,150,117,112,121,128,128,133,131,133,95,163,131,143,144,125,133,95,128,84,117,97,130,97",
                         "endOffsets": "3156,3285,4854,4941,5303,5421,5534,5656,5785,5914,6048,6180,6314,6410,6574,6706,6850,6995,7121,12059,12571,12700,12785,12903,13001,13132,13230"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\d8c70c551895ec558e7ba8556ee3d2f9\\transformed\\core-1.13.0\\res\\values-mr\\values-mr.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,155,259,360,463,565,670,787",
+                        "endColumns": "99,103,100,102,101,104,116,100",
+                        "endOffsets": "150,254,355,458,560,665,782,883"
+                    },
+                    "to": {
+                        "startLines": "40,41,42,43,44,45,46,136",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3722,3822,3926,4027,4130,4232,4337,12379",
+                        "endColumns": "99,103,100,102,101,104,116,100",
+                        "endOffsets": "3817,3921,4022,4125,4227,4332,4449,12475"
                     }
                 }
             ]

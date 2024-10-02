@@ -37,11 +37,12 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.cronet.embedded)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation ("com.android.volley:volley:1.2.1")
-    implementation ("mysql:mysql-connector-java:8.0.33")
     implementation ("androidx.biometric:biometric:1.2.0-alpha04")
+
 
 }

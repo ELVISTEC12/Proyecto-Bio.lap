@@ -32,9 +32,10 @@
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.548">
+        app:layout_constraintVertical_bias="0.498">
 
         <ImageView
             android:id="@+id/imageView5"
@@ -44,11 +45,12 @@
             app:srcCompat="@mipmap/cuenta_ajuste" />
 
         <TextView
-            android:id="@+id/textView28"
+            android:id="@+id/cambio_correo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/borde_boton"
+            android:onClick="camCorreo"
             android:paddingLeft="10dp"
             android:text="@string/cambiarC"
             android:textColor="#000000"
