@@ -17,6 +17,7 @@ import com.example.biolap.modelo.usuarioData;
 
 public class menuPrincipal extends AppCompatActivity {
     private TextView usuario;
+    usuarioData ud = new usuarioData();
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class menuPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_menuprincipal);
         usuario = findViewById(R.id.nombreTXT);
         Intent intent = getIntent();
-        String nombreUsuario = intent.getStringExtra("usuarios");
+        String nombreUsuario = ud.getUsuario_nombre();
         usuario.setText(nombreUsuario);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {

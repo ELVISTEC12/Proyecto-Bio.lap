@@ -1,8 +1,12 @@
 package com.example.biolap;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,12 +14,42 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class analisisRutina extends AppCompatActivity {
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.biolap.modelo.registros;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class analisisRutina extends AppCompatActivity {
+    private EditText rutina;
+    private EditText form;
+    String pasiente;
+    String obra;
+    String edad;
+    String dni;
+    String telefono;
+    String medico;
+    String rutinas;
+
+    registros rg = new registros();
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+
+        rutina = findViewById(R.id.rutinaTXT);
+        form = findViewById(R.id.rutinaFormTXT);
+
         setContentView(R.layout.activity_analisis_rutina);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -23,8 +57,111 @@ public class analisisRutina extends AppCompatActivity {
             return insets;
         });
     }
-    public void menu(View view){
-        Intent m = new Intent(this, menuPrincipal.class);
-        startActivity(m);
+    public void buscar(View view){
+        boolean verificar = true;
+        String cod = rutina.getText().toString();
+        if (cod.equals("")) {
+            rutina.setError("Campo obligatorio para la búsqueda");
+            verificar = false;
+        }
+        if (verificar) {
+            resultados("http://192.168.0.108/bio.lap/mostrar_nom.php");
+        }
+    }
+
+    private void resultados(String url) {
+        StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonResponse = new JSONObject(response);
+                    boolean success = jsonResponse.getBoolean("success");
+                    if (success) {
+                        String formN = jsonResponse.getString("formulario");
+                        form.setText(formN);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Error en la búsqueda", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> datos = new HashMap<String, String>();
+                datos.put("codigo", rutina.getText().toString());
+                return datos;
+            }
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(sr);
+    }
+
+    public void finalizar(View view){
+        String re = form.getText().toString();
+        boolean val = true;
+        if(TextUtils.isEmpty(re)){
+            form.setError("No se escribió nada");
+            val = false;
+        }
+        if(val) {
+            pasiente = rg.getNombreC();
+            obra = rg.getObra_social();
+            edad = rg.getEdad();
+            dni = rg.getDni();
+            telefono = rg.getTelefono();
+            medico = rg.getMedico();
+            rutinas = form.getText().toString();
+            guardar("http://192.168.0.108/bio.lap/insertar_paciente.php");
+        }
+    }
+
+    private void guardar(String url) {
+        StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonResponse = new JSONObject(response);
+                    boolean success = jsonResponse.getBoolean("success");
+                    if (success) {
+                        Toast.makeText(analisisRutina.this, "Se guardó con exito", Toast.LENGTH_SHORT).show();
+                        Intent m = new Intent(getApplicationContext(), menuPrincipal.class);
+                        startActivity(m);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Error en la búsqueda", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> datos = new HashMap<String, String>();
+                datos.put("nombre",pasiente);
+                datos.put("obra_social",obra);
+                datos.put("edad",edad);
+                datos.put("dni",dni);
+                datos.put("telefono",telefono);
+                datos.put("medico",medico);
+                datos.put("rutina",rutinas);
+                return datos;
+            }
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(sr);
     }
 }

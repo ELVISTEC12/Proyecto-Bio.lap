@@ -3211,6 +3211,8 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id blocking
+id boton_aceptar
+id boton_cancelar
 id boton_ingresar
 id boton_registrar
 id bottom
@@ -3227,7 +3229,9 @@ id button7
 id buttonPanel
 id cache_measures
 id callMeasure
+id cambiar_correo
 id cambiar_datos
+id cambio_correo
 id cancel_button
 id carga_registro
 id carryVelocity
@@ -3647,7 +3651,6 @@ id textView23
 id textView24
 id textView25
 id textView26
-id textView28
 id textView29
 id textView3
 id textView4
@@ -3834,6 +3837,7 @@ layout activity_nomenclaturas
 layout activity_nueva_nomenclatura
 layout activity_perfil_ajuste
 layout activity_registrar_usuario
+layout cambiar_correo
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3933,6 +3937,7 @@ mipmap nomenclaturas
 mipmap nuevo_re
 mipmap perfil_ajuste
 plurals mtrl_badge_content_description
+raw keep_cronet_api
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

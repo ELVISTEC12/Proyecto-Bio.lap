@@ -32,5 +32,4 @@ public class nomenclaturas extends AppCompatActivity {
         Intent nn = new Intent(this,nuevaNomenclatura.class);
         startActivity(nn);
     }
-
 }

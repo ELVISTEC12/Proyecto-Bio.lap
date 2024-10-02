@@ -13,7 +13,7 @@
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:backgroundTint="#3F51B5"
-        android:onClick="ini"
+        android:onClick="validar"
         android:text="@string/iniciar_sesion"
         android:textColor="#FFFFFF"
         android:textSize="24sp"

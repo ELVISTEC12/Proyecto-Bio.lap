@@ -52,12 +52,6 @@ public class nuevaNomenclatura extends AppCompatActivity {
         Intent m = new Intent(this, menuPrincipal.class);
         startActivity(m);
     }
-//    public void enviarDatos(View view){
-//        if(validar()){
-//            //cinematica con scratch, observador, sistema de referencia, estatico o dinamico, y explicar lo que pidio
-//
-//        }
-//    }
 
     public void validar(View view){
         boolean val = true;

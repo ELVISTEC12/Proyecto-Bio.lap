@@ -9,20 +9,20 @@
 9        android:targetSdkVersion="34" />
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-<<<<<<< HEAD
-11-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-12-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:6:5-72
-12-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:6:22-69
+12-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:6:5-72
+12-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:6:22-69
 13    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-13-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:8:5-74
-13-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:8:22-71
-14    <uses-permission android:name="android.permission.INTERNET" />
-14-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:5-67
-14-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:5:22-64
+13-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:8:5-74
+13-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:8:22-71
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->[org.chromium.net:cronet-embedded:119.6045.31] C:\Users\Usuario\.gradle\caches\transforms-4\2dcbb8e23f068b1665f74047966b3861\transformed\cronet-embedded-119.6045.31\AndroidManifest.xml:20:6-79
+14-->[org.chromium.net:cronet-embedded:119.6045.31] C:\Users\Usuario\.gradle\caches\transforms-4\2dcbb8e23f068b1665f74047966b3861\transformed\cronet-embedded-119.6045.31\AndroidManifest.xml:20:23-77
 15
 16    <permission
+<<<<<<< HEAD
 16-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\278a9b808b4179588646977873ecae28\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
 17        android:name="com.example.biolap.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
 17-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\278a9b808b4179588646977873ecae28\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
@@ -32,31 +32,47 @@
 20    <uses-permission android:name="com.example.biolap.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 20-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\278a9b808b4179588646977873ecae28\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
 20-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\278a9b808b4179588646977873ecae28\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+=======
+16-->[androidx.core:core:1.13.0] C:\Users\Usuario\.gradle\caches\transforms-4\d8c70c551895ec558e7ba8556ee3d2f9\transformed\core-1.13.0\AndroidManifest.xml:22:5-24:47
+17        android:name="com.example.biolap.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+17-->[androidx.core:core:1.13.0] C:\Users\Usuario\.gradle\caches\transforms-4\d8c70c551895ec558e7ba8556ee3d2f9\transformed\core-1.13.0\AndroidManifest.xml:23:9-81
+18        android:protectionLevel="signature" />
+18-->[androidx.core:core:1.13.0] C:\Users\Usuario\.gradle\caches\transforms-4\d8c70c551895ec558e7ba8556ee3d2f9\transformed\core-1.13.0\AndroidManifest.xml:24:9-44
+19
+20    <uses-permission android:name="com.example.biolap.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+20-->[androidx.core:core:1.13.0] C:\Users\Usuario\.gradle\caches\transforms-4\d8c70c551895ec558e7ba8556ee3d2f9\transformed\core-1.13.0\AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.13.0] C:\Users\Usuario\.gradle\caches\transforms-4\d8c70c551895ec558e7ba8556ee3d2f9\transformed\core-1.13.0\AndroidManifest.xml:26:22-94
+>>>>>>> r3
 21
 22    <application
-22-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:13:5-96:19
+22-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:10:5-86:19
 23        android:allowBackup="true"
-23-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:14:9-35
+23-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:11:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+<<<<<<< HEAD
 24-->[androidx.core:core:1.13.0] C:\Users\coron\.gradle\caches\transforms-4\278a9b808b4179588646977873ecae28\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+=======
+24-->[androidx.core:core:1.13.0] C:\Users\Usuario\.gradle\caches\transforms-4\d8c70c551895ec558e7ba8556ee3d2f9\transformed\core-1.13.0\AndroidManifest.xml:28:18-86
+>>>>>>> r3
 25        android:dataExtractionRules="@xml/data_extraction_rules"
-25-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:15:9-65
+25-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:12:9-65
 26        android:debuggable="true"
 27        android:extractNativeLibs="false"
 28        android:fullBackupContent="@xml/backup_rules"
-28-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:16:9-54
+28-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:13:9-54
 29        android:icon="@mipmap/ic_launcher"
-29-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:17:9-43
+29-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:14:9-43
 30        android:label="@string/app_name"
-30-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:18:9-41
+30-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:15:9-41
 31        android:roundIcon="@mipmap/ic_launcher_round"
-31-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:19:9-54
+31-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:16:9-54
 32        android:supportsRtl="true"
-32-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:20:9-35
+32-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:17:9-35
 33        android:testOnly="true"
 34        android:theme="@style/Theme.Biolap"
-34-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:21:9-44
+34-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:18:9-44
 35        android:usesCleartextTraffic="true" >
+<<<<<<< HEAD
 35-->C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:22:9-44
 36
 37        <!--
@@ -292,192 +308,180 @@
 34-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:19:13-39
 35            android:exported="false" />
 35-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:20:13-37
+=======
+35-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:19:9-44
+>>>>>>> r3
 36        <activity
-36-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:21:9-23:40
-37            android:name="com.example.biolap.modelo.gestionarNom"
-37-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:22:13-48
+36-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:22:9-24:40
+37            android:name="com.example.biolap.gestionNom"
+37-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:23:13-39
 38            android:exported="false" />
-38-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:23:13-37
+38-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:24:13-37
 39        <activity
-39-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:24:9-26:40
-40            android:name="com.example.biolap.nomenclaturaMenu"
-40-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:25:13-45
-41            android:exported="false" />
-41-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:26:13-37
-42        <activity
-42-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:27:9-31:56
-43            android:name="com.example.biolap.cambiar_datos"
-43-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:28:13-42
-44            android:exported="false"
-44-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:29:13-37
-45            android:screenOrientation="portrait" />
-45-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:30:13-49
-46        <activity
-46-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:32:9-36:56
-47            android:name="com.example.biolap.nomenclaturas"
-47-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:33:13-42
-48            android:exported="false"
-48-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:34:13-37
-49            android:screenOrientation="portrait" />
-49-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:35:13-49
-50        <activity
-50-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:37:9-41:56
-51            android:name="com.example.biolap.gestionarAnalisis"
-51-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:38:13-46
-52            android:exported="false"
-52-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:39:13-37
-53            android:screenOrientation="portrait" />
-53-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:40:13-49
-54        <activity
-54-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:42:9-46:56
-55            android:name="com.example.biolap.cuentaAjustes"
-55-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:43:13-42
-56            android:exported="false"
-56-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:44:13-37
-57            android:screenOrientation="portrait" />
-57-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:45:13-49
-58        <activity
-58-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:47:9-51:56
-59            android:name="com.example.biolap.perfilAjuste"
-59-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:48:13-41
-60            android:exported="false"
-60-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:49:13-37
-61            android:screenOrientation="portrait" />
-61-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:50:13-49
-62        <activity
-62-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:52:9-56:56
-63            android:name="com.example.biolap.ajustes"
-63-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:53:13-36
-64            android:exported="false"
-64-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:54:13-37
-65            android:screenOrientation="portrait" />
-65-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:55:13-49
-66        <activity
-66-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:57:9-61:56
-67            android:name="com.example.biolap.nuevaNomenclatura"
-67-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:58:13-46
-68            android:exported="false"
-68-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:59:13-37
-69            android:screenOrientation="portrait" />
-69-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:60:13-49
-70        <activity
-70-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:62:9-66:56
-71            android:name="com.example.biolap.formPacientes"
-71-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:63:13-42
-72            android:exported="false"
-72-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:64:13-37
-73            android:screenOrientation="portrait" />
-73-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:65:13-49
-74        <activity
-74-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:67:9-71:56
-75            android:name="com.example.biolap.registrarUsuario"
-75-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:68:13-45
-76            android:exported="false"
-76-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:69:13-37
-77            android:screenOrientation="portrait" />
-77-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:70:13-49
-78        <activity
-78-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:72:9-76:56
-79            android:name="com.example.biolap.menuPrincipal"
-79-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:73:13-42
-80            android:exported="false"
-80-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:74:13-37
-81            android:screenOrientation="portrait" />
-81-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:75:13-49
-82        <activity
-82-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:77:9-81:56
-83            android:name="com.example.biolap.analisisRutina"
-83-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:78:13-43
-84            android:exported="false"
-84-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:79:13-37
-85            android:screenOrientation="portrait" />
-85-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:80:13-49
-86        <activity
-86-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:82:9-92:20
-87            android:name="com.example.biolap.LogIn"
-87-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:83:13-34
-88            android:exported="true"
-88-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:84:13-36
-89            android:screenOrientation="portrait" >
-89-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:85:13-49
-90            <intent-filter>
-90-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:87:13-91:29
-91                <action android:name="android.intent.action.MAIN" />
-91-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:88:17-69
-91-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:88:25-66
-92
-93                <category android:name="android.intent.category.LAUNCHER" />
-93-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:90:17-77
-93-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:90:27-74
-94            </intent-filter>
-95        </activity>
-96
-97        <provider
-97-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-98            android:name="androidx.startup.InitializationProvider"
-98-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-99            android:authorities="com.example.biolap.androidx-startup"
-99-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-100            android:exported="false" >
-100-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-101            <meta-data
-101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-102                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-102-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-103                android:value="androidx.startup" />
-103-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\56783dc893f621a033e2aa672facd9aa\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-104            <meta-data
-104-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Usuario\.gradle\caches\transforms-4\0b007138df18b49eb95baaf5cb9e222c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
-105                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-105-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Usuario\.gradle\caches\transforms-4\0b007138df18b49eb95baaf5cb9e222c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
-106                android:value="androidx.startup" />
-106-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Usuario\.gradle\caches\transforms-4\0b007138df18b49eb95baaf5cb9e222c\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
-107            <meta-data
-107-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
-108                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-108-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
-109                android:value="androidx.startup" />
-109-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
-110        </provider>
-111
-112        <receiver
-112-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
-113            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-113-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
-114            android:directBootAware="false"
-114-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
-115            android:enabled="true"
-115-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
-116            android:exported="true"
-116-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
-117            android:permission="android.permission.DUMP" >
-117-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
-118            <intent-filter>
-118-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
-119                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-119-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
-119-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
-120            </intent-filter>
-121            <intent-filter>
-121-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
-122                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-122-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
-122-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
-123            </intent-filter>
-124            <intent-filter>
-124-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
-125                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
-125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
-126            </intent-filter>
-127            <intent-filter>
-127-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
-128                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-128-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
-128-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\0fd4949035a80591f58ee45077437c67\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
-129            </intent-filter>
-130        </receiver>
-131    </application>
-132
-133</manifest>
->>>>>>> r1
+39-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:25:9-29:56
+40            android:name="com.example.biolap.nomenclaturas"
+40-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:26:13-42
+41            android:exported="false"
+41-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:27:13-37
+42            android:screenOrientation="portrait" />
+42-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:28:13-49
+43        <activity
+43-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:30:9-34:56
+44            android:name="com.example.biolap.gestionarAnalisis"
+44-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:31:13-46
+45            android:exported="false"
+45-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:32:13-37
+46            android:screenOrientation="portrait" />
+46-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:33:13-49
+47        <activity
+47-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:35:9-39:56
+48            android:name="com.example.biolap.cuentaAjustes"
+48-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:36:13-42
+49            android:exported="false"
+49-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:37:13-37
+50            android:screenOrientation="portrait" />
+50-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:38:13-49
+51        <activity
+51-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:40:9-44:56
+52            android:name="com.example.biolap.perfilAjuste"
+52-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:41:13-41
+53            android:exported="false"
+53-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:42:13-37
+54            android:screenOrientation="portrait" />
+54-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:43:13-49
+55        <activity
+55-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:45:9-49:56
+56            android:name="com.example.biolap.ajustes"
+56-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:46:13-36
+57            android:exported="false"
+57-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:47:13-37
+58            android:screenOrientation="portrait" />
+58-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:48:13-49
+59        <activity
+59-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:50:9-54:56
+60            android:name="com.example.biolap.nuevaNomenclatura"
+60-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:51:13-46
+61            android:exported="false"
+61-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:52:13-37
+62            android:screenOrientation="portrait" />
+62-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:53:13-49
+63        <activity
+63-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:55:9-59:56
+64            android:name="com.example.biolap.formPacientes"
+64-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:56:13-42
+65            android:exported="false"
+65-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:57:13-37
+66            android:screenOrientation="portrait" />
+66-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:58:13-49
+67        <activity
+67-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:60:9-64:56
+68            android:name="com.example.biolap.registrarUsuario"
+68-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:61:13-45
+69            android:exported="false"
+69-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:62:13-37
+70            android:screenOrientation="portrait" />
+70-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:63:13-49
+71        <activity
+71-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:65:9-69:56
+72            android:name="com.example.biolap.menuPrincipal"
+72-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:66:13-42
+73            android:exported="false"
+73-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:67:13-37
+74            android:screenOrientation="portrait" />
+74-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:68:13-49
+75        <activity
+75-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:70:9-74:56
+76            android:name="com.example.biolap.analisisRutina"
+76-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:71:13-43
+77            android:exported="false"
+77-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:72:13-37
+78            android:screenOrientation="portrait" />
+78-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:73:13-49
+79        <activity
+79-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:75:9-85:20
+80            android:name="com.example.biolap.LogIn"
+80-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:76:13-34
+81            android:exported="true"
+81-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:77:13-36
+82            android:screenOrientation="portrait" >
+82-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:78:13-49
+83            <intent-filter>
+83-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:80:13-84:29
+84                <action android:name="android.intent.action.MAIN" />
+84-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:81:17-69
+84-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:81:25-66
+85
+86                <category android:name="android.intent.category.LAUNCHER" />
+86-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:83:17-77
+86-->C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\src\main\AndroidManifest.xml:83:27-74
+87            </intent-filter>
+88        </activity>
+89
+90        <provider
+90-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\708db83cf5029624f0a5a11e3d6c0ae7\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+91            android:name="androidx.startup.InitializationProvider"
+91-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\708db83cf5029624f0a5a11e3d6c0ae7\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+92            android:authorities="com.example.biolap.androidx-startup"
+92-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\708db83cf5029624f0a5a11e3d6c0ae7\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+93            android:exported="false" >
+93-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\708db83cf5029624f0a5a11e3d6c0ae7\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+94            <meta-data
+94-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\708db83cf5029624f0a5a11e3d6c0ae7\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+95                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+95-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\708db83cf5029624f0a5a11e3d6c0ae7\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+96                android:value="androidx.startup" />
+96-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Usuario\.gradle\caches\transforms-4\708db83cf5029624f0a5a11e3d6c0ae7\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+97            <meta-data
+97-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Usuario\.gradle\caches\transforms-4\32265f2aeb1a194fd02e9c31bd031f82\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+98                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+98-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Usuario\.gradle\caches\transforms-4\32265f2aeb1a194fd02e9c31bd031f82\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+99                android:value="androidx.startup" />
+99-->[androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\Usuario\.gradle\caches\transforms-4\32265f2aeb1a194fd02e9c31bd031f82\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+100            <meta-data
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+101                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+102                android:value="androidx.startup" />
+102-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+103        </provider>
+104
+105        <receiver
+105-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+106            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+107            android:directBootAware="false"
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+108            android:enabled="true"
+108-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+109            android:exported="true"
+109-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+110            android:permission="android.permission.DUMP" >
+110-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+111            <intent-filter>
+111-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+112                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+112-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+113            </intent-filter>
+114            <intent-filter>
+114-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+115                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+115-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+115-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+116            </intent-filter>
+117            <intent-filter>
+117-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+118                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+118-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+118-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+119            </intent-filter>
+120            <intent-filter>
+120-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+121                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+121-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+121-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Usuario\.gradle\caches\transforms-4\63e7787b9d5a13f9a25d2ff21b31a139\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+122            </intent-filter>
+123        </receiver>
+124    </application>
+125
+126</manifest>
