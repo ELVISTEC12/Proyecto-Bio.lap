@@ -16,6 +16,8 @@ drawable spinner_arrow
 id Contraseña_user
 id b_r
 id barradeprogreso
+id boton_aceptar
+id boton_cancelar
 id boton_ingresar
 id boton_registrar
 id buscador
@@ -24,8 +26,13 @@ id button2
 id button3
 id button6
 id button7
+id cambiar_correo
 id cambiar_datos
+<<<<<<< HEAD
 id carga_registro
+=======
+id cambio_correo
+>>>>>>> r3
 id cerrar
 id checkBox
 id codBuscador
@@ -92,7 +99,6 @@ id textView23
 id textView24
 id textView25
 id textView26
-id textView28
 id textView29
 id textView3
 id textView4
@@ -114,6 +120,7 @@ layout activity_nomenclaturas
 layout activity_nueva_nomenclatura
 layout activity_perfil_ajuste
 layout activity_registrar_usuario
+layout cambiar_correo
 mipmap ajustes
 mipmap analisis
 mipmap candado

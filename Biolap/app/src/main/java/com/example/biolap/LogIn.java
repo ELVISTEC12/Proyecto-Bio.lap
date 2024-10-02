@@ -89,25 +89,14 @@ public class LogIn extends AppCompatActivity {
                     boolean success = jsonResponse.getBoolean("success");
 
                     if (success) {
-                        // Si el login es exitoso, obtener los datos
-                        int id = jsonResponse.getInt("id");
+                        String id = jsonResponse.getString("id");
                         String nombre = jsonResponse.getString("usuarios");
 
-                        // Guardar el ID del usuario en SharedPreferences
-                        SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putInt("USER_ID", id);  // Guardar ID
-                        editor.putBoolean("isUserLoggedIn", true);  // Marcar usuario como logueado
-                        editor.apply();
-                        n.setVisibility(View.GONE);//ocultar barra de progreso
-                        // Crear un objeto de usuarioData para almacenar la información temporalmente
                         usuarioData ud = new usuarioData();
-                        ud.setNombre(nombre);
-                        ud.setUsuarioId(id);
+                        ud.setUsuario_nombre(nombre);
+                        ud.setId_usuario(id);
 
-                        // Iniciar una nueva actividad (menuPrincipal)
                         Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
-                        mp.putExtra("usuarios", ud.getNombre());
                         startActivity(mp);
                     }else{
                         n.setVisibility(View.GONE);
@@ -153,11 +142,3 @@ public class LogIn extends AppCompatActivity {
     }
 
 }
- /* int id = jsonResponse.getInt("id");
-                        String nombre = jsonResponse.getString("usuarios");
-                        usuarioData ud = new usuarioData();
-                        ud.setNombre(nombre);
-                        ud.setUsuarioId(id);
-                        Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
-                        mp.putExtra("usuarios", ud.getNombre());
-                        startActivity(mp);*/

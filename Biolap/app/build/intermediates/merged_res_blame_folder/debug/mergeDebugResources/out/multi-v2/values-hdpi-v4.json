@@ -1,10 +1,14 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.biolap.app-mergeDebugResources-30:/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "com.example.biolap.app-mergeDebugResources-31:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\27eae03ad5f0ce559b975cb126674c84\\transformed\\appcompat-1.6.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+=======
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\a1f16d5c77c1abe08cf8d957eb963441\\transformed\\appcompat-1.6.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+>>>>>>> r3
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

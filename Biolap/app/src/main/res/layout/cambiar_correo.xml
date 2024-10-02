@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="220dp"
+    android:layout_width="330dp"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#000000">
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--tools:context=".menuPrincipal">-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#FFFFFF"
+        android:text="Cambio de nombre de usuario"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:padding="10dp"
+
+        />
+
+    <EditText
+        android:id="@+id/cambiar_correo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bordes"
+        android:hint="Escriba su nuevo nombre de usuario"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#80FFFFFF" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="2dp"
+        >
+
+        <Button
+            android:id="@+id/boton_aceptar"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#3F51B5"
+            android:text="Confirmar"
+            android:layout_marginEnd="16dp"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="7dp" />
+
+        <Button
+            android:id="@+id/boton_cancelar"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#3F51B5"
+            android:text="Cancelar"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="7dp" />
+
+    </LinearLayout>
+</LinearLayout>
+
