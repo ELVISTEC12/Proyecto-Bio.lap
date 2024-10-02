@@ -27,7 +27,7 @@
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
         <config>
-          <theme>@android:style/Theme.Material.Light</theme>
+          <theme>@style/Theme.Biolap</theme>
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menuprincipal.xml">
@@ -50,13 +50,26 @@
           <theme>@style/Theme.Biolap</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/cambiar_correo.xml">
+        <config>
+          <theme>@style/Theme.Biolap</theme>
+        </config>
+      </layout>
     </layouts>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46b09fe4-1b57-4a9c-9300-ae1844d434ff" name="Changes" comment="no_se_encontro" />
+    <list default="true" id="46b09fe4-1b57-4a9c-9300-ae1844d434ff" name="Changes" comment="no_se_encontro">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/biolap/LogIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/biolap/LogIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/biolap/analisisRutina.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/biolap/analisisRutina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/biolap/formPacientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/biolap/formPacientes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/biolap/modelo/NomList.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/biolap/modelo/registros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/biolap/nomenclaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/biolap/nomenclaturas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_analisis_rutina.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_analisis_rutina.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -351,16 +364,5 @@
     <MESSAGE value="no_se_encontro" />
     <option name="LAST_COMMIT_MESSAGE" value="no_se_encontro" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/biolap/LogIn.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

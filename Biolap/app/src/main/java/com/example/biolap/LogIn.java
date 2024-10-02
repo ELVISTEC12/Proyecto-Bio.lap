@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -52,18 +53,9 @@ public class LogIn extends AppCompatActivity {
 
         usuarioTXT = findViewById(R.id.usuarioTXT);
         contraTXT = findViewById(R.id.contrasenaTXT);
-        ing = findViewById(R.id.boton_ingresar);
         errorT = findViewById(R.id.textView23);
         n=findViewById(R.id.barradeprogreso);
         no=findViewById(R.id.error);
-
-        ing.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                n.setVisibility(View.VISIBLE);//mostrar barra de progreso
-                enviarDatos("http://192.168.1.2/bio.lap/validar_usuario.php");
-            }
-        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -77,20 +69,35 @@ public class LogIn extends AppCompatActivity {
         startActivity(mp);
     }
 
-    public void enviarDatos(String URL){
+    public void validar(View view){
+        boolean val = true;
+        String nombre = usuarioTXT.getText().toString();
+        String clave = contraTXT.getText().toString();
+        if(TextUtils.isEmpty(nombre)){
+            usuarioTXT.setError("Campo obligatorio");
+            val = false;
+        }
+        if(TextUtils.isEmpty(clave)){
+            contraTXT.setError("Campo obligatorio");
+            val = false;
+        }
+        if(val){
+            n.setVisibility(View.VISIBLE);//mostrar barra de progreso
+            enviarDatos("http://192.168.0.108/bio.lap/validar_usuario.php");
+        }
+    }
 
+    public void enviarDatos(String URL){
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-
-
                 try {
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean success = jsonResponse.getBoolean("success");
 
                     if (success) {
                         String id = jsonResponse.getString("id");
-                        String nombre = jsonResponse.getString("usuarios");
+                        String nombre = jsonResponse.getString("nombre");
 
                         usuarioData ud = new usuarioData();
                         ud.setUsuario_nombre(nombre);
@@ -122,8 +129,8 @@ public class LogIn extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> parametros = new HashMap<>();
-                parametros.put("usuarios", usuarioTXT.getText().toString());
-                parametros.put("contra", contraTXT.getText().toString());
+                parametros.put("nombre", usuarioTXT.getText().toString());
+                parametros.put("clave", contraTXT.getText().toString());
                 return parametros;
             }
         };

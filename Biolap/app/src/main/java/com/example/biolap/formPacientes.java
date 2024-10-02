@@ -24,6 +24,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.biolap.modelo.registros;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,7 +34,8 @@ import java.util.Map;
 
 public class formPacientes extends AppCompatActivity {
     EditText n, ob, ed, dni, num, medi;
-     boolean verificaded = true;
+    boolean verificaded = true;
+    registros rg = new registros();
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -63,10 +65,9 @@ public class formPacientes extends AppCompatActivity {
         String edad = ed.getText().toString();
         String numero = num.getText().toString();
         String medico = medi.getText().toString();
-
         String DNI = dni.getText().toString();
 
-         // Inicialización
+        // Inicialización
 
         if (TextUtils.isEmpty(nombre)) {
             n.setError("Ingrese el nombre del paciente");
@@ -106,7 +107,8 @@ public class formPacientes extends AppCompatActivity {
         }
 
         if (verificaded) {
-            String URL = "http://192.168.1.2/bio.lap/insertar_paciente.php";
+            /*
+            String URL = "http://192.168.0.108/bio.lap/insertar_paciente.php";
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
@@ -140,7 +142,6 @@ public class formPacientes extends AppCompatActivity {
                     parametros.put("dni", DNI);
                     parametros.put("n_telefono", numero);
                     parametros.put("n_medico", medico);
-
                     return parametros;
                 }
             };
@@ -149,12 +150,15 @@ public class formPacientes extends AppCompatActivity {
             requestQueue.add(stringRequest);
         } else {
             Toast.makeText(this, "Debe completar todos los campos correctamente", Toast.LENGTH_SHORT).show();
+        }*/
+            rg.setNombreC(nombre);
+            rg.setObra_social(obra);
+            rg.setEdad(edad);
+            rg.setTelefono(numero);
+            rg.setMedico(medico);
+            rg.setDni(DNI);
+            Intent fn = new Intent(getApplicationContext(),analisisRutina.class);
+            startActivity(fn);
         }
     }
-
-
-
-
-        /*Intent r = new Intent(this, analisisRutina.class);
-        startActivity(r);*/
-    }
+}
