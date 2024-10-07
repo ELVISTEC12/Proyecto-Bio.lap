@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.164" />
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/mostra"
         android:layout_width="383dp"
         android:layout_height="368dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,16 +43,30 @@
         app:layout_constraintVertical_bias="0.771" />
 
     <EditText
-        android:id="@+id/editTextText12"
-        android:layout_width="365dp"
-        android:layout_height="45dp"
+        android:id="@+id/buscar_d"
+        android:layout_width="231dp"
+        android:layout_height="47dp"
         android:ems="10"
         android:hint="Escriba el DNI o nombre del paciente"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247" />
+
+    <Button
+        android:id="@+id/b_buscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aplicar"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.424"
+        app:layout_constraintStart_toEndOf="@+id/buscar_d"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.247" />
 </androidx.constraintlayout.widget.ConstraintLayout>

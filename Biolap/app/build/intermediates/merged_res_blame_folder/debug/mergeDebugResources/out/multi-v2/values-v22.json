@@ -4,11 +4,7 @@
             "outputFile": "com.example.biolap.app-mergeDebugResources-31:/values-v22/values-v22.xml",
             "map": [
                 {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\27eae03ad5f0ce559b975cb126674c84\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",
-=======
-                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\a1f16d5c77c1abe08cf8d957eb963441\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",
->>>>>>> r3
+                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\fa6cc02dab6217f81af7c4c2081cfa0f\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

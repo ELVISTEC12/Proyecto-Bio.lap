@@ -108,27 +108,32 @@ public class registrarUsuario extends AppCompatActivity {
         // Solo procedemos si verificaded es verdadero
         if (verificaded) {
             cr.setVisibility(View.VISIBLE);
-            String URL = "http://192.168.1.5/bio.lap/insertar.php";
+            String URL = "http://192.168.1.6/bio.lap/insertar.php";
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
                     try {
                         JSONObject jsonResponse = new JSONObject(response);
                         boolean success = jsonResponse.getBoolean("success");
+
                         if (success) {
-                            // Registro exitoso, navegar a la siguiente pantalla
+                            // Registro exitoso, navega a la siguiente pantalla
                             cr.setVisibility(View.GONE);
                             Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
                             startActivity(mp);
                         } else {
                             cr.setVisibility(View.GONE);
-                             nombre.setText("");
-                             correo.setText("");
-                             contra.setText("");
-                             conta1.setText("");
-                            // Error al registrarse, mostrar mensaje y bloquear la pantalla
+                            nombre.setText("");
+                            correo.setText("");
+                            contra.setText("");
+                            conta1.setText("");
+                            // Muestra mensaje de error
                             Toast.makeText(getApplicationContext(), "Error al registrarse", Toast.LENGTH_SHORT).show();
                             no.setVisibility(View.VISIBLE);
+
+                            // Imprime el mensaje de error en el log para ver el detalle
+                            String message = jsonResponse.getString("message");
+                            Log.e("RegisterError", message);
 
                             // Bloquea la pantalla por 3 segundos
                             getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
@@ -151,7 +156,12 @@ public class registrarUsuario extends AppCompatActivity {
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(registrarUsuario.this, "Error: "+error, Toast.LENGTH_SHORT).show();
+                    String errorMessage = "Error: " + error.getMessage();
+                    if (error.networkResponse != null) {
+                        errorMessage += " | Código de estado: " + error.networkResponse.statusCode;
+                    }
+                    Toast.makeText(registrarUsuario.this, errorMessage, Toast.LENGTH_SHORT).show();
+                    Log.e("VolleyError", errorMessage);
                 }
             }) {
                 @Nullable
@@ -171,6 +181,7 @@ public class registrarUsuario extends AppCompatActivity {
             // Si verificaded es falso, no se procede con la solicitud
             Toast.makeText(this, "Debe completar todos los campos correctamente", Toast.LENGTH_SHORT).show();
         }
+
     }
 
 

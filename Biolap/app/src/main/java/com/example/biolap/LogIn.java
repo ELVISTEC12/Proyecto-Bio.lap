@@ -83,7 +83,7 @@ public class LogIn extends AppCompatActivity {
         }
         if(val){
             n.setVisibility(View.VISIBLE);//mostrar barra de progreso
-            enviarDatos("http://192.168.0.108/bio.lap/validar_usuario.php");
+            enviarDatos("http://192.168.1.6/bio.lap/validar_usuario.php");
         }
     }
 
@@ -99,16 +99,19 @@ public class LogIn extends AppCompatActivity {
                         String id = jsonResponse.getString("id");
                         String nombre = jsonResponse.getString("nombre");
 
+                        // Guardar los datos del usuario
                         usuarioData ud = new usuarioData();
                         ud.setUsuario_nombre(nombre);
                         ud.setId_usuario(id);
 
+                        // Redirigir a la pantalla principal
                         Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
                         startActivity(mp);
-                    }else{
+                    } else {
+                        // Mostrar mensaje de error si no hay coincidencias
                         n.setVisibility(View.GONE);
                         no.setVisibility(View.VISIBLE);
-                        Toast.makeText(LogIn.this, "No se encuentran coincidencias", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LogIn.this, jsonResponse.getString("message"), Toast.LENGTH_SHORT).show();
                     }
 
                 } catch (JSONException e) {
@@ -116,8 +119,8 @@ public class LogIn extends AppCompatActivity {
                     e.printStackTrace();
                     Toast.makeText(LogIn.this, "Error en el servidor", Toast.LENGTH_SHORT).show();
                 }
-
             }
+
 
         }, new Response.ErrorListener() {
             @Override

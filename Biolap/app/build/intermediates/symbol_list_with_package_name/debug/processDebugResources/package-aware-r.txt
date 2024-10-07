@@ -3203,6 +3203,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id b_buscar
 id b_r
 id barradeprogreso
 id barrier
@@ -3220,7 +3221,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id buscador
+id buscar_d
 id button
 id button2
 id button3
@@ -3254,7 +3255,7 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id closest
-id codBuscador
+id codNomBus
 id codNomTXT
 id collapseActionView
 id compress
@@ -3315,8 +3316,6 @@ id east
 id edad
 id edge
 id editTextText
-id editTextText12
-id editTextTextMultiLine
 id edit_query
 id edit_text_id
 id elastic
@@ -3348,11 +3347,11 @@ id fixed
 id flip
 id floating
 id floatingActionButton
-id floatingActionButton3
+id floatingActionButton2
 id flow
 id forever
-id formBusc
 id formNomTXT
+id formResult
 id fragment_container_view_tag
 id frost
 id fullscreen_header
@@ -3377,10 +3376,12 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageButton
 id imageButton2
 id imageButton3
 id imageButton4
 id imageButton5
+id imageButton6
 id imageView
 id imageView10
 id imageView5
@@ -3409,7 +3410,6 @@ id linearLayout5
 id linearLayout6
 id linearLayout7
 id listMode
-id listView
 id list_item
 id m3_side_sheet
 id main
@@ -3448,6 +3448,7 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
+id mostra
 id motion_base
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
@@ -3489,7 +3490,7 @@ id noScroll
 id noState
 id no_carga
 id nomNomTXT
-id nombreBusc
+id nombreResult
 id nombreTXT
 id none
 id normal
@@ -3549,6 +3550,8 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rutinaFormTXT
+id rutinaTXT
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3589,7 +3592,6 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
-id spinner
 id spline
 id split_action_bar
 id spread
@@ -3829,10 +3831,10 @@ layout activity_ajustes
 layout activity_analisis_rutina
 layout activity_cuenta_ajustes
 layout activity_form_pacientes
+layout activity_gestion_nom
 layout activity_gestionar_analisis
 layout activity_main
 layout activity_menuprincipal
-layout activity_nomenclaturamenu
 layout activity_nomenclaturas
 layout activity_nueva_nomenclatura
 layout activity_perfil_ajuste
