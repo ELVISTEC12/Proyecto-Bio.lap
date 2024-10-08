@@ -4,30 +4,7 @@
             "outputFile": "com.example.biolap.app-mergeDebugResources-31:/values-v28/values-v28.xml",
             "map": [
                 {
-<<<<<<< HEAD
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\f1753f668e20fc71efa1fdbd537fef03\\transformed\\material-1.12.0\\res\\values-v28\\values-v28.xml",
-=======
-                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\a1f16d5c77c1abe08cf8d957eb963441\\transformed\\appcompat-1.6.1\\res\\values-v28\\values-v28.xml",
-                    "from": {
-                        "startLines": "2,3,4,8",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,130,217,397",
-                        "endLines": "2,3,7,11",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "125,212,392,584"
-                    },
-                    "to": {
-                        "startLines": "14,15,16,20",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "1141,1216,1303,1483",
-                        "endLines": "14,15,19,23",
-                        "endColumns": "74,86,12,12",
-                        "endOffsets": "1211,1298,1478,1670"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\d6cc62455fe6ca766f811522bf44ab24\\transformed\\material-1.12.0\\res\\values-v28\\values-v28.xml",
->>>>>>> r3
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\76a8f98aa65ebf68e4779a387e270003\\transformed\\material-1.12.0\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -46,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\27eae03ad5f0ce559b975cb126674c84\\transformed\\appcompat-1.6.1\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\4a26d791f2e15d2f71842feaa3b8914a\\transformed\\appcompat-1.6.1\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

@@ -3,10 +3,7 @@ package com.example.biolap;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -24,27 +21,17 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.biolap.modelo.Nomenclaturas;
 
-import org.chromium.base.task.AsyncTask;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import android.content.DialogInterface;
-import android.os.Bundle;
-import android.widget.Button;
+
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
 public class gestionNom extends AppCompatActivity {
     private EditText codigo;
@@ -52,7 +39,7 @@ public class gestionNom extends AppCompatActivity {
     private EditText formulario;
     private String id;
     private Spinner codigos;
-    private List<Nomenclaturas> listaNom;
+    //private List<Nomenclaturas> listaNom;
 
     @SuppressLint("MissingInflatedId")
     @Override

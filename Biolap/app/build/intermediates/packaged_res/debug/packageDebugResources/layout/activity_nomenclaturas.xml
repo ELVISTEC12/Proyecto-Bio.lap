@@ -57,6 +57,7 @@
         app:srcCompat="@android:drawable/ic_input_add" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mostrar_nom"
         android:layout_width="350dp"
         android:layout_height="360dp"
         android:background="@drawable/bordes"

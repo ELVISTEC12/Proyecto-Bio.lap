@@ -24,15 +24,17 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/rutinaFormTXT"
         android:layout_width="370dp"
         android:layout_height="400dp"
         android:background="@drawable/borde_nom"
         android:ems="10"
         android:gravity="start|top"
+        android:hint="Formulario"
         android:inputType="textMultiLine"
         android:padding="10dp"
         android:textColor="#FFFFFF"
+        android:textColorHint="#80FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
@@ -40,24 +42,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.629" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="240dp"
-        android:layout_height="50dp"
-        android:background="@drawable/spinner_arrow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.116"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.156" />
-
     <Button
         android:id="@+id/button7"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:backgroundTint="#22C55E"
-        android:onClick="menu"
+        android:onClick="finalizar"
         android:text="Listo"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -67,4 +57,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.963" />
+
+    <EditText
+        android:id="@+id/rutinaTXT"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/borde_nom"
+        android:ems="10"
+        android:hint="Código de la nomenclatura"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#80FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.173" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:onClick="buscar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.173"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

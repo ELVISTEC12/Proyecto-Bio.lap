@@ -43,6 +43,7 @@ public class LogIn extends AppCompatActivity {
     TextView errorT;
     ProgressBar n;
     ImageView no;
+    usuarioData ud = new usuarioData();
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -82,7 +83,7 @@ public class LogIn extends AppCompatActivity {
             val = false;
         }
         if(val){
-            n.setVisibility(View.VISIBLE);//mostrar barra de progreso
+            n.setVisibility(View.VISIBLE);
             enviarDatos("http://192.168.0.108/bio.lap/validar_usuario.php");
         }
     }
@@ -96,12 +97,8 @@ public class LogIn extends AppCompatActivity {
                     boolean success = jsonResponse.getBoolean("success");
 
                     if (success) {
-                        String id = jsonResponse.getString("id");
-                        String nombre = jsonResponse.getString("nombre");
-
-                        usuarioData ud = new usuarioData();
-                        ud.setUsuario_nombre(nombre);
-                        ud.setId_usuario(id);
+                        ud.setUsuario_nombre(jsonResponse.getString("id"));
+                        ud.setId_usuario(jsonResponse.getString("nombre"));
 
                         Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
                         startActivity(mp);
