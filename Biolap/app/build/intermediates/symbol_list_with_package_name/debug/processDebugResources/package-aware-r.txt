@@ -3221,7 +3221,10 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+<<<<<<< HEAD
 id buscar_d
+=======
+>>>>>>> r5
 id button
 id button2
 id button3
@@ -3316,6 +3319,10 @@ id east
 id edad
 id edge
 id editTextText
+<<<<<<< HEAD
+=======
+id editTextText12
+>>>>>>> r5
 id edit_query
 id edit_text_id
 id elastic
@@ -3448,7 +3455,11 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
+<<<<<<< HEAD
 id mostra
+=======
+id mostrar_nom
+>>>>>>> r5
 id motion_base
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
@@ -3937,7 +3948,9 @@ mipmap nombre
 mipmap nombre_perfil
 mipmap nomenclaturas
 mipmap nuevo_re
+mipmap paciente
 mipmap perfil_ajuste
+mipmap pngwing
 plurals mtrl_badge_content_description
 raw keep_cronet_api
 string abc_action_bar_home_description

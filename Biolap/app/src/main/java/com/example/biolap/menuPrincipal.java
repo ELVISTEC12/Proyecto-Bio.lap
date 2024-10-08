@@ -25,9 +25,8 @@ public class menuPrincipal extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_menuprincipal);
         usuario = findViewById(R.id.nombreTXT);
-        Intent intent = getIntent();
-        String nombreUsuario = ud.getUsuario_nombre();
-        usuario.setText(nombreUsuario);
+
+        usuario.setText(ud.getUsuario_nombre());
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -41,7 +40,7 @@ public class menuPrincipal extends AppCompatActivity {
         startActivity(nr);
     }
     public void nomenclatura(View view){
-        Intent nu = new Intent(this, gestionNom.class);
+        Intent nu = new Intent(this, nomenclaturas.class);
         startActivity(nu);
     }
     public void buscar(View view){
@@ -49,7 +48,7 @@ public class menuPrincipal extends AppCompatActivity {
         startActivity(b);
     }
     public void ajustes(View view){
-
+        Toast.makeText(this, ud.getUsuario_nombre(), Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, ajustes.class);
         startActivity(intent);
         /*usuarioData ud = new usuarioData();

@@ -21,7 +21,10 @@ id boton_aceptar
 id boton_cancelar
 id boton_ingresar
 id boton_registrar
+<<<<<<< HEAD
 id buscar_d
+=======
+>>>>>>> r5
 id button
 id button2
 id button3
@@ -43,6 +46,10 @@ id correo_user
 id dnipa
 id edad
 id editTextText
+<<<<<<< HEAD
+=======
+id editTextText12
+>>>>>>> r5
 id error
 id floatingActionButton
 id floatingActionButton2
@@ -66,7 +73,11 @@ id linearLayout6
 id linearLayout7
 id main
 id med
+<<<<<<< HEAD
 id mostra
+=======
+id mostrar_nom
+>>>>>>> r5
 id n_p
 id name_user
 id no_carga
@@ -137,7 +148,9 @@ mipmap nombre
 mipmap nombre_perfil
 mipmap nomenclaturas
 mipmap nuevo_re
+mipmap paciente
 mipmap perfil_ajuste
+mipmap pngwing
 string ajuste
 string app_name
 string bienv

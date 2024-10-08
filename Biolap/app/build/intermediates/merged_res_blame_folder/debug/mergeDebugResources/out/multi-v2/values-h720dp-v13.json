@@ -4,7 +4,11 @@
             "outputFile": "com.example.biolap.app-mergeDebugResources-31:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\fa6cc02dab6217f81af7c4c2081cfa0f\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+=======
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\4a26d791f2e15d2f71842feaa3b8914a\\transformed\\appcompat-1.6.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+>>>>>>> r5
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

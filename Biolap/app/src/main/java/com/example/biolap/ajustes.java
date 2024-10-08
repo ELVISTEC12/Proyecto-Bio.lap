@@ -44,6 +44,7 @@ public class ajustes extends AppCompatActivity {
         View dialogFView = inflater.inflate(R.layout.cambiar_correo,null);
         builder.setView(dialogFView);
         EditText correo = dialogFView.findViewById(R.id.cambiar_correo);
+        correo.setText(usuarioData.getInstance().getUsuario_nombre());
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button aceptar = dialogFView.findViewById(R.id.boton_aceptar);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button cancelar = dialogFView.findViewById(R.id.boton_cancelar);
         AlertDialog dialog = builder.create();

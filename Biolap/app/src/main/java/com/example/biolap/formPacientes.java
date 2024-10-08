@@ -151,6 +151,7 @@ public class formPacientes extends AppCompatActivity {
         } else {
             Toast.makeText(this, "Debe completar todos los campos correctamente", Toast.LENGTH_SHORT).show();
         }*/
+
             rg.setNombreC(nombre);
             rg.setObra_social(obra);
             rg.setEdad(edad);

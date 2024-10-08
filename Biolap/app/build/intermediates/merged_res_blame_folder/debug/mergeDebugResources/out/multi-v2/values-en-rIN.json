@@ -4,6 +4,7 @@
             "outputFile": "com.example.biolap.app-mergeDebugResources-31:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\999ff9b0f1bba4d6512ca3ba72c558cc\\transformed\\core-1.13.0\\res\\values-en-rIN\\values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -22,6 +23,9 @@
                 },
                 {
                     "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\fa6cc02dab6217f81af7c4c2081cfa0f\\transformed\\appcompat-1.6.1\\res\\values-en-rIN\\values-en-rIN.xml",
+=======
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\4a26d791f2e15d2f71842feaa3b8914a\\transformed\\appcompat-1.6.1\\res\\values-en-rIN\\values-en-rIN.xml",
+>>>>>>> r5
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +42,28 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\3a03739d79b1d210d9c97cc2e2c01623\\transformed\\biometric-1.2.0-alpha04\\res\\values-en-rIN\\values-en-rIN.xml",
+=======
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\6d14066d49a5d07d3caa334aefbc5edc\\transformed\\core-1.13.0\\res\\values-en-rIN\\values-en-rIN.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,151,253,352,451,555,658,774",
+                        "endColumns": "95,101,98,98,103,102,115,100",
+                        "endOffsets": "146,248,347,446,550,653,769,870"
+                    },
+                    "to": {
+                        "startLines": "31,32,33,34,35,36,37,57",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3020,3116,3218,3317,3416,3520,3623,6000",
+                        "endColumns": "95,101,98,98,103,102,115,100",
+                        "endOffsets": "3111,3213,3312,3411,3515,3618,3734,6096"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\db5c184d6b667779541427188872ea5f\\transformed\\biometric-1.2.0-alpha04\\res\\values-en-rIN\\values-en-rIN.xml",
+>>>>>>> r5
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

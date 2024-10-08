@@ -119,6 +119,7 @@ public class analisisRutina extends AppCompatActivity {
             telefono = rg.getTelefono();
             medico = rg.getMedico();
             rutinas = form.getText().toString();
+            Toast.makeText(this, rg.getNombreC(), Toast.LENGTH_SHORT).show();
             guardar("http://192.168.0.108/bio.lap/insertar_paciente.php");
         }
     }

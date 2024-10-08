@@ -4,7 +4,28 @@
             "outputFile": "com.example.biolap.app-mergeDebugResources-31:/values-th/values-th.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\3a03739d79b1d210d9c97cc2e2c01623\\transformed\\biometric-1.2.0-alpha04\\res\\values-th\\values-th.xml",
+=======
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\6d14066d49a5d07d3caa334aefbc5edc\\transformed\\core-1.13.0\\res\\values-th\\values-th.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,151,254,352,450,553,658,770",
+                        "endColumns": "95,102,97,97,102,104,111,100",
+                        "endOffsets": "146,249,347,445,548,653,765,866"
+                    },
+                    "to": {
+                        "startLines": "40,41,42,43,44,45,46,136",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3635,3731,3834,3932,4030,4133,4238,12078",
+                        "endColumns": "95,102,97,97,102,104,111,100",
+                        "endOffsets": "3726,3829,3927,4025,4128,4233,4345,12174"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\db5c184d6b667779541427188872ea5f\\transformed\\biometric-1.2.0-alpha04\\res\\values-th\\values-th.xml",
+>>>>>>> r5
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +42,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\b78dd0516c57df0fda66615418b29a1e\\transformed\\material-1.12.0\\res\\values-th\\values-th.xml",
+=======
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\76a8f98aa65ebf68e4779a387e270003\\transformed\\material-1.12.0\\res\\values-th\\values-th.xml",
+>>>>>>> r5
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,7 +65,11 @@
                     }
                 },
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\fa6cc02dab6217f81af7c4c2081cfa0f\\transformed\\appcompat-1.6.1\\res\\values-th\\values-th.xml",
+=======
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\4a26d791f2e15d2f71842feaa3b8914a\\transformed\\appcompat-1.6.1\\res\\values-th\\values-th.xml",
+>>>>>>> r5
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
