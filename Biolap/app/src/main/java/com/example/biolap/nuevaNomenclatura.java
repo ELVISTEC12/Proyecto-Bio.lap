@@ -84,8 +84,9 @@ public class nuevaNomenclatura extends AppCompatActivity {
                     boolean success = jsonResponse.getBoolean("success");
                     if (success) {
                         Toast.makeText(nuevaNomenclatura.this, "Se creo con éxito", Toast.LENGTH_SHORT).show();
-                        Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
+                        Intent mp = new Intent(getApplicationContext(), nomenclaturas.class);
                         startActivity(mp);
+                        finish();
                     } else {
                         Toast.makeText(getApplicationContext(), "Error al cargar", Toast.LENGTH_SHORT).show();
                     }

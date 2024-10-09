@@ -30,46 +30,44 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class analisisRutina extends AppCompatActivity {
-    private EditText rutina;
+    private EditText rutinasTXT;
     private EditText form;
-    String pasiente;
-    String obra;
-    String edad;
-    String dni;
-    String telefono;
-    String medico;
-    String rutinas;
+    private String pasiente;
+    private String obra;
+    private String edad;
+    private String dni;
+    private String telefono;
+    private String medico;
 
-    registros rg = new registros();
+    registros rg = registros.getInstance();
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-
-        rutina = findViewById(R.id.rutinaTXT);
-        form = findViewById(R.id.rutinaFormTXT);
-
         setContentView(R.layout.activity_analisis_rutina);
+
+        rutinasTXT = findViewById(R.id.rutinaTXT);
+        form = findViewById(R.id.rutinaFormTXT);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
     }
-    public void buscar(View view){
+    public void buscarN(View view){
         boolean verificar = true;
-        String cod = rutina.getText().toString();
+        String cod = rutinasTXT.getText().toString();
         if (cod.equals("")) {
-            rutina.setError("Campo obligatorio para la búsqueda");
+            rutinasTXT.setError("Campo obligatorio para la búsqueda");
             verificar = false;
         }
         if (verificar) {
-            resultados("http://192.168.0.108/bio.lap/mostrar_nom.php");
+            resultadoss("http://192.168.0.108/bio.lap/mostrar_nom.php");
         }
     }
 
-    private void resultados(String url) {
+    private void resultadoss(String url) {
         StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -96,7 +94,7 @@ public class analisisRutina extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> datos = new HashMap<String, String>();
-                datos.put("codigo", rutina.getText().toString());
+                datos.put("codigo", rutinasTXT.getText().toString());
                 return datos;
             }
         };
@@ -118,8 +116,6 @@ public class analisisRutina extends AppCompatActivity {
             dni = rg.getDni();
             telefono = rg.getTelefono();
             medico = rg.getMedico();
-            rutinas = form.getText().toString();
-            Toast.makeText(this, rg.getNombreC(), Toast.LENGTH_SHORT).show();
             guardar("http://192.168.0.108/bio.lap/insertar_paciente.php");
         }
     }
@@ -135,12 +131,12 @@ public class analisisRutina extends AppCompatActivity {
                         Toast.makeText(analisisRutina.this, "Se guardó con exito", Toast.LENGTH_SHORT).show();
                         Intent m = new Intent(getApplicationContext(), menuPrincipal.class);
                         startActivity(m);
+                        finish();
                     } else {
                         Toast.makeText(getApplicationContext(), "Error en la búsqueda", Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
-                    e.printStackTrace();
-                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
@@ -158,7 +154,7 @@ public class analisisRutina extends AppCompatActivity {
                 datos.put("dni",dni);
                 datos.put("telefono",telefono);
                 datos.put("medico",medico);
-                datos.put("rutina",rutinas);
+                datos.put("rutina",form.getText().toString());
                 return datos;
             }
         };

@@ -17,7 +17,8 @@ import com.example.biolap.modelo.usuarioData;
 
 public class menuPrincipal extends AppCompatActivity {
     private TextView usuario;
-    usuarioData ud = new usuarioData();
+    private String name;
+    usuarioData ud = usuarioData.getInstance();
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +26,8 @@ public class menuPrincipal extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_menuprincipal);
         usuario = findViewById(R.id.nombreTXT);
-
-        usuario.setText(ud.getUsuario_nombre());
+        name = ud.getUsuario_nombre();
+        usuario.setText(name);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -38,20 +39,21 @@ public class menuPrincipal extends AppCompatActivity {
     public void nuevoRegistro(View view){
         Intent nr = new Intent(this, formPacientes.class);
         startActivity(nr);
+        //finish();
     }
     public void nomenclatura(View view){
         Intent nu = new Intent(this, nomenclaturas.class);
         startActivity(nu);
+        //finish();
     }
     public void buscar(View view){
         Intent b = new Intent(this, gestionarAnalisis.class);
         startActivity(b);
+        //finish();
     }
     public void ajustes(View view){
-        Toast.makeText(this, ud.getUsuario_nombre(), Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, ajustes.class);
         startActivity(intent);
-        /*usuarioData ud = new usuarioData();
-        Toast.makeText(this, "nombre: "+ud.getNombre(), Toast.LENGTH_SHORT).show();*/
+        finish();
     }
 }

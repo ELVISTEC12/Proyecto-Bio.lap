@@ -35,7 +35,7 @@ import java.util.Map;
 public class formPacientes extends AppCompatActivity {
     EditText n, ob, ed, dni, num, medi;
     boolean verificaded = true;
-    registros rg = new registros();
+    registros rg = registros.getInstance();
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -43,14 +43,12 @@ public class formPacientes extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_form_pacientes);
-        n= findViewById(R.id.n_p);//nombre paciente
-        ed= findViewById(R.id.edad);//edad del paciente
-        ob=findViewById(R.id.obra);//obra social del paciente
-        num=findViewById(R.id.nu_p);//numero telefonico del paciente
-        medi=findViewById(R.id.med);//medico del paciente
-
-        dni=findViewById(R.id.dnipa);//dni del paciente
-
+        n= findViewById(R.id.n_p);
+        ed= findViewById(R.id.edad);
+        ob=findViewById(R.id.obra);
+        num=findViewById(R.id.nu_p);
+        medi=findViewById(R.id.med);
+        dni=findViewById(R.id.dnipa);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -66,9 +64,6 @@ public class formPacientes extends AppCompatActivity {
         String numero = num.getText().toString();
         String medico = medi.getText().toString();
         String DNI = dni.getText().toString();
-
-        // Inicialización
-
         if (TextUtils.isEmpty(nombre)) {
             n.setError("Ingrese el nombre del paciente");
             verificaded = false;
@@ -107,51 +102,6 @@ public class formPacientes extends AppCompatActivity {
         }
 
         if (verificaded) {
-            /*
-            String URL = "http://192.168.0.108/bio.lap/insertar_paciente.php";
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    try {
-                        JSONObject jsonResponse = new JSONObject(response);
-                        boolean success = jsonResponse.getBoolean("success");
-                        if (success) {
-                            Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
-                            startActivity(mp);
-                        } else {
-                            Toast.makeText(getApplicationContext(), "Error al registrarse", Toast.LENGTH_SHORT).show();
-                        }
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                        Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(formPacientes.this, "Error de conexión: " + error.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            }) {
-                @Nullable
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-                    Map<String, String> parametros = new HashMap<>();
-                    parametros.put("nombre", nombre);
-                    parametros.put("obra_social", obra);
-                    parametros.put("edad", edad);
-                    parametros.put("dni", DNI);
-                    parametros.put("n_telefono", numero);
-                    parametros.put("n_medico", medico);
-                    return parametros;
-                }
-            };
-
-            RequestQueue requestQueue = Volley.newRequestQueue(this);
-            requestQueue.add(stringRequest);
-        } else {
-            Toast.makeText(this, "Debe completar todos los campos correctamente", Toast.LENGTH_SHORT).show();
-        }*/
-
             rg.setNombreC(nombre);
             rg.setObra_social(obra);
             rg.setEdad(edad);

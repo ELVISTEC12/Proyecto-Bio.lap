@@ -17,11 +17,28 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.biolap.modelo.usuarioData;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ajustes extends AppCompatActivity {
 
     private TextView cambio_c;
+    private String id;
+    private EditText usuario;
+    private String nombre;
+    usuarioData ud = usuarioData.getInstance();
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +60,9 @@ public class ajustes extends AppCompatActivity {
         LayoutInflater inflater = getLayoutInflater();
         View dialogFView = inflater.inflate(R.layout.cambiar_correo,null);
         builder.setView(dialogFView);
-        EditText correo = dialogFView.findViewById(R.id.cambiar_correo);
-        correo.setText(usuarioData.getInstance().getUsuario_nombre());
+        usuario = dialogFView.findViewById(R.id.cambiar_correo);
+        usuario.setText(ud.getUsuario_nombre());
+        id = ud.getId_usuario();
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button aceptar = dialogFView.findViewById(R.id.boton_aceptar);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button cancelar = dialogFView.findViewById(R.id.boton_cancelar);
         AlertDialog dialog = builder.create();
@@ -52,7 +70,8 @@ public class ajustes extends AppCompatActivity {
         aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(ajustes.this, "Listo", Toast.LENGTH_SHORT).show();
+                nombre = usuario.getText().toString();
+                modificar("http://192.168.0.108/bio.lap/modificar_usuario.php");
                 dialog.dismiss();
             }
         });
@@ -71,13 +90,44 @@ public class ajustes extends AppCompatActivity {
         Intent c = new Intent(this, cuentaAjustes.class);
         startActivity(c);
     }
-    /*
-    public void guardar(View view){
-       try{
-            OutpuntStebfir archivos = new Outout||Reader(
-            archivo.
-       }
+
+    private void modificar(String url) {
+        StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonResponse = new JSONObject(response);
+                    boolean success = jsonResponse.getBoolean("success");
+                    if (success) {
+                        ud.setUsuario_nombre(nombre);
+                        Toast.makeText(ajustes.this, "Listo", Toast.LENGTH_SHORT).show();
+                        Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
+                        startActivity(mp);
+                        finish();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Error en la búsqueda", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> datos = new HashMap<String, String>();
+                datos.put("id", id);
+                datos.put("nombre", nombre);
+                return datos;
+            }
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(sr);
     }
-    */
 
 }

@@ -38,8 +38,6 @@ public class gestionNom extends AppCompatActivity {
     private EditText nombre;
     private EditText formulario;
     private String id;
-    private Spinner codigos;
-    //private List<Nomenclaturas> listaNom;
 
     @SuppressLint("MissingInflatedId")
     @Override

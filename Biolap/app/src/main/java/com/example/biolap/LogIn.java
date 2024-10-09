@@ -39,11 +39,10 @@ import java.util.Map;
 public class LogIn extends AppCompatActivity {
     EditText usuarioTXT;
     EditText contraTXT;
-    Button ing;
     TextView errorT;
     ProgressBar n;
     ImageView no;
-    usuarioData ud = new usuarioData();
+    usuarioData ud = usuarioData.getInstance();
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -63,11 +62,6 @@ public class LogIn extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
-
-    public void ini (View view){
-        Intent mp = new Intent(this, menuPrincipal.class);
-        startActivity(mp);
     }
 
     public void validar(View view){
@@ -98,14 +92,11 @@ public class LogIn extends AppCompatActivity {
                     boolean success = jsonResponse.getBoolean("success");
 
                     if (success) {
-                        String id = jsonResponse.getString("id");
-                        String nombre = jsonResponse.getString("nombre");
-                        usuarioData ud = new usuarioData();
-                        ud.setUsuario_nombre(nombre);
-                        ud.setId_usuario(id);
-
+                        ud.setUsuario_nombre(jsonResponse.getString("nombre"));
+                        ud.setId_usuario(jsonResponse.getString("id"));
                         Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
                         startActivity(mp);
+                        finish();
                     } else {
                         n.setVisibility(View.GONE);
                         no.setVisibility(View.VISIBLE);
