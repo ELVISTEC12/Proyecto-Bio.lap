@@ -20,6 +20,10 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\cambiar_correo.xml"
     },
     {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_paciente_dato.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_paciente_dato.xml"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_menuprincipal.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_menuprincipal.xml"
     },
@@ -124,10 +128,6 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_paciente_card.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/paciente_card.xml"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_analisis.png.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\analisis.png"
     },
@@ -204,6 +204,10 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\contactos.png"
     },
     {
+        "merged": "com.example.biolap.app-debug-33:/layout_activity_nom_datos.xml.flat",
+        "source": "com.example.biolap.app-main-35:/layout/activity_nom_datos.xml"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-mdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-mdpi\\ic_launcher.webp"
     },
@@ -242,6 +246,10 @@
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_candado.png.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\candado.png"
+    },
+    {
+        "merged": "com.example.biolap.app-debug-33:/layout_activity_paciente_dato.xml.flat",
+        "source": "com.example.biolap.app-main-35:/layout/activity_paciente_dato.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",

@@ -14,9 +14,15 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable spinner_arrow
 id Contraseña_user
+id DNIPasienteE
 id DatosPaciente
 id DatosPacientes
+id EdadPaciente
+id MedicoPaciente
 id NombreNomenclatura
+id NombrePaciente
+id ObraSocialPaciente
+id RutinaPaciente
 id b_buscar
 id b_r
 id barradeprogreso
@@ -49,6 +55,8 @@ id dniPaciente
 id dnipa
 id edad
 id editTextText
+id eli_pac
+id eliminar_nom
 id error
 id fechaCarga
 id floatingActionButton
@@ -61,6 +69,7 @@ id iconoPaciente
 id idNom
 id idNomenclatura
 id idPaciente
+id idPacienteE
 id imageButton
 id imageButton2
 id imageButton3
@@ -78,6 +87,8 @@ id linearLayout6
 id linearLayout7
 id main
 id med
+id mod_pac
+id modificar_nom
 id mostrar_nom
 id n_p
 id name_user
@@ -94,6 +105,7 @@ id obra_social
 id pacientes_listado
 id rutinaFormTXT
 id rutinaTXT
+id telefonoPaciente
 id textView
 id textView10
 id textView11
@@ -136,6 +148,7 @@ layout activity_menuprincipal
 layout activity_nom_datos
 layout activity_nomenclaturas
 layout activity_nueva_nomenclatura
+layout activity_paciente_dato
 layout activity_perfil_ajuste
 layout activity_registrar_usuario
 layout cambiar_correo

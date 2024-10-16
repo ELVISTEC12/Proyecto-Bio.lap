@@ -6,11 +6,13 @@ public class NomLista implements Serializable {
     private String id;
     private String nombre;
     private String codigo;
+    private String formulario;
 
-    public NomLista(String id, String nombre, String codigo) {
+    public NomLista(String id, String nombre, String codigo, String form) {
         this.id = id;
         this.nombre = nombre;
         this.codigo = codigo;
+        this.formulario = form;
     }
 
     public String getId() {
@@ -25,4 +27,7 @@ public class NomLista implements Serializable {
         return codigo;
     }
 
+    public String getFormulario() {
+        return formulario;
+    }
 }

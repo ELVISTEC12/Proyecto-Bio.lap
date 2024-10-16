@@ -12,7 +12,7 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Buscador"
+        android:text="Análisis"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         android:textStyle="bold"

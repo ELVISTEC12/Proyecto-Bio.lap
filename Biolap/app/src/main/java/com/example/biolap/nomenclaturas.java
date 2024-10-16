@@ -40,49 +40,47 @@ public class nomenclaturas extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_nomenclaturas);
 
-
         lista_nom = findViewById(R.id.mostrar_nom);
         lista_nom.setLayoutManager(new LinearLayoutManager(this));
 
-        String url = "http://192.168.0.108/bio.lap/lista_p.php";
+        String url = "http://192.168.0.108/bio.lap/lista_nom.php";
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
-                Request.Method.GET,
-                url,
-                null,
-                new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        List<NomLista> nomenclaturaList = new ArrayList<>();
-                        for (int i = 0; i < response.length(); i++) {
-                            try {
-                                JSONObject jsonObject = response.getJSONObject(i);
-                                String nombre = jsonObject.getString("nombre");
-                                String codigo = jsonObject.getString("codigo");
-                                String id = jsonObject.getString("id");
+            Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+                @Override
+                public void onResponse(JSONArray response) {
+                    List<NomLista> nomenclaturaList = new ArrayList<>();
+                    for (int i = 0; i < response.length(); i++) {
+                        try {
+                            JSONObject jsonObject = response.getJSONObject(i);
+                            String id = jsonObject.getString("id");
+                            String codigo = jsonObject.getString("codigo");
+                            String nombre = jsonObject.getString("nombre");
+                            String form = jsonObject.getString("formulario");
 
-                                NomLista nomenclatura = new NomLista(id,nombre, codigo);
-                                nomenclaturaList.add(nomenclatura);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
+                            NomLista nomenclatura = new NomLista(id,nombre, codigo, form);
+                            nomenclaturaList.add(nomenclatura);
+                        } catch (JSONException e) {
+                            Toast.makeText(nomenclaturas.this, e.toString(), Toast.LENGTH_SHORT).show();
                         }
+                    }
 
-                        NomAdapter adapter = new NomAdapter(nomenclaturaList, new NomAdapter.OnItemClickListener() {
-                            @Override
-                            public void OnItemClick(NomLista item) {
-                                mover(item);
-                            }
-                        });
-                        lista_nom.setAdapter(adapter);
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(nomenclaturas.this, error.toString(), Toast.LENGTH_SHORT).show();;
-                    }
+                    NomAdapter adapter = new NomAdapter(nomenclaturaList, new NomAdapter.OnItemClickListener() {
+                        @Override
+                        public void OnItemClick(NomLista item) {
+                            //Toast.makeText(nomenclaturas.this, item.toString(), Toast.LENGTH_SHORT).show();
+                            mover(item);
+                        }
+                    });
+                    lista_nom.setAdapter(adapter);
                 }
+            },
+            new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(nomenclaturas.this, error.toString(), Toast.LENGTH_SHORT).show();;
+                }
+            }
         );
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(jsonArrayRequest);
@@ -96,7 +94,7 @@ public class nomenclaturas extends AppCompatActivity {
 
 
     public void mover(NomLista item){
-        Intent nn = new Intent(this,nom_datos.class);
+        Intent nn = new Intent(getApplicationContext(),nom_datos.class);
         nn.putExtra("NomLista", item);
         startActivity(nn);
     }

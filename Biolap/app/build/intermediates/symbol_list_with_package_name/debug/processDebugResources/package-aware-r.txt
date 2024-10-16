@@ -3120,12 +3120,18 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id Contraseña_user
+id DNIPasienteE
 id DatosPaciente
 id DatosPacientes
+id EdadPaciente
 id FUNCTION
 id META
+id MedicoPaciente
 id NO_DEBUG
 id NombreNomenclatura
+id NombrePaciente
+id ObraSocialPaciente
+id RutinaPaciente
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -3325,6 +3331,8 @@ id editTextText
 id edit_query
 id edit_text_id
 id elastic
+id eli_pac
+id eliminar_nom
 id embed
 id end
 id endToStart
@@ -3384,6 +3392,7 @@ id iconoPaciente
 id idNom
 id idNomenclatura
 id idPaciente
+id idPacienteE
 id ifRoom
 id ignore
 id ignoreRequest
@@ -3454,6 +3463,8 @@ id med
 id message
 id middle
 id mini
+id mod_pac
+id modificar_nom
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3642,6 +3653,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id telefonoPaciente
 id text
 id text2
 id textEnd
@@ -3856,6 +3868,7 @@ layout activity_menuprincipal
 layout activity_nom_datos
 layout activity_nomenclaturas
 layout activity_nueva_nomenclatura
+layout activity_paciente_dato
 layout activity_perfil_ajuste
 layout activity_registrar_usuario
 layout cambiar_correo

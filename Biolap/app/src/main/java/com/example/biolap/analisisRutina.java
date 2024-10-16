@@ -38,6 +38,7 @@ public class analisisRutina extends AppCompatActivity {
     private String dni;
     private String telefono;
     private String medico;
+    private String nom = "";
 
     registros rg = registros.getInstance();
     @SuppressLint("MissingInflatedId")
@@ -76,7 +77,9 @@ public class analisisRutina extends AppCompatActivity {
                     boolean success = jsonResponse.getBoolean("success");
                     if (success) {
                         String formN = jsonResponse.getString("formulario");
-                        form.setText(formN);
+                        String act = form.getText().toString();
+                        nom = act +"\n"+ formN ;
+                        form.setText(nom);
                     } else {
                         Toast.makeText(getApplicationContext(), "Error en la búsqueda", Toast.LENGTH_SHORT).show();
                     }

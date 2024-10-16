@@ -1,5 +1,6 @@
 package com.example.biolap;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -83,7 +84,7 @@ public class gestionarAnalisis extends AppCompatActivity {
                         PacienteAdapter adapter = new PacienteAdapter(PacienteLista, new PacienteAdapter.OnItemClickListener() {
                             @Override
                             public void OnItemClick(PacienteLista item) {
-                                //mover(item);
+                                moverP(item);
                             }
                         });
                         pacientes.setAdapter(adapter);
@@ -105,5 +106,10 @@ public class gestionarAnalisis extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void moverP(PacienteLista item){
+        Intent nn = new Intent(getApplicationContext(),paciente_dato.class);
+        nn.putExtra("PacienteLista", item);
+        startActivity(nn);
     }
 }

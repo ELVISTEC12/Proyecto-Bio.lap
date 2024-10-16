@@ -34,6 +34,9 @@
         android:theme="@style/Theme.Biolap"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.example.biolap.paciente_dato"
+            android:exported="false" />
+        <activity
             android:name="com.example.biolap.nom_datos"
             android:exported="false" />
         <activity

@@ -18,6 +18,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".paciente_dato"
+            android:exported="false" />
+        <activity
             android:name=".nom_datos"
             android:exported="false" />
         <activity
