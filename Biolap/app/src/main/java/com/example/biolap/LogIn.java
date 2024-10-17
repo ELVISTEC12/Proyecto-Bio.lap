@@ -2,8 +2,12 @@ package com.example.biolap;
 
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -24,8 +28,12 @@ import com.android.volley.toolbox.Volley;
 import com.example.biolap.modelo.usuarioData;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.biometric.BiometricManager;
+import androidx.biometric.BiometricPrompt;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -35,14 +43,16 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Executor;
 
 public class LogIn extends AppCompatActivity {
     EditText usuarioTXT;
     EditText contraTXT;
     TextView errorT;
     ProgressBar n;
-    ImageView no;
+    ImageView no, inter;
     usuarioData ud = usuarioData.getInstance();
+    Button sin_in;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -56,7 +66,14 @@ public class LogIn extends AppCompatActivity {
         errorT = findViewById(R.id.textView23);
         n=findViewById(R.id.barradeprogreso);
         no=findViewById(R.id.error);
-
+        inter=findViewById(R.id.sin_internet);
+        sin_in=findViewById(R.id.bo_sin_internet);
+        sin_in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                salir();
+            }
+        });
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -65,79 +82,157 @@ public class LogIn extends AppCompatActivity {
     }
 
     public void validar(View view){
-        boolean val = true;
-        String nombre = usuarioTXT.getText().toString();
-        String clave = contraTXT.getText().toString();
-        if(TextUtils.isEmpty(nombre)){
-            usuarioTXT.setError("Campo obligatorio");
-            val = false;
-        }
-        if(TextUtils.isEmpty(clave)){
-            contraTXT.setError("Campo obligatorio");
-            val = false;
-        }
-        if(val){
+        if (!isConnected()) {
 
-            n.setVisibility(View.VISIBLE);
-            enviarDatos("http://192.168.0.108/bio.lap/validar_usuario.php");
+            inter.setVisibility(View.VISIBLE);
+            sin_in.setVisibility(View.VISIBLE);
+
+        } else {
+
+            boolean val = true;
+            String nombre = usuarioTXT.getText().toString();
+            String clave = contraTXT.getText().toString();
+            if (TextUtils.isEmpty(nombre)) {
+                usuarioTXT.setError("Campo obligatorio");
+                val = false;
+            }
+            if (TextUtils.isEmpty(clave)) {
+                contraTXT.setError("Campo obligatorio");
+                val = false;
+            }
+            if (val) {
+
+                n.setVisibility(View.VISIBLE);
+                enviarDatos("http://192.168.0.108/bio.lap/validar_usuario.php");
+            }
         }
     }
 
     public void enviarDatos(String URL){
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    JSONObject jsonResponse = new JSONObject(response);
-                    boolean success = jsonResponse.getBoolean("success");
+        if (!isConnected()) {
 
-                    if (success) {
-                        ud.setUsuario_nombre(jsonResponse.getString("nombre"));
-                        ud.setId_usuario(jsonResponse.getString("id"));
-                        Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
-                        startActivity(mp);
-                        finish();
-                    } else {
+            inter.setVisibility(View.VISIBLE);
+            sin_in.setVisibility(View.VISIBLE);
+
+        } else {
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        JSONObject jsonResponse = new JSONObject(response);
+                        boolean success = jsonResponse.getBoolean("success");
+
+                        if (success) {
+                            ud.setUsuario_nombre(jsonResponse.getString("nombre"));
+                            ud.setId_usuario(jsonResponse.getString("id"));
+                            Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
+                            startActivity(mp);
+                            finish();
+                        } else {
+                            n.setVisibility(View.GONE);
+                            no.setVisibility(View.VISIBLE);
+                            Toast.makeText(LogIn.this, jsonResponse.getString("message"), Toast.LENGTH_SHORT).show();
+                        }
+
+                    } catch (JSONException e) {
                         n.setVisibility(View.GONE);
-                        no.setVisibility(View.VISIBLE);
-                        Toast.makeText(LogIn.this, jsonResponse.getString("message"), Toast.LENGTH_SHORT).show();
+                        e.printStackTrace();
+                        Toast.makeText(LogIn.this, "Error en el servidor", Toast.LENGTH_SHORT).show();
                     }
-
-                } catch (JSONException e) {
-                    n.setVisibility(View.GONE);
-                    e.printStackTrace();
-                    Toast.makeText(LogIn.this, "Error en el servidor", Toast.LENGTH_SHORT).show();
                 }
-            }
 
 
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                errorT.setText(error.toString());
-            }
-        }) {
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    errorT.setText(error.toString());
+                }
+            }) {
 
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> parametros = new HashMap<>();
-                parametros.put("nombre", usuarioTXT.getText().toString());
-                parametros.put("clave", contraTXT.getText().toString());
-                return parametros;
-            }
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String, String> parametros = new HashMap<>();
+                    parametros.put("nombre", usuarioTXT.getText().toString());
+                    parametros.put("clave", contraTXT.getText().toString());
+                    return parametros;
+                }
+            };
+            RequestQueue requestQueue = Volley.newRequestQueue(this);
+            requestQueue.add(stringRequest);
+        }
     }
 
     public void registrar(View view) {
-        Intent r = new Intent(this, registrarUsuario.class);
-        startActivity(r);
+        if (!isConnected()) {
+
+            inter.setVisibility(View.VISIBLE);
+            sin_in.setVisibility(View.VISIBLE);
+
+        } else {
+            Intent r = new Intent(this, registrarUsuario.class);
+            startActivity(r);
+        }
     }
 
-    public void recu(){
-        Intent r = new Intent(this, perfilAjuste.class);
-        startActivity(r);
-    }
+    public void recu(View view) {
+        if (!isConnected()) {
+            inter.setVisibility(View.VISIBLE);
+            sin_in.setVisibility(View.VISIBLE);
+        } else {
 
+            verificarAutenticacion();
+
+        }
+    }
+    private boolean isConnected() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        return networkInfo != null && networkInfo.isConnected();
+    }
+    public void salir(){
+        System.exit(0);
+    }
+    private void verificarAutenticacion() {
+        androidx.biometric.BiometricManager biometricManager = androidx.biometric.BiometricManager.from(this);
+
+        if (biometricManager.canAuthenticate(androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG | androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL)
+                == androidx.biometric.BiometricManager.BIOMETRIC_SUCCESS) {
+            Executor executor = ContextCompat.getMainExecutor(this);
+            BiometricPrompt biometricPrompt = new BiometricPrompt(LogIn.this, executor, new BiometricPrompt.AuthenticationCallback() {
+                @Override
+                public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
+                    super.onAuthenticationError(errorCode, errString);
+                    Toast.makeText(getApplicationContext(), "Autenticación fallida: " + errString, Toast.LENGTH_SHORT).show();
+                }
+
+                @Override
+                public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
+                    super.onAuthenticationSucceeded(result);
+                    recuperar();
+                }
+
+                @Override
+                public void onAuthenticationFailed() {
+                    super.onAuthenticationFailed();
+                    Toast.makeText(getApplicationContext(), "Fallo al autenticar", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            // Crear el diálogo de autenticación biométrica
+            BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
+                    .setTitle("Autenticación requerida")
+                    .setSubtitle("Verifica tu identidad para poder ver tus datos")
+                    .setAllowedAuthenticators(androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG | BiometricManager.Authenticators.DEVICE_CREDENTIAL)
+                    .build();
+
+            biometricPrompt.authenticate(promptInfo);
+
+        } else {
+            Toast.makeText(this, "No se puede usar autenticación biométrica en este dispositivo", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void recuperar(){
+        Intent intent = new Intent(this, cuentaAjustes.class);
+        startActivity(intent);
+    }
 }

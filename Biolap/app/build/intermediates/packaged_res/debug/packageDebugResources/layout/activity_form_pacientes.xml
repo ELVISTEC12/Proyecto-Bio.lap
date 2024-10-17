@@ -84,7 +84,7 @@
         android:ems="10"
         android:hint="@string/edad_paciente"
         android:inputType="number"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textColorHint="#80FFFFFF" />
 
     <EditText

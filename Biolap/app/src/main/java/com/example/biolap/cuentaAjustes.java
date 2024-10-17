@@ -155,7 +155,7 @@ public class cuentaAjustes extends AppCompatActivity {
                 .show();
     }
 
-    // Método para verificar la autenticación biométrica o por PIN/contraseña
+
     private void verificarAutenticacion() {
         BiometricManager biometricManager = BiometricManager.from(this);
 
@@ -256,5 +256,8 @@ public class cuentaAjustes extends AppCompatActivity {
         // Añadir la solicitud a la cola de solicitudes
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+    }
+    public void mostra(View view){
+
     }
 }

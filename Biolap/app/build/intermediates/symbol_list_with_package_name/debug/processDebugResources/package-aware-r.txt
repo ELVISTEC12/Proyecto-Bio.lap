@@ -3221,6 +3221,7 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id blocking
+id bo_sin_internet
 id boton_aceptar
 id boton_cancelar
 id boton_ingresar
@@ -3608,6 +3609,7 @@ id showCustom
 id showHome
 id showTitle
 id sin
+id sin_internet
 id skipCollapsed
 id skipped
 id slide
@@ -3965,6 +3967,7 @@ mipmap foto_perfil
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap mostrar
 mipmap no_carga
 mipmap no_encontrado
 mipmap nombre
@@ -3974,6 +3977,7 @@ mipmap nuevo_re
 mipmap paciente
 mipmap perfil_ajuste
 mipmap pngwing
+mipmap sin_internet
 plurals mtrl_badge_content_description
 raw keep_cronet_api
 string abc_action_bar_home_description
