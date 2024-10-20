@@ -3254,7 +3254,6 @@ int id cerrar 0x7f090088
 int id chain 0x7f090089
 int id chain2 0x7f09008a
 int id chains 0x7f09008b
-int id checkBox 0x7f09008c
 int id checkbox 0x7f09008d
 int id checked 0x7f09008e
 int id chronometer 0x7f09008f
@@ -3426,6 +3425,7 @@ int id line1 0x7f090134
 int id line3 0x7f090135
 int id linear 0x7f090136
 int id linearLayout 0x7f090137
+int id linearLayout2 0x7f090277
 int id linearLayout3 0x7f090138
 int id linearLayout5 0x7f090139
 int id linearLayout6 0x7f09013a
@@ -3608,6 +3608,7 @@ int id showCustom 0x7f0901ea
 int id showHome 0x7f0901eb
 int id showTitle 0x7f0901ec
 int id sin 0x7f0901ed
+int id sin_conexion 0x7f090276
 int id sin_internet 0x7f0901ee
 int id skipCollapsed 0x7f0901ef
 int id skipped 0x7f0901f0
@@ -3977,6 +3978,7 @@ int mipmap paciente 0x7f0e0011
 int mipmap perfil_ajuste 0x7f0e0012
 int mipmap pngwing 0x7f0e0013
 int mipmap sin_internet 0x7f0e0014
+int mipmap sin_servidor 0x7f0e0016
 int plurals mtrl_badge_content_description 0x7f0f0000
 int raw keep_cronet_api 0x7f100000
 int string abc_action_bar_home_description 0x7f110000

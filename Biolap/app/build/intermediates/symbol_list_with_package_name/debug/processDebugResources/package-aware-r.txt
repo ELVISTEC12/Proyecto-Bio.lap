@@ -3255,7 +3255,6 @@ id cerrar
 id chain
 id chain2
 id chains
-id checkBox
 id checkbox
 id checked
 id chronometer
@@ -3427,6 +3426,7 @@ id line1
 id line3
 id linear
 id linearLayout
+id linearLayout2
 id linearLayout3
 id linearLayout5
 id linearLayout6
@@ -3609,6 +3609,7 @@ id showCustom
 id showHome
 id showTitle
 id sin
+id sin_conexion
 id sin_internet
 id skipCollapsed
 id skipped
@@ -3978,6 +3979,7 @@ mipmap paciente
 mipmap perfil_ajuste
 mipmap pngwing
 mipmap sin_internet
+mipmap sin_servidor
 plurals mtrl_badge_content_description
 raw keep_cronet_api
 string abc_action_bar_home_description

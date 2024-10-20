@@ -50,7 +50,7 @@ public class LogIn extends AppCompatActivity {
     EditText contraTXT;
     TextView errorT;
     ProgressBar n;
-    ImageView no, inter;
+    ImageView no, inter, sinconex;
     usuarioData ud = usuarioData.getInstance();
     Button sin_in;
 
@@ -68,6 +68,7 @@ public class LogIn extends AppCompatActivity {
         no=findViewById(R.id.error);
         inter=findViewById(R.id.sin_internet);
         sin_in=findViewById(R.id.bo_sin_internet);
+        sinconex=findViewById(R.id.sin_conexion);
         sin_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,7 +104,7 @@ public class LogIn extends AppCompatActivity {
             if (val) {
 
                 n.setVisibility(View.VISIBLE);
-                enviarDatos("http://192.168.0.108/bio.lap/validar_usuario.php");
+                enviarDatos("http://192.168.1.12/bio.lap/validar_usuario.php");
             }
         }
     }
@@ -132,10 +133,17 @@ public class LogIn extends AppCompatActivity {
                             n.setVisibility(View.GONE);
                             no.setVisibility(View.VISIBLE);
                             Toast.makeText(LogIn.this, jsonResponse.getString("message"), Toast.LENGTH_SHORT).show();
+                            new android.os.Handler().postDelayed(() -> {
+                                no.setVisibility(View.GONE);
+                            }, 3000);
                         }
 
                     } catch (JSONException e) {
                         n.setVisibility(View.GONE);
+                        sinconex.setVisibility(View.VISIBLE);
+                        new android.os.Handler().postDelayed(() -> {
+                            sinconex.setVisibility(View.GONE);
+                        }, 3000);
                         e.printStackTrace();
                         Toast.makeText(LogIn.this, "Error en el servidor", Toast.LENGTH_SHORT).show();
                     }
@@ -146,6 +154,11 @@ public class LogIn extends AppCompatActivity {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     errorT.setText(error.toString());
+                    n.setVisibility(View.GONE);
+                    sinconex.setVisibility(View.VISIBLE);
+                    new android.os.Handler().postDelayed(() -> {
+                        sinconex.setVisibility(View.GONE);
+                    }, 3000);
                 }
             }) {
 

@@ -42,10 +42,10 @@ import java.util.Map;
 public class registrarUsuario extends AppCompatActivity {
     EditText nombre, correo, contra, conta1;
     Button b1;
-    CheckBox check;
+
     boolean verificaded = true;
     ProgressBar cr;
-    ImageView no;
+    ImageView no, sinconex;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -58,10 +58,10 @@ public class registrarUsuario extends AppCompatActivity {
         contra = findViewById(R.id.contra1_r);
         conta1 = findViewById(R.id.contra2_r);
         b1 = findViewById(R.id.b_r);
-        check = findViewById(R.id.checkBox);
+
         no=findViewById(R.id.no_carga);
         cr=findViewById(R.id.carga_registro);
-
+        sinconex=findViewById(R.id.sin_conexion);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -100,15 +100,12 @@ public class registrarUsuario extends AppCompatActivity {
             conta1.setError("Las contraseñas no coinciden");
             verificaded = false;
         }
-        if (check != null && !check.isChecked()) {
-            Toast.makeText(this, "Debe aceptar los términos", Toast.LENGTH_SHORT).show();
-            verificaded = false;
-        }
+
 
         // Solo procedemos si verificaded es verdadero
         if (verificaded) {
             cr.setVisibility(View.VISIBLE);
-            String URL = "http://192.168.1.6/bio.lap/insertar.php";
+            String URL = "http://192.168.1.12/bio.lap/insertar.php";
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
@@ -130,6 +127,10 @@ public class registrarUsuario extends AppCompatActivity {
                             // Muestra mensaje de error
                             Toast.makeText(getApplicationContext(), "Error al registrarse", Toast.LENGTH_SHORT).show();
                             no.setVisibility(View.VISIBLE);
+                           // no.setVisibility(View.VISIBLE);
+                            new android.os.Handler().postDelayed(() -> {
+                                no.setVisibility(View.GONE);
+                            }, 3000);
 
                             // Imprime el mensaje de error en el log para ver el detalle
                             String message = jsonResponse.getString("message");
@@ -149,6 +150,15 @@ public class registrarUsuario extends AppCompatActivity {
                             }, 3000);
                         }
                     } catch (JSONException e) {
+                        cr.setVisibility(View.GONE);
+                        nombre.setText("");
+                        correo.setText("");
+                        contra.setText("");
+                        conta1.setText("");
+                        sinconex.setVisibility(View.VISIBLE);
+                        new android.os.Handler().postDelayed(() -> {
+                            sinconex.setVisibility(View.GONE);
+                        }, 3000);
                         e.printStackTrace();
                         Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
                     }
@@ -156,10 +166,20 @@ public class registrarUsuario extends AppCompatActivity {
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
+                    cr.setVisibility(View.GONE);
+                    nombre.setText("");
+                    correo.setText("");
+                    contra.setText("");
+                    conta1.setText("");
+                    sinconex.setVisibility(View.VISIBLE);
+                    new android.os.Handler().postDelayed(() -> {
+                        sinconex.setVisibility(View.GONE);
+                    }, 3000);
                     String errorMessage = "Error: " + error.getMessage();
                     if (error.networkResponse != null) {
                         errorMessage += " | Código de estado: " + error.networkResponse.statusCode;
                     }
+
                     Toast.makeText(registrarUsuario.this, errorMessage, Toast.LENGTH_SHORT).show();
                     Log.e("VolleyError", errorMessage);
                 }
@@ -168,9 +188,9 @@ public class registrarUsuario extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> parametros = new HashMap<>();
-                    parametros.put("usuarios", nombreUsuario);
+                    parametros.put("nombre", nombreUsuario);
                     parametros.put("correo", correoUsuario);
-                    parametros.put("contra", contrasena);
+                    parametros.put("clave", contrasena);
                     return parametros;
                 }
             };

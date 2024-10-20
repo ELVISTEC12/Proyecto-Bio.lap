@@ -209,5 +209,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.627" />
 
+    <ImageView
+        android:id="@+id/sin_conexion"
+        android:layout_width="144dp"
+        android:layout_height="103dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/sin_servidor" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -42,7 +42,6 @@ id cambiar_datos
 id cambio_correo
 id carga_registro
 id cerrar
-id checkBox
 id codNomBus
 id codNomTXT
 id codigoNom
@@ -82,6 +81,7 @@ id imageView10
 id imageView5
 id imageView6
 id linearLayout
+id linearLayout2
 id linearLayout3
 id linearLayout5
 id linearLayout6
@@ -106,6 +106,7 @@ id obra_social
 id pacientes_listado
 id rutinaFormTXT
 id rutinaTXT
+id sin_conexion
 id sin_internet
 id telefonoPaciente
 id textView
@@ -178,6 +179,7 @@ mipmap paciente
 mipmap perfil_ajuste
 mipmap pngwing
 mipmap sin_internet
+mipmap sin_servidor
 string ajuste
 string app_name
 string bienv
