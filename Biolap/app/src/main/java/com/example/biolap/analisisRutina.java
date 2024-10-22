@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -39,6 +41,8 @@ public class analisisRutina extends AppCompatActivity {
     private String telefono;
     private String medico;
     private String nom = "";
+    private ProgressBar carga;
+    private ImageView no_encontrado, sin_servidor;
 
     registros rg = registros.getInstance();
     @SuppressLint("MissingInflatedId")
@@ -50,6 +54,9 @@ public class analisisRutina extends AppCompatActivity {
 
         rutinasTXT = findViewById(R.id.rutinaTXT);
         form = findViewById(R.id.rutinaFormTXT);
+        carga=findViewById(R.id.barradeprogreso);
+        no_encontrado=findViewById(R.id.error);
+        sin_servidor=findViewById(R.id.sin_conexion);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -57,6 +64,7 @@ public class analisisRutina extends AppCompatActivity {
         });
     }
     public void buscarN(View view){
+        carga.setVisibility(View.VISIBLE);
         boolean verificar = true;
         String cod = rutinasTXT.getText().toString();
         if (cod.equals("")) {
@@ -64,7 +72,8 @@ public class analisisRutina extends AppCompatActivity {
             verificar = false;
         }
         if (verificar) {
-            resultadoss("http://192.168.0.108/bio.lap/mostrar_nom.php");
+            resultadoss("http://192.168.1.12/bio.lap/mostrar_nom.php");
+            carga.setVisibility(View.GONE);
         }
     }
 
@@ -81,9 +90,18 @@ public class analisisRutina extends AppCompatActivity {
                         nom = act +"\n"+ formN ;
                         form.setText(nom);
                     } else {
+
                         Toast.makeText(getApplicationContext(), "Error en la búsqueda", Toast.LENGTH_SHORT).show();
+                        no_encontrado.setVisibility(View.VISIBLE);
+                        new android.os.Handler().postDelayed(() -> {
+                            no_encontrado.setVisibility(View.GONE);
+                        }, 3000);
                     }
                 } catch (JSONException e) {
+                    sin_servidor.setVisibility(View.VISIBLE);
+                    new android.os.Handler().postDelayed(() -> {
+                        sin_servidor.setVisibility(View.GONE);
+                    }, 3000);
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
                 }
@@ -91,6 +109,10 @@ public class analisisRutina extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                sin_servidor.setVisibility(View.VISIBLE);
+                new android.os.Handler().postDelayed(() -> {
+                    sin_servidor.setVisibility(View.GONE);
+                }, 3000);
                 Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
             }
         }) {
@@ -119,7 +141,7 @@ public class analisisRutina extends AppCompatActivity {
             dni = rg.getDni();
             telefono = rg.getTelefono();
             medico = rg.getMedico();
-            guardar("http://192.168.0.108/bio.lap/insertar_paciente.php");
+            guardar("http://192.168.1.12/bio.lap/insertar_paciente.php");
         }
     }
 
@@ -136,15 +158,27 @@ public class analisisRutina extends AppCompatActivity {
                         startActivity(m);
                         finish();
                     } else {
+                        no_encontrado.setVisibility(View.VISIBLE);
+                        new android.os.Handler().postDelayed(() -> {
+                            no_encontrado.setVisibility(View.GONE);
+                        }, 3000);
                         Toast.makeText(getApplicationContext(), "Error en la búsqueda", Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
+                    sin_servidor.setVisibility(View.VISIBLE);
+                    new android.os.Handler().postDelayed(() -> {
+                        sin_servidor.setVisibility(View.GONE);
+                    }, 3000);
                     Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                sin_servidor.setVisibility(View.VISIBLE);
+                new android.os.Handler().postDelayed(() -> {
+                    sin_servidor.setVisibility(View.GONE);
+                }, 3000);
                 Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
             }
         }) {

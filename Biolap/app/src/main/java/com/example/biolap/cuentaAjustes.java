@@ -5,8 +5,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,7 +42,8 @@ public class cuentaAjustes extends AppCompatActivity {
 
     TextView name_user, correo, contra;
     Button cerrar, cambia;
-
+    ProgressBar cargar;
+    ImageView error, sin_conexion;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,17 +57,23 @@ public class cuentaAjustes extends AppCompatActivity {
         contra = findViewById(R.id.Contraseña_user);
         cerrar = findViewById(R.id.cerrar);
         cambia = findViewById(R.id.cambiar_datos);
-
+        //cargar= findViewById(R.id.barradeprogreso);
+        error= findViewById(R.id.error);
+        sin_conexion=findViewById(R.id.sin_conexion);
         // Obtener el ID del usuario desde SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
         int userId = sharedPreferences.getInt("USER_ID", -1);
 
         if (userId != -1) {
             // URL con el ID del usuario
-            String url = "http://192.168.193.224/bio.lap/selec_user.php?id=" + userId;
-            fetchUserData(url);  // Llamar a fetchUserData con la URL correcta
+            String url = "http://192.168.1.12/bio.lap/selec_user.php?id=" + userId;
+            fetchUserData(url); 
         } else {
             // Manejar el caso de ID no válido
+            error.setVisibility(View.VISIBLE);
+            new android.os.Handler().postDelayed(() -> {
+                error.setVisibility(View.GONE);
+            }, 3000);
             Toast.makeText(this, "Usuario no encontrado", Toast.LENGTH_SHORT).show();
         }
 
@@ -79,6 +89,7 @@ public class cuentaAjustes extends AppCompatActivity {
         cambia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 verificarAutenticacion();
             }
         });
@@ -117,6 +128,10 @@ public class cuentaAjustes extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                sin_conexion.setVisibility(View.VISIBLE);
+                new android.os.Handler().postDelayed(() -> {
+                    sin_conexion.setVisibility(View.GONE);
+                }, 3000);
                 String errorMessage = "Error de red";
                 if (error.networkResponse != null) {
                     errorMessage += " Código de respuesta: " + error.networkResponse.statusCode;
@@ -155,7 +170,7 @@ public class cuentaAjustes extends AppCompatActivity {
                 .show();
     }
 
-    // Método para verificar la autenticación biométrica o por PIN/contraseña
+
     private void verificarAutenticacion() {
         BiometricManager biometricManager = BiometricManager.from(this);
 
@@ -208,7 +223,7 @@ public class cuentaAjustes extends AppCompatActivity {
         }
 
         // URL del archivo PHP que se encargará de actualizar los datos
-        String url = "http://192.168.1.5/bio.lap/acc.php";
+        String url = "http://192.168.1.12/bio.lap/acc.php";
 
         // Obtener los datos que el usuario desea cambiar
         String user = name_user.getText().toString();
@@ -231,6 +246,10 @@ public class cuentaAjustes extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "Error: " + message, Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
+                            sin_conexion.setVisibility(View.VISIBLE);
+                            new android.os.Handler().postDelayed(() -> {
+                                sin_conexion.setVisibility(View.GONE);
+                            }, 3000);
                             e.printStackTrace();
                             Toast.makeText(getApplicationContext(), "Error al procesar la respuesta del servidor", Toast.LENGTH_SHORT).show();
                         }
@@ -239,6 +258,10 @@ public class cuentaAjustes extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        sin_conexion.setVisibility(View.VISIBLE);
+                        new android.os.Handler().postDelayed(() -> {
+                            sin_conexion.setVisibility(View.GONE);
+                        }, 3000);
                         Toast.makeText(getApplicationContext(), "Error al conectar con el servidor", Toast.LENGTH_LONG).show();
                     }
                 }) {
@@ -256,5 +279,17 @@ public class cuentaAjustes extends AppCompatActivity {
         // Añadir la solicitud a la cola de solicitudes
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+    }
+    public void mostra(View view){
+        if (contra.getInputType() == (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD)) {
+            // Si está en formato de contraseña, mostrar el texto normal
+            contra.setInputType(InputType.TYPE_CLASS_TEXT);
+        } else {
+            // Si el texto está visible, volver a ocultarlo como contraseña
+            contra.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        }
+
+        // Mueve el cursor al final del texto
+       // contra.setSelection(contra.getText().length());
     }
 }

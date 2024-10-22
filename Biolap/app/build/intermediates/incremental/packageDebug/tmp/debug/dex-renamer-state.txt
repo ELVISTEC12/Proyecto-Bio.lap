@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 #Wed Oct 16 16:43:44 ART 2024
 base.0=C\:\\Users\\Usuario\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Usuario\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\Usuario\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 base.3=C\:\\Users\\Usuario\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
 base.4=C\:\\Users\\Usuario\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+=======
+#Sun Oct 20 16:01:10 ART 2024
+base.0=C\:\\Users\\coron\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\coron\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=C\:\\Users\\coron\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+base.3=C\:\\Users\\coron\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
+base.4=C\:\\Users\\coron\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+>>>>>>> 665da2146e16ddf8b0b72d06c2b43c7fa3ca47d4
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=4/classes.dex

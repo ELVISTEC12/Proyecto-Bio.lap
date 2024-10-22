@@ -21,12 +21,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"></LinearLayout>
 
-    <EditText
+    <TextView
         android:id="@+id/correo_user"
         android:layout_width="360dp"
         android:layout_height="45dp"
         android:ems="10"
-        android:inputType="text"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.568"
@@ -103,16 +103,16 @@
 
     <EditText
         android:id="@+id/Contraseña_user"
-        android:layout_width="360dp"
-        android:layout_height="45dp"
+        android:layout_width="305dp"
+        android:layout_height="42dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.619" />
+        app:layout_constraintVertical_bias="0.613" />
 
     <Button
         android:id="@+id/cambiar_datos"
@@ -128,4 +128,53 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.746" />
 
+    <ImageView
+        android:layout_width="69dp"
+        android:layout_height="57dp"
+        android:src="@mipmap/mostrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <ProgressBar
+        android:id="@+id/barradeprogreso"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="147dp"
+        android:layout_height="136dp"
+        android:background="@color/black"
+        android:max="100"
+        android:progressDrawable="@color/black"
+        android:progressTint="#243F7A"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/error"
+        android:layout_width="331dp"
+        android:layout_height="102dp"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/no_encontrado" />
+
+    <ImageView
+        android:id="@+id/sin_conexion"
+        android:layout_width="144dp"
+        android:layout_height="103dp"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/sin_servidor" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,6 +26,7 @@ id RutinaPaciente
 id b_buscar
 id b_r
 id barradeprogreso
+id bo_sin_internet
 id boton_aceptar
 id boton_cancelar
 id boton_ingresar
@@ -41,7 +42,6 @@ id cambiar_datos
 id cambio_correo
 id carga_registro
 id cerrar
-id checkBox
 id codNomBus
 id codNomTXT
 id codigoNom
@@ -81,6 +81,7 @@ id imageView10
 id imageView5
 id imageView6
 id linearLayout
+id linearLayout2
 id linearLayout3
 id linearLayout5
 id linearLayout6
@@ -105,6 +106,8 @@ id obra_social
 id pacientes_listado
 id rutinaFormTXT
 id rutinaTXT
+id sin_conexion
+id sin_internet
 id telefonoPaciente
 id textView
 id textView10
@@ -165,6 +168,7 @@ mipmap foto_perfil
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap mostrar
 mipmap no_carga
 mipmap no_encontrado
 mipmap nombre
@@ -174,6 +178,8 @@ mipmap nuevo_re
 mipmap paciente
 mipmap perfil_ajuste
 mipmap pngwing
+mipmap sin_internet
+mipmap sin_servidor
 string ajuste
 string app_name
 string bienv
