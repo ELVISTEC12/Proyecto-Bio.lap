@@ -114,6 +114,7 @@ public class LogIn extends AppCompatActivity {
 
             inter.setVisibility(View.VISIBLE);
             sin_in.setVisibility(View.VISIBLE);
+            
 
         } else {
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
