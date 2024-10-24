@@ -8,12 +8,12 @@
         "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-ldpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_paciente_dato.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_paciente_dato.xml"
-    },
-    {
         "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_paciente_dato.xml.flat",
+        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_paciente_dato.xml"
     },
     {
         "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_menuprincipal.xml.flat",
@@ -50,10 +50,6 @@
     {
         "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_ajustes.png.flat",
         "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\ajustes.png"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_form_pacientes.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_form_pacientes.xml"
     },
     {
         "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_borde_boton.xml.flat",
@@ -140,12 +136,12 @@
         "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_ajustes.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_ajustes.xml"
-    },
-    {
         "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_nom_datos.xml.flat",
         "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_nom_datos.xml"
+    },
+    {
+        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_ajustes.xml.flat",
+        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_ajustes.xml"
     },
     {
         "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_footer.png.flat",
@@ -186,14 +182,6 @@
     {
         "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_cuenta_ajustes.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_cuenta_ajustes.xml"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_analisis_rutina.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_analisis_rutina.xml"
     },
     {
         "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_registrar_usuario.xml.flat",
@@ -254,6 +242,10 @@
     {
         "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
         "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.biolap.app-debug-33:/layout_activity_paciente_dato.xml.flat",
+        "source": "com.example.biolap.app-main-35:/layout/activity_paciente_dato.xml"
     },
     {
         "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_main.xml.flat",

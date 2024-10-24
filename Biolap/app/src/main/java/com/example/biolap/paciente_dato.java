@@ -3,16 +3,21 @@ package com.example.biolap;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -30,8 +35,15 @@ import com.example.biolap.modelo.PacienteLista;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Paragraph;
+import android.os.Environment;
+import java.io.File;
 
 public class paciente_dato extends AppCompatActivity {
     private EditText dni;
@@ -132,7 +144,7 @@ public class paciente_dato extends AppCompatActivity {
         builder.setMessage("¿Estás seguro que deseas eliminar '" + nombreP + "' ?")
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        eliDatos("http://192.168.0.129/bio.lap/eliminar_paciente.php");
+                        eliDatos("http://192.168.0.130/bio.lap/eliminar_paciente.php");
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -225,4 +237,47 @@ public class paciente_dato extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(sr);
     }
+
+
+    public void generarPDF(View view) {
+        try {
+            // Crear el directorio en la carpeta de Descargas
+            File pdfDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "Pacientes");
+            if (!pdfDir.exists() && !pdfDir.mkdirs()) {
+                Log.e("PDF_DIR", "Failed to create directory");
+                Toast.makeText(this, "No se pudo crear el directorio", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Definir la ruta del archivo PDF
+            String pdfPath = pdfDir + "/paciente_" + dniP + ".pdf";
+            Log.d("PDF_PATH", "PDF path: " + pdfPath);
+
+            // Crear el archivo PDF
+            PdfWriter writer = new PdfWriter(pdfPath);
+            PdfDocument pdfDoc = new PdfDocument(writer);
+            Document document = new Document(pdfDoc);
+
+            // Añadir los datos del paciente al PDF
+            document.add(new Paragraph("Datos del Paciente:"));
+            document.add(new Paragraph("DNI: " + dniP));
+            document.add(new Paragraph("Nombre: " + nombreP));
+            document.add(new Paragraph("Teléfono: " + telefonoP));
+            document.add(new Paragraph("Edad: " + edadP));
+            document.add(new Paragraph("Obra Social: " + obraP));
+            document.add(new Paragraph("Médico: " + medicoP));
+            document.add(new Paragraph("Rutina: " + rutinaP));
+
+            // Cerrar el documento
+            document.close();
+
+            // Mostrar la ubicación donde se guardó el PDF
+            Toast.makeText(this, "PDF generado en: " + pdfPath, Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            Log.e("PDF_ERROR", "Error al generar PDF", e);
+            Toast.makeText(this, "Error al generar el PDF: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
 }

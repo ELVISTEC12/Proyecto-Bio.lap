@@ -104,7 +104,7 @@ public class LogIn extends AppCompatActivity {
             if (val) {
 
                 n.setVisibility(View.VISIBLE);
-                enviarDatos("http://192.168.1.12/bio.lap/validar_usuario.php");
+                enviarDatos("http://192.168.1.2/bio.lap/validar_usuario.php");
             }
         }
     }

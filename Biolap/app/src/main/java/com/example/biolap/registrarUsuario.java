@@ -105,7 +105,7 @@ public class registrarUsuario extends AppCompatActivity {
         // Solo procedemos si verificaded es verdadero
         if (verificaded) {
             cr.setVisibility(View.VISIBLE);
-            String URL = "http://192.168.1.12/bio.lap/insertar.php";
+            String URL = "http://192.168.1.2/bio.lap/insertar.php";
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {

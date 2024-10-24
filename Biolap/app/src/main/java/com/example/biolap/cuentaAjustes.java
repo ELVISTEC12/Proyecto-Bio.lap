@@ -67,7 +67,7 @@ public class cuentaAjustes extends AppCompatActivity {
         if (userId != -1) {
             // URL con el ID del usuario
             String url = "http://192.168.1.12/bio.lap/selec_user.php?id=" + userId;
-            fetchUserData(url); 
+            fetchUserData(url);
         } else {
             // Manejar el caso de ID no válido
             error.setVisibility(View.VISIBLE);

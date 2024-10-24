@@ -35,6 +35,7 @@ id buscar_d
 id button
 id button2
 id button3
+id button4
 id button6
 id button7
 id cambiar_correo
