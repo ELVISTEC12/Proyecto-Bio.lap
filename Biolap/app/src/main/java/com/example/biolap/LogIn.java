@@ -192,9 +192,7 @@ public class LogIn extends AppCompatActivity {
             inter.setVisibility(View.VISIBLE);
             sin_in.setVisibility(View.VISIBLE);
         } else {
-
             verificarAutenticacion();
-
         }
     }
     private boolean isConnected() {
