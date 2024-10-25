@@ -41,7 +41,7 @@ import java.util.concurrent.Executor;
 public class cuentaAjustes extends AppCompatActivity {
 
     TextView name_user, correo, contra;
-    Button cerrar, cambia;
+    Button cambia;
     ProgressBar cargar;
     ImageView error, sin_conexion;
     @SuppressLint("MissingInflatedId")
@@ -54,13 +54,12 @@ public class cuentaAjustes extends AppCompatActivity {
         // Inicializar los TextView y Button
         name_user = findViewById(R.id.name_user);
         correo = findViewById(R.id.correo_user);
-        contra = findViewById(R.id.Contraseña_user);
-        cerrar = findViewById(R.id.cerrar);
+
         cambia = findViewById(R.id.cambiar_datos);
         //cargar= findViewById(R.id.barradeprogreso);
         error= findViewById(R.id.error);
         sin_conexion=findViewById(R.id.sin_conexion);
-        // Obtener el ID del usuario desde SharedPreferences
+
         SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
         int userId = sharedPreferences.getInt("USER_ID", -1);
 
@@ -77,19 +76,10 @@ public class cuentaAjustes extends AppCompatActivity {
             Toast.makeText(this, "Usuario no encontrado", Toast.LENGTH_SHORT).show();
         }
 
-        // Evento al hacer clic en el botón cerrar sesión
-        cerrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                cerrar(v); // Llama al método para cerrar sesión
-            }
-        });
-
         // Verificación biométrica antes de permitir cambios
         cambia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 verificarAutenticacion();
             }
         });
@@ -144,32 +134,6 @@ public class cuentaAjustes extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
-
-    // Método para cerrar sesión
-    private void cerrar(View v) {
-        new AlertDialog.Builder(this)
-                .setTitle("Cerrar sesión")
-                .setMessage("¿Estás seguro de que deseas cerrar sesión?")
-                .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Limpiar SharedPreferences
-                        SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.remove("USER_ID");
-                        editor.putBoolean("isUserLoggedIn", false);
-                        editor.apply();
-
-                        // Navegar a la actividad de inicio de sesión
-                        Intent intent = new Intent(getApplicationContext(), LogIn.class);
-                        startActivity(intent);
-                        finish(); // Finaliza la actividad actual
-                    }
-                })
-                .setNegativeButton("No", null)
-                .show();
-    }
-
 
     private void verificarAutenticacion() {
         BiometricManager biometricManager = BiometricManager.from(this);
