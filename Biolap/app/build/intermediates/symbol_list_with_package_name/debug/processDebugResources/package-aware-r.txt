@@ -3119,7 +3119,6 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
-id Contraseña_user
 id DNIPasienteE
 id DatosPaciente
 id DatosPacientes
@@ -3252,7 +3251,6 @@ id centerCrop
 id centerInside
 id center_horizontal
 id center_vertical
-id cerrar
 id chain
 id chain2
 id chains
@@ -3674,7 +3672,6 @@ id textView14
 id textView15
 id textView16
 id textView17
-id textView18
 id textView19
 id textView2
 id textView20
@@ -3686,7 +3683,6 @@ id textView25
 id textView26
 id textView29
 id textView3
-id textView4
 id textView5
 id textView6
 id textView7

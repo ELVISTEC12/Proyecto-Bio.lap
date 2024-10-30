@@ -94,7 +94,6 @@
         android:background="@drawable/bordes"
         android:gravity="top|start"
         android:inputType="textMultiLine"
-        android:maxLines="5"
         android:padding="10dp"
         android:scrollbars="vertical"
         android:hint="Formulario"

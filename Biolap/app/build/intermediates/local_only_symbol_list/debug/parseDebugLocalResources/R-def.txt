@@ -13,7 +13,6 @@ drawable fondo_menu
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable spinner_arrow
-id Contraseña_user
 id DNIPasienteE
 id DatosPaciente
 id DatosPacientes
@@ -42,7 +41,6 @@ id cambiar_correo
 id cambiar_datos
 id cambio_correo
 id carga_registro
-id cerrar
 id codNomBus
 id codNomTXT
 id codigoNom
@@ -119,7 +117,6 @@ id textView14
 id textView15
 id textView16
 id textView17
-id textView18
 id textView19
 id textView2
 id textView20
@@ -131,7 +128,6 @@ id textView25
 id textView26
 id textView29
 id textView3
-id textView4
 id textView5
 id textView6
 id textView7
