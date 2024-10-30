@@ -218,3 +218,4 @@ style Base.Theme.Biolap
 style Theme.Biolap
 xml backup_rules
 xml data_extraction_rules
+xml file_paths

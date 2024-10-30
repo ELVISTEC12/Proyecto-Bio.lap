@@ -2,7 +2,7 @@ package com.example.biolap;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.SharedPreferences;
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -11,7 +11,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.CheckBox;
+
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -31,7 +31,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.biolap.modelo.usuarioData;
+
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -132,11 +132,11 @@ public class registrarUsuario extends AppCompatActivity {
                                 no.setVisibility(View.GONE);
                             }, 3000);
 
-                            // Imprime el mensaje de error en el log para ver el detalle
+
                             String message = jsonResponse.getString("message");
                             Log.e("RegisterError", message);
 
-                            // Bloquea la pantalla por 3 segundos
+
                             getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
                                     WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
 
@@ -201,10 +201,5 @@ public class registrarUsuario extends AppCompatActivity {
             // Si verificaded es falso, no se procede con la solicitud
             Toast.makeText(this, "Debe completar todos los campos correctamente", Toast.LENGTH_SHORT).show();
         }
-
     }
-
-
-
-
 }

@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -18,6 +19,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -240,19 +242,28 @@ public class paciente_dato extends AppCompatActivity {
 
 
     public void generarPDF(View view) {
+        // Asegúrate de capturar los datos antes de generar el PDF
+        String nombreP = nombre.getText().toString();
+        String obraP = obra_social.getText().toString();
+        String dniP = dni.getText().toString();
+        String edadP = edad.getText().toString();
+        String telefonoP = telefono.getText().toString();
+        String medicoP = medico.getText().toString();
+        String rutinaP = rutina.getText().toString();
+
+        // Crear el directorio en la carpeta de Descargas
+        File pdfDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "Pacientes");
+        if (!pdfDir.exists() && !pdfDir.mkdirs()) {
+            Log.e("PDF_DIR", "Failed to create directory");
+            Toast.makeText(this, "No se pudo crear el directorio", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Definir la ruta del archivo PDF
+        String pdfPath = pdfDir + "/paciente_" + dniP + ".pdf";
+        Log.d("PDF_PATH", "PDF path: " + pdfPath);
+
         try {
-            // Crear el directorio en la carpeta de Descargas
-            File pdfDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "Pacientes");
-            if (!pdfDir.exists() && !pdfDir.mkdirs()) {
-                Log.e("PDF_DIR", "Failed to create directory");
-                Toast.makeText(this, "No se pudo crear el directorio", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            // Definir la ruta del archivo PDF
-            String pdfPath = pdfDir + "/paciente_" + dniP + ".pdf";
-            Log.d("PDF_PATH", "PDF path: " + pdfPath);
-
             // Crear el archivo PDF
             PdfWriter writer = new PdfWriter(pdfPath);
             PdfDocument pdfDoc = new PdfDocument(writer);
@@ -273,6 +284,16 @@ public class paciente_dato extends AppCompatActivity {
 
             // Mostrar la ubicación donde se guardó el PDF
             Toast.makeText(this, "PDF generado en: " + pdfPath, Toast.LENGTH_SHORT).show();
+
+            // Abrir el archivo PDF automáticamente
+            File pdfFile = new File(pdfPath);
+            Uri pdfUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", pdfFile);
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setDataAndType(pdfUri, "application/pdf");
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            startActivity(intent);
+
         } catch (Exception e) {
             Log.e("PDF_ERROR", "Error al generar PDF", e);
             Toast.makeText(this, "Error al generar el PDF: " + e.getMessage(), Toast.LENGTH_SHORT).show();
