@@ -88,7 +88,7 @@ public class nom_datos extends AppCompatActivity {
             val = false;
         }
         if(val){
-            modDatos("http://192.168.0.108/bio.lap/modificar_nom.php");
+            modDatos("http://192.168.237.162/bio.lap/modificar_nom.php");
         }
     }
     public void eliminarN(View view){
@@ -97,7 +97,7 @@ public class nom_datos extends AppCompatActivity {
         builder.setMessage("¿Estás seguro que deseas eliminar '" + n + "' ?")
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        eliDatos("http://192.168.0.108/bio.lap/eliminar_nom.php");
+                        eliDatos("http://192.168.237.162/bio.lap/eliminar_nom.php");
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {

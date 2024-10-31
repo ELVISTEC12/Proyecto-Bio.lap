@@ -144,7 +144,7 @@ public class paciente_dato extends AppCompatActivity {
         builder.setMessage("¿Estás seguro que deseas eliminar '" + nombreP + "' ?")
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        eliDatos("http://192.168.0.130/bio.lap/eliminar_paciente.php");
+                        eliDatos("http://192.168.237.162/bio.lap/eliminar_paciente.php");
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {

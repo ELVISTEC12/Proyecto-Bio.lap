@@ -43,7 +43,7 @@ public class nomenclaturas extends AppCompatActivity {
         lista_nom = findViewById(R.id.mostrar_nom);
         lista_nom.setLayoutManager(new LinearLayoutManager(this));
 
-        String url = "http://192.168.1.2/bio.lap/lista_nom.php";
+        String url = "http://192.168.237.162/bio.lap/lista_nom.php";
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
             Request.Method.GET, url, null, new Response.Listener<JSONArray>() {

@@ -4,24 +4,7 @@
             "outputFile": "com.example.biolap.app-mergeDebugResources-31:/values-zh-rCN/values-zh-rCN.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\6d14066d49a5d07d3caa334aefbc5edc\\transformed\\core-1.13.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,147,248,342,436,529,623,719",
-                        "endColumns": "91,100,93,93,92,93,95,100",
-                        "endOffsets": "142,243,337,431,524,618,714,815"
-                    },
-                    "to": {
-                        "startLines": "40,41,42,43,44,45,46,136",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "3421,3513,3614,3708,3802,3895,3989,10886",
-                        "endColumns": "91,100,93,93,92,93,95,100",
-                        "endOffsets": "3508,3609,3703,3797,3890,3984,4080,10982"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\76a8f98aa65ebf68e4779a387e270003\\transformed\\material-1.12.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\76a8f98aa65ebf68e4779a387e270003\\transformed\\material-1.12.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\4a26d791f2e15d2f71842feaa3b8914a\\transformed\\appcompat-1.6.1\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\4a26d791f2e15d2f71842feaa3b8914a\\transformed\\appcompat-1.6.1\\res\\values-zh-rCN\\values-zh-rCN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\coron\\.gradle\\caches\\transforms-4\\db5c184d6b667779541427188872ea5f\\transformed\\biometric-1.2.0-alpha04\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\db5c184d6b667779541427188872ea5f\\transformed\\biometric-1.2.0-alpha04\\res\\values-zh-rCN\\values-zh-rCN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -71,6 +54,23 @@
                         "startOffsets": "2854,2978,4355,4453,4724,4843,4934,5033,5132,5235,5337,5435,5536,5637,5727,5851,5951,6063,6169,10487,10987,11072,11181,11259,11363,11448,11557",
                         "endColumns": "123,99,97,80,118,90,98,98,102,101,97,100,100,89,123,99,111,105,96,101,84,108,77,103,84,108,90",
                         "endOffsets": "2973,3073,4448,4529,4838,4929,5028,5127,5230,5332,5430,5531,5632,5722,5846,5946,6058,6164,6261,10584,11067,11176,11254,11358,11443,11552,11643"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-4\\6d14066d49a5d07d3caa334aefbc5edc\\transformed\\core-1.13.0\\res\\values-zh-rCN\\values-zh-rCN.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,147,248,342,436,529,623,719",
+                        "endColumns": "91,100,93,93,92,93,95,100",
+                        "endOffsets": "142,243,337,431,524,618,714,815"
+                    },
+                    "to": {
+                        "startLines": "40,41,42,43,44,45,46,136",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "3421,3513,3614,3708,3802,3895,3989,10886",
+                        "endColumns": "91,100,93,93,92,93,95,100",
+                        "endOffsets": "3508,3609,3703,3797,3890,3984,4080,10982"
                     }
                 }
             ]
