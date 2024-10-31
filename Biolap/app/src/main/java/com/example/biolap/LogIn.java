@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Build;
+
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -28,12 +28,9 @@ import com.android.volley.toolbox.Volley;
 import com.example.biolap.modelo.usuarioData;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.biometric.BiometricManager;
-import androidx.biometric.BiometricPrompt;
-import androidx.core.content.ContextCompat;
+
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -43,7 +40,8 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.Executor;
+
+
 
 public class LogIn extends AppCompatActivity {
     EditText usuarioTXT;
@@ -53,6 +51,7 @@ public class LogIn extends AppCompatActivity {
     ImageView no, inter, sinconex;
     usuarioData ud = usuarioData.getInstance();
     Button sin_in;
+    private SharedPreferences sharedPreferences;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -64,11 +63,18 @@ public class LogIn extends AppCompatActivity {
         usuarioTXT = findViewById(R.id.usuarioTXT);
         contraTXT = findViewById(R.id.contrasenaTXT);
         errorT = findViewById(R.id.textView23);
-        n=findViewById(R.id.barradeprogreso);
-        no=findViewById(R.id.error);
-        inter=findViewById(R.id.sin_internet);
-        sin_in=findViewById(R.id.bo_sin_internet);
-        sinconex=findViewById(R.id.sin_conexion);
+        n = findViewById(R.id.barradeprogreso);
+        no = findViewById(R.id.error);
+        inter = findViewById(R.id.sin_internet);
+        sin_in = findViewById(R.id.bo_sin_internet);
+        sinconex = findViewById(R.id.sin_conexion);
+
+        // Inicializar SharedPreferences
+        sharedPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
+
+        // Cargar datos almacenados (si existen) en los EditText
+        cargarDatosGuardados();
+
         sin_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,14 +88,11 @@ public class LogIn extends AppCompatActivity {
         });
     }
 
-    public void validar(View view){
+    public void validar(View view) {
         if (!isConnected()) {
-
             inter.setVisibility(View.VISIBLE);
             sin_in.setVisibility(View.VISIBLE);
-
         } else {
-
             boolean val = true;
             String nombre = usuarioTXT.getText().toString();
             String clave = contraTXT.getText().toString();
@@ -102,20 +105,20 @@ public class LogIn extends AppCompatActivity {
                 val = false;
             }
             if (val) {
-
                 n.setVisibility(View.VISIBLE);
+<<<<<<< HEAD
                 enviarDatos("http://192.168.237.162/bio.lap/validar_usuario.php");
+=======
+                enviarDatos("http://192.168.237.224/bio.lap/validar_usuario.php");
+>>>>>>> e730d200bd77c76dd33a5d153031fefbdc82a662
             }
         }
     }
 
-    public void enviarDatos(String URL){
+    public void enviarDatos(String URL) {
         if (!isConnected()) {
-
             inter.setVisibility(View.VISIBLE);
             sin_in.setVisibility(View.VISIBLE);
-            
-
         } else {
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
@@ -149,8 +152,6 @@ public class LogIn extends AppCompatActivity {
                         Toast.makeText(LogIn.this, "Error en el servidor", Toast.LENGTH_SHORT).show();
                     }
                 }
-
-
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
@@ -166,8 +167,14 @@ public class LogIn extends AppCompatActivity {
                 @Override
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> parametros = new HashMap<>();
-                    parametros.put("nombre", usuarioTXT.getText().toString());
-                    parametros.put("clave", contraTXT.getText().toString());
+                    String nombre = usuarioTXT.getText().toString();
+                    String clave = contraTXT.getText().toString();
+                    parametros.put("nombre", nombre);
+                    parametros.put("clave", clave);
+
+                    // Guardar datos en SharedPreferences
+                    guardarDatos(nombre, clave);
+
                     return parametros;
                 }
             };
@@ -176,75 +183,38 @@ public class LogIn extends AppCompatActivity {
         }
     }
 
+    private void guardarDatos(String nombre, String clave) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("nombre", nombre);
+        editor.putString("clave", clave);
+        editor.apply();
+    }
+
+    private void cargarDatosGuardados() {
+        String nombreGuardado = sharedPreferences.getString("nombre", "");
+        String claveGuardada = sharedPreferences.getString("clave", "");
+        usuarioTXT.setText(nombreGuardado);
+        contraTXT.setText(claveGuardada);
+    }
+
     public void registrar(View view) {
         if (!isConnected()) {
-
             inter.setVisibility(View.VISIBLE);
             sin_in.setVisibility(View.VISIBLE);
-
         } else {
             Intent r = new Intent(this, registrarUsuario.class);
             startActivity(r);
         }
     }
 
-    public void recu(View view) {
-        if (!isConnected()) {
-            inter.setVisibility(View.VISIBLE);
-            sin_in.setVisibility(View.VISIBLE);
-        } else {
-            verificarAutenticacion();
-        }
-    }
     private boolean isConnected() {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         return networkInfo != null && networkInfo.isConnected();
     }
-    public void salir(){
+
+    public void salir() {
         System.exit(0);
     }
-    private void verificarAutenticacion() {
-        androidx.biometric.BiometricManager biometricManager = androidx.biometric.BiometricManager.from(this);
-
-        if (biometricManager.canAuthenticate(androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG | androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL)
-                == androidx.biometric.BiometricManager.BIOMETRIC_SUCCESS) {
-            Executor executor = ContextCompat.getMainExecutor(this);
-            BiometricPrompt biometricPrompt = new BiometricPrompt(LogIn.this, executor, new BiometricPrompt.AuthenticationCallback() {
-                @Override
-                public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
-                    super.onAuthenticationError(errorCode, errString);
-                    Toast.makeText(getApplicationContext(), "Autenticación fallida: " + errString, Toast.LENGTH_SHORT).show();
-                }
-
-                @Override
-                public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
-                    super.onAuthenticationSucceeded(result);
-                    recuperar();
-                }
-
-                @Override
-                public void onAuthenticationFailed() {
-                    super.onAuthenticationFailed();
-                    Toast.makeText(getApplicationContext(), "Fallo al autenticar", Toast.LENGTH_SHORT).show();
-                }
-            });
-
-            // Crear el diálogo de autenticación biométrica
-            BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
-                    .setTitle("Autenticación requerida")
-                    .setSubtitle("Verifica tu identidad para poder ver tus datos")
-                    .setAllowedAuthenticators(androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG | BiometricManager.Authenticators.DEVICE_CREDENTIAL)
-                    .build();
-
-            biometricPrompt.authenticate(promptInfo);
-
-        } else {
-            Toast.makeText(this, "No se puede usar autenticación biométrica en este dispositivo", Toast.LENGTH_SHORT).show();
-        }
-    }
-    public void recuperar(){
-        Intent intent = new Intent(this, cuentaAjustes.class);
-        startActivity(intent);
-    }
 }
+

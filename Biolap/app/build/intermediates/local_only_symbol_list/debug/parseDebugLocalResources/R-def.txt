@@ -128,7 +128,6 @@ id textView25
 id textView26
 id textView29
 id textView3
-id textView4
 id textView5
 id textView6
 id textView7
@@ -219,3 +218,4 @@ style Base.Theme.Biolap
 style Theme.Biolap
 xml backup_rules
 xml data_extraction_rules
+xml file_paths
