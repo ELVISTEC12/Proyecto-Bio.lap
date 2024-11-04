@@ -1,9 +1,12 @@
 package com.example.biolap;
-
+import android.content.ContentValues;
+import android.os.Build;
+import android.provider.MediaStore;
+import java.io.OutputStream;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -34,16 +37,25 @@ import com.android.volley.toolbox.Volley;
 import com.example.biolap.modelo.NomLista;
 import com.example.biolap.modelo.PacienteLista;
 
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
+
+import com.itextpdf.io.IOException;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.layout.property.TextAlignment;
+
 import android.os.Environment;
 import java.io.File;
 
@@ -242,7 +254,7 @@ public class paciente_dato extends AppCompatActivity {
 
 
     public void generarPDF(View view) {
-        // Asegúrate de capturar los datos antes de generar el PDF
+        // Capturar los datos del paciente
         String nombreP = nombre.getText().toString();
         String obraP = obra_social.getText().toString();
         String dniP = dni.getText().toString();
@@ -251,44 +263,76 @@ public class paciente_dato extends AppCompatActivity {
         String medicoP = medico.getText().toString();
         String rutinaP = rutina.getText().toString();
 
-        // Crear el directorio en la carpeta de Descargas
-        File pdfDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "Pacientes");
-        if (!pdfDir.exists() && !pdfDir.mkdirs()) {
-            Log.e("PDF_DIR", "Failed to create directory");
-            Toast.makeText(this, "No se pudo crear el directorio", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        // Definir la ruta del archivo PDF
-        String pdfPath = pdfDir + "/paciente_" + dniP + ".pdf";
-        Log.d("PDF_PATH", "PDF path: " + pdfPath);
+        // Obtener la fecha actual
+        String fechaActual = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
 
         try {
-            // Crear el archivo PDF
-            PdfWriter writer = new PdfWriter(pdfPath);
+            Uri pdfUri;
+            OutputStream outputStream;
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                // Usar MediaStore para Android 10 y superior (API 29+)
+                ContentValues values = new ContentValues();
+                values.put(MediaStore.Downloads.DISPLAY_NAME, "paciente_" + dniP + ".pdf");
+                values.put(MediaStore.Downloads.MIME_TYPE, "application/pdf");
+                values.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS);
+
+                pdfUri = getContentResolver().insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values);
+                if (pdfUri == null) {
+                    throw new IOException("No se pudo crear el archivo PDF");
+                }
+                outputStream = getContentResolver().openOutputStream(pdfUri);
+            } else {
+                // Para Android 9 y versiones anteriores
+                File pdfFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "paciente_" + dniP + ".pdf");
+                pdfUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", pdfFile);
+                outputStream = new FileOutputStream(pdfFile);
+            }
+
+            // Crear y escribir el PDF
+            PdfWriter writer = new PdfWriter(outputStream);
             PdfDocument pdfDoc = new PdfDocument(writer);
             Document document = new Document(pdfDoc);
 
-            // Añadir los datos del paciente al PDF
-            document.add(new Paragraph("Datos del Paciente:"));
-            document.add(new Paragraph("DNI: " + dniP));
-            document.add(new Paragraph("Nombre: " + nombreP));
-            document.add(new Paragraph("Teléfono: " + telefonoP));
-            document.add(new Paragraph("Edad: " + edadP));
-            document.add(new Paragraph("Obra Social: " + obraP));
-            document.add(new Paragraph("Médico: " + medicoP));
-            document.add(new Paragraph("Rutina: " + rutinaP));
+            // Encabezado del documento
+            document.add(new Paragraph("CENTRO DE ESPECIALIDADES MEDICAS \"SAN GREGORIO\"").setBold().setFontSize(12));
+            document.add(new Paragraph("LABORATORIO DE ANALISIS CLINICOS").setFontSize(10));
+            document.add(new Paragraph("BIOQUIMICA: FABIOLA PANTOJA - M.P 311\nPEDRO GOYENA Nº 33    TELEFONO: 3888 - 426915    SAN PEDRO DE JUJUY").setFontSize(10));
+            document.add(new Paragraph("\n"));
+
+            // Información del paciente y médico
+            document.add(new Paragraph("PACIENTE: " + nombreP + "\nDR/A: " + medicoP + "\nD.N.I: " + dniP + "    EDAD: " + edadP + "    FECHA DE ANALISIS: " + fechaActual + "\n").setFontSize(10));
+
+            // Línea separadora
+            document.add(new Paragraph("______________________________________________________________").setTextAlignment(TextAlignment.CENTER));
+
+            // Resultados de hemoglobina glicosilada
+            document.add(new Paragraph("\nDETERMINACION DE HEMOGLOBINA GLICOSILADA:\n").setBold().setFontSize(10));
+            document.add(new Paragraph("RESULTADO: ........................................: 6.03 %").setFontSize(10));
+            document.add(new Paragraph("METODO: INMUNOTURBIDIMETRIA AUTOMATIZADO").setFontSize(10));
+            document.add(new Paragraph("VALOR DE REFERENCIA: NIVELES NORMALES, NO DIABETICOS:\n"
+                    + "    EXCELENTE CONTROL DE DIABETES ............... 4 a 6 %\n"
+                    + "    BUEN CONTROL DE DIABETES .................... 6.5 a 7.5 %\n"
+                    + "    FALLA EN EL CONTROL DE DIABETES ............. > a 7.5 %\n"
+                    + "    NIVELES DE HIPOGLUCEMIA ..................... < a 4.0 %").setFontSize(10));
+
+            // Línea separadora
+            document.add(new Paragraph("______________________________________________________________").setTextAlignment(TextAlignment.CENTER));
+
+            // Química clínica y otros detalles
+            document.add(new Paragraph("\nQUIMICA CLINICA\n").setBold().setFontSize(10));
+            document.add(new Paragraph("GLUCOSA: 93 mg/dl                   VR: 70-110").setFontSize(10));
+
+            // Rutina
+            document.add(new Paragraph("\nRUTINA: " + rutinaP).setFontSize(10));
 
             // Cerrar el documento
             document.close();
+            outputStream.close();
 
-            // Mostrar la ubicación donde se guardó el PDF
-            Toast.makeText(this, "PDF generado en: " + pdfPath, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "PDF generado correctamente en la carpeta de Descargas", Toast.LENGTH_SHORT).show();
 
             // Abrir el archivo PDF automáticamente
-            File pdfFile = new File(pdfPath);
-            Uri pdfUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", pdfFile);
-
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setDataAndType(pdfUri, "application/pdf");
             intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
@@ -299,6 +343,9 @@ public class paciente_dato extends AppCompatActivity {
             Toast.makeText(this, "Error al generar el PDF: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+
+
+
 
 
 }
