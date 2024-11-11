@@ -3524,8 +3524,7 @@ int id notification_main_column 0x7f090196
 int id notification_main_column_container 0x7f090197
 int id nu_p 0x7f090198
 int id nuser_r 0x7f090199
-int id obra 0x7f09019a
-int id obra_social 0x7f09019b
+int id obra_socialS 0x7f09019b
 int id off 0x7f09019c
 int id on 0x7f09019d
 int id onInterceptTouchReturnSwipe 0x7f09019e
@@ -3952,6 +3951,7 @@ int layout paciente_card 0x7f0c0078
 int layout select_dialog_item_material 0x7f0c0079
 int layout select_dialog_multichoice_material 0x7f0c007a
 int layout select_dialog_singlechoice_material 0x7f0c007b
+int layout spinner_item 0x7f0c007d
 int layout support_simple_spinner_dropdown_item 0x7f0c007c
 int mipmap ajustes 0x7f0e0000
 int mipmap analisis 0x7f0e0001

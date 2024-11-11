@@ -106,11 +106,15 @@ public class LogIn extends AppCompatActivity {
             }
             if (val) {
                 n.setVisibility(View.VISIBLE);
+<<<<<<< HEAD
 //<<<<<<< HEAD
                 //enviarDatos("http://192.168.237.162/bio.lap/validar_usuario.php");
 //=======
                 enviarDatos("http://192.168.1.11/bio.lap/validar_usuario.php");
 //>>>>>>> e730d200bd77c76dd33a5d153031fefbdc82a662
+=======
+                enviarDatos("http://192.168.0.108/bio.lap/validar_usuario.php");
+>>>>>>> f8
             }
         }
     }

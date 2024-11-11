@@ -72,7 +72,7 @@ public class analisisRutina extends AppCompatActivity {
             verificar = false;
         }
         if (verificar) {
-            resultadoss("http://192.168.237.162/bio.lap/mostrar_nom.php");
+            resultadoss("http://192.168.0.108/bio.lap/mostrar_nom.php");
             carga.setVisibility(View.GONE);
         }
     }
@@ -85,9 +85,9 @@ public class analisisRutina extends AppCompatActivity {
                     JSONObject jsonResponse = new JSONObject(response);
                     boolean success = jsonResponse.getBoolean("success");
                     if (success) {
-                        String formN = jsonResponse.getString("formulario");
+                        String formN = "\n" + jsonResponse.getString("formulario");
                         String act = form.getText().toString();
-                        nom = act +"\n"+ formN ;
+                        nom = act + formN ;
                         form.setText(nom);
                     } else {
 
@@ -141,7 +141,7 @@ public class analisisRutina extends AppCompatActivity {
             dni = rg.getDni();
             telefono = rg.getTelefono();
             medico = rg.getMedico();
-            guardar("http://192.168.237.162/bio.lap/insertar_paciente.php");
+            guardar("http://192.168.0.108/bio.lap/insertar_paciente.php");
         }
     }
 
