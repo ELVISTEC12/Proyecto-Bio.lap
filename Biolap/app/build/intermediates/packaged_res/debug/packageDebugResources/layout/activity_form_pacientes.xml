@@ -36,22 +36,22 @@
       app:cornerRadius="7dp"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintHorizontal_bias="0.497"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.973" />
+      app:layout_constraintVertical_bias="0.933" />
 
   <LinearLayout
       android:id="@+id/linearLayout2"
-      android:layout_width="413dp"
-      android:layout_height="498dp"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
       android:orientation="vertical"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.478"
+      app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.579">
+      app:layout_constraintVertical_bias="0.463">
 
     <EditText
         android:id="@+id/n_p"
@@ -65,16 +65,12 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#80FFFFFF" />
 
-    <EditText
-        android:id="@+id/obra"
+    <Spinner
+        android:id="@+id/obra_socialS"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="10dp"
-        android:background="@drawable/bordes"
-        android:ems="10"
-        android:hint="@string/obra_social"
-        android:inputType="text"
-        android:textColorHint="#80FFFFFF" />
+        android:background="@drawable/spinner_arrow" />
 
     <EditText
         android:id="@+id/edad"
@@ -120,13 +116,6 @@
         android:hint="@string/medico"
         android:inputType="text"
         android:textColorHint="#80FFFFFF" />
-
-    <Spinner
-        android:id="@+id/obra_social"
-        android:layout_width="196dp"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/spinner_arrow" />
 
   </LinearLayout>
 

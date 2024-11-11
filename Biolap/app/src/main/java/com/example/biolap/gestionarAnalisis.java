@@ -51,11 +51,7 @@ public class gestionarAnalisis extends AppCompatActivity {
         pacientes = findViewById(R.id.pacientes_listado);
         pacientes.setLayoutManager(new LinearLayoutManager(this));
 
-<<<<<<< HEAD
-        String url = "http://192.168.237.162/bio.lap/lista_pac.php";
-=======
         String url = "http://192.168.237.224/bio.lap/lista_pac.php";
->>>>>>> e730d200bd77c76dd33a5d153031fefbdc82a662
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,

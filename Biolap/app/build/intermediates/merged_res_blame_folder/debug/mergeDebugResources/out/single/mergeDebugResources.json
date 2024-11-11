@@ -1,580 +1,302 @@
 [
     {
-<<<<<<< HEAD
-        "merged": "com.example.biolap.app-debug-33:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-ldpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_perfil_ajuste.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/perfil_ajuste.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_foto.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\foto.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.biolap.app-main-35:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.biolap.app-pngs-29:/drawable-xhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_cuenta_ajustes.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_cuenta_ajustes.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable-hdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.biolap.app-pngs-29:/drawable-hdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_cambiar_correo.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\cambiar_correo.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_footer.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/footer.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_paciente_dato.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_paciente_dato.xml"
     },
     {
         "merged": "com.example.biolap.app-debug-33:/layout_activity_form_pacientes.xml.flat",
         "source": "com.example.biolap.app-main-35:/layout/activity_form_pacientes.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.example.biolap.app-pngs-29:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_menuprincipal.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_menuprincipal.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_nomenclaturas.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_nomenclaturas.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_analisis_rutina.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_analisis_rutina.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable_fondo.png.flat",
-        "source": "com.example.biolap.app-main-35:/drawable/fondo.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable_borde_nom.xml.flat",
-        "source": "com.example.biolap.app-main-35:/drawable/borde_nom.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_nuevo_re.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/nuevo_re.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_bordes.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\bordes.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_ajustes.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_ajustes.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_nueva_nomenclatura.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_nueva_nomenclatura.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_perfil_ajuste.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\perfil_ajuste.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_foto.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/foto.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_nom_card.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\nom_card.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_analisis.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/analisis.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_sin_internet.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/sin_internet.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_sin_servidor.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\sin_servidor.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_pngwing.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/pngwing.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.biolap.app-pngs-29:/drawable-xxxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_form_pacientes.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_form_pacientes.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/ic_launcher_foreground.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_nom_datos.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_nom_datos.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_main.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_main.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_paciente.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\paciente.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable_borde_boton.xml.flat",
-        "source": "com.example.biolap.app-main-35:/drawable/borde_boton.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_bordes_layout.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\bordes_layout.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_no_carga.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/no_carga.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_perfil_ajuste.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_perfil_ajuste.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_menuprincipal.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_menuprincipal.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\xml_file_paths.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-34:\\xml\\file_paths.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_paciente_card.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/paciente_card.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_fondo_menu.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\fondo_menu.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_cambiar_correo.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/cambiar_correo.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_ajustes.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_ajustes.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_nomenclaturas.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\nomenclaturas.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_perfil_ajuste.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_perfil_ajuste.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_borde_nom.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\borde_nom.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_nombre_perfil.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/nombre_perfil.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable-mdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.biolap.app-pngs-29:/drawable-mdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_mostrar.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\mostrar.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_analisis.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\analisis.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_mostrar.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/mostrar.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-xhdpi/ic_launcher_foreground.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_nomenclaturas.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_nomenclaturas.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_ajustes.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\ajustes.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_paciente.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/paciente.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_footer.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\footer.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_sin_servidor.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/sin_servidor.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.biolap.app-main-35:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_fondo.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\fondo.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_candado.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/candado.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_nom_datos.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_nom_datos.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_spinner_arrow.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\spinner_arrow.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_cuenta_ajuste.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/cuenta_ajuste.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_nuevo_re.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\nuevo_re.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable_spinner_arrow.xml.flat",
-        "source": "com.example.biolap.app-main-35:/drawable/spinner_arrow.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_registrar_usuario.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_registrar_usuario.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_cuenta_ajustes.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_cuenta_ajustes.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_paciente_card.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\paciente_card.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_gestion_nom.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_gestion_nom.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_cuenta_ajuste.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\cuenta_ajuste.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_gestionar_analisis.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_gestionar_analisis.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_no_encontrado.jpg.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\no_encontrado.jpg"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_analisis_rutina.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_analisis_rutina.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/xml_backup_rules.xml.flat",
-        "source": "com.example.biolap.app-main-35:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.biolap.app-pngs-29:/drawable-xxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_borde_boton.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\borde_boton.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_nombre.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/nombre.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_contactos.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/contactos.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_contactos.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\contactos.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable_bordes.xml.flat",
-        "source": "com.example.biolap.app-main-35:/drawable/bordes.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_registrar_usuario.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_registrar_usuario.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_nueva_nomenclatura.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_nueva_nomenclatura.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/drawable-ldpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.biolap.app-pngs-29:/drawable-ldpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_gestion_nom.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_gestion_nom.xml"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/layout_nom_card.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/nom_card.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_nomenclaturas.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/nomenclaturas.png"
-=======
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_borde_superior.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\borde_superior.xml"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-ldpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-ldpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_pngwing.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\pngwing.png"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_nombre_perfil.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\nombre_perfil.png"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_paciente_dato.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_paciente_dato.xml"
+        "merged": "com.example.biolap.app-debug-33:/layout_spinner_item.xml.flat",
+        "source": "com.example.biolap.app-main-35:/layout/spinner_item.xml"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_menuprincipal.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_menuprincipal.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_sin_internet.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\sin_internet.png"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_foreground.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_candado.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\candado.png"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_perfil_ajuste.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\perfil_ajuste.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_fondo_menu.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\fondo_menu.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_gestionar_analisis.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_gestionar_analisis.xml"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_no_carga.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\no_carga.png"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_foto_perfil.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\foto_perfil.png"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_sin_internet.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\sin_internet.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_nombre.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\nombre.png"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_ajustes.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\ajustes.png"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_borde_boton.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\borde_boton.xml"
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-mdpi\\ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-xhdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_sin_servidor.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\sin_servidor.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_cuenta_ajustes.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_cuenta_ajustes.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_perfil_ajuste.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_perfil_ajuste.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_foto_perfil.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\foto_perfil.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_nomenclaturas.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\nomenclaturas.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_foto.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\foto.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_form_pacientes.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_form_pacientes.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_borde_nom.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\borde_nom.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_analisis.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\analisis.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-xxhdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-hdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-hdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-mdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_spinner_arrow.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\spinner_arrow.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_nom_card.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\nom_card.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\xml\\data_extraction_rules.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_contactos.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\contactos.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xhdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_paciente.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\paciente.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_nom_datos.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_nom_datos.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_ajustes.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_ajustes.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_footer.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\footer.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_mostrar.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\mostrar.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_gestionar_analisis.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_gestionar_analisis.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_bordes_layout.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\bordes_layout.xml"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/xml_file_paths.xml.flat",
-        "source": "com.example.biolap.app-debug-34:/xml/file_paths.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_analisis_rutina.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_analisis_rutina.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxhdpi\\ic_launcher_round.webp"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_cambiar_correo.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\cambiar_correo.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_registrar_usuario.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_registrar_usuario.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_nueva_nomenclatura.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_nueva_nomenclatura.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_nomenclaturas.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_nomenclaturas.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-mdpi\\ic_launcher.webp"
->>>>>>> e730d200bd77c76dd33a5d153031fefbdc82a662
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/layout_activity_paciente_dato.xml.flat",
-        "source": "com.example.biolap.app-main-35:/layout/activity_paciente_dato.xml"
-    },
-    {
-<<<<<<< HEAD
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_foto_perfil.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/foto_perfil.png"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-anydpi-v26/ic_launcher.xml"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-mdpi/ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_no_encontrado.jpg.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/no_encontrado.jpg"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/drawable_fondo_menu.xml.flat",
-        "source": "com.example.biolap.app-main-35:/drawable/fondo_menu.xml"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/drawable_borde_superior.xml.flat",
-        "source": "com.example.biolap.app-main-35:/drawable/borde_superior.xml"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_ajustes.png.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/ajustes.png"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.biolap.app-main-35:/mipmap-hdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "com.example.biolap.app-debug-33:/drawable_bordes_layout.xml.flat",
-        "source": "com.example.biolap.app-main-35:/drawable/bordes_layout.xml"
-=======
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_paciente_card.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\paciente_card.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_candado.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\candado.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_no_encontrado.jpg.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\no_encontrado.jpg"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_fondo.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\fondo.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-xxxhdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable-mdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-pngs-29:\\drawable-mdpi\\ic_launcher_foreground.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\drawable_borde_superior.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\drawable\\borde_superior.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_no_carga.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\no_carga.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\layout_activity_gestion_nom.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\layout\\activity_gestion_nom.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\xml\\backup_rules.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-mdpi\\ic_launcher_foreground.webp"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_cuenta_ajuste.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\cuenta_ajuste.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_nombre.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\nombre.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_pngwing.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\pngwing.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_nuevo_re.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\nuevo_re.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-hdpi_nombre_perfil.png.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-hdpi\\nombre_perfil.png"
-    },
-    {
-        "merged": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\coron\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxhdpi\\ic_launcher_foreground.webp"
->>>>>>> e730d200bd77c76dd33a5d153031fefbdc82a662
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-debug-33:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\8.7\\com.example.biolap.app-main-35:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     }
 ]

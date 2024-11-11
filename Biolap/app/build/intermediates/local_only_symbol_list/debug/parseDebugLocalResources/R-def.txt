@@ -100,8 +100,7 @@ id nombreResult
 id nombreTXT
 id nu_p
 id nuser_r
-id obra
-id obra_social
+id obra_socialS
 id pacientes_listado
 id rutinaFormTXT
 id rutinaTXT
@@ -154,6 +153,7 @@ layout activity_registrar_usuario
 layout cambiar_correo
 layout nom_card
 layout paciente_card
+layout spinner_item
 mipmap ajustes
 mipmap analisis
 mipmap candado
