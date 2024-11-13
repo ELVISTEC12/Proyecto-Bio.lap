@@ -5,10 +5,13 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.AnimationDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -48,9 +51,10 @@ public class LogIn extends AppCompatActivity {
     EditText contraTXT;
     TextView errorT;
     ProgressBar n;
-    ImageView no, inter, sinconex;
+    ImageView no, inter, sinconex, mostrar, ocultar;
     usuarioData ud = usuarioData.getInstance();
     Button sin_in;
+
     private SharedPreferences sharedPreferences;
 
     @SuppressLint("MissingInflatedId")
@@ -59,6 +63,11 @@ public class LogIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+//ojo
+        ocultar = findViewById(R.id.ojos);
+        mostrar=findViewById(R.id.ojosa);
+
+
 
         usuarioTXT = findViewById(R.id.usuarioTXT);
         contraTXT = findViewById(R.id.contrasenaTXT);
@@ -81,6 +90,8 @@ public class LogIn extends AppCompatActivity {
                 salir();
             }
         });
+        // Iniciar la animación al hacer clic
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -106,15 +117,15 @@ public class LogIn extends AppCompatActivity {
             }
             if (val) {
                 n.setVisibility(View.VISIBLE);
-<<<<<<< HEAD
+
 //<<<<<<< HEAD
                 //enviarDatos("http://192.168.237.162/bio.lap/validar_usuario.php");
 //=======
                 enviarDatos("http://192.168.1.11/bio.lap/validar_usuario.php");
 //>>>>>>> e730d200bd77c76dd33a5d153031fefbdc82a662
-=======
+
                 enviarDatos("http://192.168.0.108/bio.lap/validar_usuario.php");
->>>>>>> f8
+
             }
         }
     }
@@ -219,6 +230,22 @@ public class LogIn extends AppCompatActivity {
 
     public void salir() {
         System.exit(0);
+    }
+    public void contraseña(View view){
+       ocultar.setVisibility(View.GONE);
+       mostrar.setVisibility(View.VISIBLE);
+       contraTXT.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+        new Handler().postDelayed(() -> {
+            // Volver a poner el InputType para ocultar el texto con puntos
+            contraTXT.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
+            // Hacer visible el botón de mostrar y ocultar el botón de ocultar
+            ocultar.setVisibility(View.VISIBLE);
+            mostrar.setVisibility(View.GONE);
+
+            // Para mover el cursor al final del texto
+            contraTXT.setSelection(contraTXT.getText().length());
+        }, 3000);
     }
 }
 

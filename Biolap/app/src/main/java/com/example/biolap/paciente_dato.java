@@ -269,11 +269,11 @@ public class paciente_dato extends AppCompatActivity {
         try {
             Uri pdfUri;
             OutputStream outputStream;
-
+            int i=0;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 // Usar MediaStore para Android 10 y superior (API 29+)
                 ContentValues values = new ContentValues();
-                values.put(MediaStore.Downloads.DISPLAY_NAME, "paciente_" + dniP + ".pdf");
+                values.put(MediaStore.Downloads.DISPLAY_NAME, "paciente_" + dniP +(i)+".pdf");
                 values.put(MediaStore.Downloads.MIME_TYPE, "application/pdf");
                 values.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS);
 
@@ -284,7 +284,7 @@ public class paciente_dato extends AppCompatActivity {
                 outputStream = getContentResolver().openOutputStream(pdfUri);
             } else {
                 // Para Android 9 y versiones anteriores
-                File pdfFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "paciente_" + dniP + ".pdf");
+                File pdfFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "paciente_" + dniP +(i)+".pdf");
                 pdfUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", pdfFile);
                 outputStream = new FileOutputStream(pdfFile);
             }

@@ -29,7 +29,6 @@
         android:id="@+id/linearLayout5"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
-
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +36,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.316">
-
 
         <TextView
             android:id="@+id/textView2"
@@ -70,18 +68,39 @@
             android:textSize="24sp"
             tools:ignore="MissingConstraints" />
 
-        <EditText
-            android:id="@+id/contrasenaTXT"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/bordes"
-            android:ems="10"
-            android:hint="@string/caja_contrasena"
-            android:inputType="textPassword"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#80FFFFFF"
-            android:textColorLink="#000000" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/contrasenaTXT"
+                android:layout_width="266dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/bordes"
+                android:ems="10"
+                android:hint="@string/caja_contrasena"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#80FFFFFF"
+                android:textColorLink="#000000" />
+
+            <ImageView
+                android:id="@+id/ojos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="contraseña"
+                app:srcCompat="@drawable/ojo_cerrado" />
+            <ImageView
+                android:id="@+id/ojosa"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="contraseña"
+                android:visibility="gone"
+                app:srcCompat="@drawable/ojo_abierto" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -148,10 +167,10 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="147dp"
         android:layout_height="136dp"
-        android:visibility="gone"
         android:max="100"
         android:progressDrawable="@color/black"
         android:progressTint="#243F7A"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@+id/imageView10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -184,10 +203,10 @@
         android:layout_width="121dp"
         android:layout_height="67dp"
         android:backgroundTint="#255"
-       android:visibility="gone"
         android:text="Salir"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
+        android:visibility="gone"
         app:cornerRadius="7dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -205,6 +224,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/sin_servidor" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="linearLayout5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

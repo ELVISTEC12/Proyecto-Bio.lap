@@ -3111,6 +3111,8 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable ojo_abierto
+drawable ojo_cerrado
 drawable spinner_arrow
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -3375,6 +3377,7 @@ id ghost_view_holder
 id gone
 id graph
 id graph_wrap
+id group
 id group_divider
 id grouping
 id groups
@@ -3527,6 +3530,8 @@ id nu_p
 id nuser_r
 id obra_socialS
 id off
+id ojos
+id ojosa
 id on
 id onInterceptTouchReturnSwipe
 id open_search_bar_text_view

@@ -12,6 +12,8 @@ drawable fondo
 drawable fondo_menu
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ojo_abierto
+drawable ojo_cerrado
 drawable spinner_arrow
 id DNIPasienteE
 id DatosPaciente
@@ -64,6 +66,7 @@ id flow
 id formNom
 id formNomTXT
 id formResult
+id group
 id iconoPaciente
 id idNom
 id idNomenclatura
@@ -101,6 +104,8 @@ id nombreTXT
 id nu_p
 id nuser_r
 id obra_socialS
+id ojos
+id ojosa
 id pacientes_listado
 id rutinaFormTXT
 id rutinaTXT
