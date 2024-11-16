@@ -170,6 +170,7 @@ mipmap foto_perfil
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap microscopio
 mipmap mostrar
 mipmap no_carga
 mipmap no_encontrado

@@ -118,13 +118,8 @@ public class LogIn extends AppCompatActivity {
             if (val) {
                 n.setVisibility(View.VISIBLE);
 
-//<<<<<<< HEAD
-                //enviarDatos("http://192.168.237.162/bio.lap/validar_usuario.php");
-//=======
-                enviarDatos("http://192.168.1.11/bio.lap/validar_usuario.php");
-//>>>>>>> e730d200bd77c76dd33a5d153031fefbdc82a662
 
-                enviarDatos("http://192.168.0.108/bio.lap/validar_usuario.php");
+                enviarDatos("http://192.168.1.2/bio.lap/validar_usuario.php");
 
             }
         }
@@ -231,21 +226,30 @@ public class LogIn extends AppCompatActivity {
     public void salir() {
         System.exit(0);
     }
-    public void contraseña(View view){
-       ocultar.setVisibility(View.GONE);
-       mostrar.setVisibility(View.VISIBLE);
-       contraTXT.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-        new Handler().postDelayed(() -> {
-            // Volver a poner el InputType para ocultar el texto con puntos
-            contraTXT.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
 
-            // Hacer visible el botón de mostrar y ocultar el botón de ocultar
+    private boolean isPasswordVisible = false; // Declara la variable al inicio
+
+
+    public void contraseña(View view){
+
+        if(isPasswordVisible) {
+            // Si la contraseña está visible, ocultarla
+            contraTXT.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
             ocultar.setVisibility(View.VISIBLE);
             mostrar.setVisibility(View.GONE);
+        } else {
+            // Si la contraseña está oculta, mostrarla
+            contraTXT.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+            ocultar.setVisibility(View.GONE);
+            mostrar.setVisibility(View.VISIBLE);
+        }
 
-            // Para mover el cursor al final del texto
-            contraTXT.setSelection(contraTXT.getText().length());
-        }, 3000);
+        // Alternar el estado de la variable booleana
+        isPasswordVisible = !isPasswordVisible;
+
+        // Para mover el cursor al final del texto
+        contraTXT.setSelection(contraTXT.getText().length());
     }
+
 }
 

@@ -3969,6 +3969,7 @@ int mipmap foto_perfil 0x7f0e0007
 int mipmap ic_launcher 0x7f0e0008
 int mipmap ic_launcher_foreground 0x7f0e0009
 int mipmap ic_launcher_round 0x7f0e000a
+int mipmap microscopio 0x7f0e0017
 int mipmap mostrar 0x7f0e000b
 int mipmap no_carga 0x7f0e000c
 int mipmap no_encontrado 0x7f0e000d
