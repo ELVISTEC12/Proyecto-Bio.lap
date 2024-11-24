@@ -65,11 +65,12 @@
             android:layout_marginTop="10dp"
             app:srcCompat="@mipmap/contactos" />
 
-        <TextView
-            android:id="@+id/textView29"
+        <Button
+            android:id="@+id/as"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+
             android:background="@drawable/borde_boton"
             android:padding="15dp"
             android:text="Cerrar sesión"

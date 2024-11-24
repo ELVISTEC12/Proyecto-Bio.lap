@@ -24,6 +24,7 @@ id NombreNomenclatura
 id NombrePaciente
 id ObraSocialPaciente
 id RutinaPaciente
+id as
 id b_buscar
 id b_r
 id barradeprogreso
@@ -130,7 +131,6 @@ id textView23
 id textView24
 id textView25
 id textView26
-id textView29
 id textView3
 id textView5
 id textView6

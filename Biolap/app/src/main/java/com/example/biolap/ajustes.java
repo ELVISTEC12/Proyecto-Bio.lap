@@ -1,7 +1,9 @@
 package com.example.biolap;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,7 +40,9 @@ public class ajustes extends AppCompatActivity {
     private String id;
     private EditText usuario;
     private String nombre;
+    Button ce;
     usuarioData ud = usuarioData.getInstance();
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,15 @@ public class ajustes extends AppCompatActivity {
         setContentView(R.layout.activity_ajustes);
 
         cambio_c = findViewById(R.id.cambio_correo);
+        ce = findViewById(R.id.as);
+        ce.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        cerrar();
+                    }
+                }
+        );
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -55,16 +68,57 @@ public class ajustes extends AppCompatActivity {
         });
     }
 
-    public void camCorreo(View view){
+    public void cerrar() {
+        // Crear un cuadro de diálogo para confirmar la acción
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Cerrar sesión");
+        builder.setMessage("¿Estás seguro de que deseas cerrar sesión?");
+
+        // Botón de confirmación
+        builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Eliminar los datos de SharedPreferences
+                SharedPreferences sharedPreferences = getSharedPreferences("loginPrefs", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.clear();
+                editor.apply();
+
+                // Redirigir al Login y finalizar actividad actual
+                Intent intent = new Intent(ajustes.this, LogIn.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        // Botón de cancelación
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Cierra el cuadro de diálogo sin hacer nada
+                dialog.dismiss();
+            }
+        });
+
+        // Mostrar el cuadro de diálogo
+        builder.create().show();
+    }
+
+
+    public void camCorreo(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
-        View dialogFView = inflater.inflate(R.layout.cambiar_correo,null);
+        View dialogFView = inflater.inflate(R.layout.cambiar_correo, null);
         builder.setView(dialogFView);
+
         usuario = dialogFView.findViewById(R.id.cambiar_correo);
         usuario.setText(ud.getUsuario_nombre());
         id = ud.getId_usuario();
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button aceptar = dialogFView.findViewById(R.id.boton_aceptar);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button cancelar = dialogFView.findViewById(R.id.boton_cancelar);
+
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        Button aceptar = dialogFView.findViewById(R.id.boton_aceptar);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        Button cancelar = dialogFView.findViewById(R.id.boton_cancelar);
         AlertDialog dialog = builder.create();
 
         aceptar.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +140,7 @@ public class ajustes extends AppCompatActivity {
         dialog.show();
     }
 
-    public void cuenta(View view){
+    public void cuenta(View view) {
         Intent c = new Intent(this, cuentaAjustes.class);
         startActivity(c);
     }
@@ -126,8 +180,8 @@ public class ajustes extends AppCompatActivity {
                 return datos;
             }
         };
+
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(sr);
     }
-
 }

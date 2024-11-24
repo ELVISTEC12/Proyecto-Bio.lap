@@ -119,7 +119,7 @@ public class LogIn extends AppCompatActivity {
                 n.setVisibility(View.VISIBLE);
 
 
-                enviarDatos("http://192.168.1.2/bio.lap/validar_usuario.php");
+                enviarDatos("http://192.168.1.11/bio.lap/validar_usuario.php");
 
             }
         }
@@ -138,8 +138,17 @@ public class LogIn extends AppCompatActivity {
                         boolean success = jsonResponse.getBoolean("success");
 
                         if (success) {
+                            // Guardar el ID del usuario en SharedPreferences
+                            SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putInt("USER_ID", jsonResponse.getInt("id")); // Obtener el ID desde la respuesta
+                            editor.apply();
+
+                            // Guardar el nombre de usuario en la instancia ud
                             ud.setUsuario_nombre(jsonResponse.getString("nombre"));
                             ud.setId_usuario(jsonResponse.getString("id"));
+
+                            // Redirigir al menú principal
                             Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
                             startActivity(mp);
                             finish();
@@ -151,7 +160,6 @@ public class LogIn extends AppCompatActivity {
                                 no.setVisibility(View.GONE);
                             }, 3000);
                         }
-
                     } catch (JSONException e) {
                         n.setVisibility(View.GONE);
                         sinconex.setVisibility(View.VISIBLE);
@@ -162,6 +170,7 @@ public class LogIn extends AppCompatActivity {
                         Toast.makeText(LogIn.this, "Error en el servidor", Toast.LENGTH_SHORT).show();
                     }
                 }
+
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
@@ -175,18 +184,21 @@ public class LogIn extends AppCompatActivity {
             }) {
 
                 @Override
+
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> parametros = new HashMap<>();
                     String nombre = usuarioTXT.getText().toString();
                     String clave = contraTXT.getText().toString();
+
                     parametros.put("nombre", nombre);
                     parametros.put("clave", clave);
 
-                    // Guardar datos en SharedPreferences
+                    // Guardar temporalmente los datos de nombre y clave, si es necesario
                     guardarDatos(nombre, clave);
 
                     return parametros;
                 }
+
             };
             RequestQueue requestQueue = Volley.newRequestQueue(this);
             requestQueue.add(stringRequest);
