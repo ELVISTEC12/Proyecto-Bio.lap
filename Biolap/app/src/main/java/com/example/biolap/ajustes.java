@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -184,4 +185,56 @@ public class ajustes extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(sr);
     }
+    public void Contactanos() {
+        // Crear un intent para enviar un correo
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+
+        // Especificar el tipo de contenido
+        emailIntent.setType("message/rfc822");
+
+        // Añadir los correos destinatarios
+        String[] addresses = {"coronado@gmail.com", "pablo@gmail.com"};
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
+
+        // Asunto del correo
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Asunto del correo");
+
+        // Cuerpo del mensaje
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Este es el cuerpo del mensaje.");
+
+        // Comprobar si hay una aplicación para manejar el correo
+        try {
+            startActivity(Intent.createChooser(emailIntent, "Enviar correo..."));
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(this, "No tienes ninguna aplicación de correo instalada.", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public void Contactanos(View view) {
+        // Crear un intent para enviar un correo
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
+
+        // Especificar la URI de Gmail
+        emailIntent.setData(Uri.parse("mailto:"));
+
+        // Añadir los correos destinatarios
+        String[] addresses = {"coronado@gmail.com", "pablo@gmail.com"};
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
+
+        // Asunto del correo
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Asunto del correo");
+
+        // Cuerpo del mensaje
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Este es el cuerpo del mensaje.");
+
+        // Verificar si Gmail está disponible en el dispositivo
+        emailIntent.setPackage("com.google.android.gm");
+
+        // Comprobar si hay una aplicación de Gmail para manejar el correo
+        try {
+            startActivity(emailIntent);
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(this, "No tienes la aplicación Gmail instalada.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }
