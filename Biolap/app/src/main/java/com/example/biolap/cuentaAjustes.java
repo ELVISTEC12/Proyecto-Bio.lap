@@ -7,7 +7,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -46,7 +48,8 @@ public class cuentaAjustes extends AppCompatActivity {
 
     Button cambia;
     ImageView error, sin_conexion;
-    EditText nuevaClave;
+    EditText nuevaClave, repi;
+    String a, b;
     int userId;
 
     @SuppressLint("MissingInflatedId")
@@ -60,29 +63,36 @@ public class cuentaAjustes extends AppCompatActivity {
         error = findViewById(R.id.error);
         sin_conexion = findViewById(R.id.sin_conexion);
         nuevaClave = findViewById(R.id.name_user);
-
+        repi=findViewById(R.id.correo_user);
         // Recuperar el ID del usuario desde SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
         userId = sharedPreferences.getInt("USER_ID", -1); // Obtener el ID del usuario almacenado
 
         if (userId == -1) {
-            // Si no se encuentra el usuario (valor predeterminado -1)
+            error.setVisibility(View.VISIBLE);  // Muestra la imagen de error
             System.out.println("No se encontró el usuario");
             Toast.makeText(this, "Usuario no encontrado", Toast.LENGTH_SHORT).show();
+
+            // Crear un Handler para ocultar la imagen después de 4 segundos
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    error.setVisibility(View.GONE);  // Oculta la imagen después de 4 segundos
+                }
+            }, 4000);  // 4000 milisegundos = 4 segundos
         } else {
             // Si se encuentra el ID del usuario
+
             System.out.println("Usuario encontrado con ID: " + userId);
             Toast.makeText(this, "ID del usuario: " + userId, Toast.LENGTH_SHORT).show();
         }
 
-        cambia.setOnClickListener(view -> {
-            String clave = nuevaClave.getText().toString().trim();
-            if (clave.isEmpty()) {
-                Toast.makeText(this, "La nueva contraseña no puede estar vacía", Toast.LENGTH_SHORT).show();
-            } else {
-                cambiarClave(clave);
-            }
-        });
+       cambia.setOnClickListener(new  View.OnClickListener(){
+           @Override
+           public void onClick(View v){
+               verificarAutenticacion();
+           }
+       });
 
         // Ajustar los márgenes del sistema
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -93,37 +103,87 @@ public class cuentaAjustes extends AppCompatActivity {
     }
 
     // Método para cambiar la contraseña
-    public void cambiarClave(String nuevaClave) {
-        // URL de la API para cambiar la contraseña, pasando el userId y la nueva contraseña
-        String url = "http://192.168.1.11/bio.lap/modificar_clave.php?id=" + userId;
+    public void cambiarClave() {
+        a = nuevaClave.getText().toString();
+        b = repi.getText().toString();
+        boolean val = true;
+
+        // Validar que ambos campos no estén vacíos
+        if (TextUtils.isEmpty(a)) {
+            nuevaClave.setError("Campo obligatorio");
+            val = false;
+        }
+        if (TextUtils.isEmpty(b)) {
+            repi.setError("Campo obligatorio");
+            val = false;
+        }
+
+        // Validar que las claves coincidan
+        if (!a.equals(b)) {
+            repi.setError("Las contraseñas no coinciden");
+            val = false;
+        }
+
+        // Si todo es válido, proceder con el cambio
+        if (val) {
+            cambios("http://192.168.1.11/bio.lap/modificar_clave.php?id=" + userId);
+        }
+    }
 
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
-                response -> {
-
-                    if (response.equals("success")) {
-                        Toast.makeText(this, "Contraseña cambiada exitosamente", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(this, "Error al cambiar la contraseña", Toast.LENGTH_SHORT).show();
-                    }
-                },
-                error -> {
-
-                    Toast.makeText(this, "Error de conexión", Toast.LENGTH_SHORT).show();
-                }) {
+    private void cambios(String url) {
+        StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
-            protected Map<String, String> getParams() {
-                // Aquí puedes agregar parámetros adicionales si es necesario
-                Map<String, String> params = new HashMap<>();
-                params.put("id", String.valueOf(userId));
-                params.put("clave", nuevaClave);
-                return params;
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonResponse = new JSONObject(response);
+                    boolean success = jsonResponse.getBoolean("success");
+                    if (success) {
+                        Toast.makeText(getApplicationContext(), "Se modificó con éxito", Toast.LENGTH_SHORT).show();
+
+                        finish();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Error en la modificación", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
+                    sin_conexion.setVisibility(View.VISIBLE);
+                    // Crear un Handler para ocultar la imagen después de 4 segundos
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            sin_conexion.setVisibility(View.GONE);  // Oculta la imagen después de 4 segundos
+                        }
+                    }, 4000);
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+                sin_conexion.setVisibility(View.VISIBLE);
+                // Crear un Handler para ocultar la imagen después de 4 segundos
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        sin_conexion.setVisibility(View.GONE);  // Oculta la imagen después de 4 segundos
+                    }
+                }, 4000);
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> datos = new HashMap<String, String>();
+                datos.put("id", String.valueOf(userId)); // Enviar el ID del usuario
+                datos.put("clave", a);  // Nueva clave
+                return datos;
             }
         };
-
-        // Añadir la solicitud a la cola de Volley
-        Volley.newRequestQueue(this).add(stringRequest);
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(sr);
     }
+
 
 
     private void verificarAutenticacion() {
@@ -143,7 +203,7 @@ public class cuentaAjustes extends AppCompatActivity {
                 public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                     super.onAuthenticationSucceeded(result);
                     // Si la autenticación es exitosa, llama al método cambiar()
-                    //cambiarClave();
+                    cambiarClave();
 
                 }
 
