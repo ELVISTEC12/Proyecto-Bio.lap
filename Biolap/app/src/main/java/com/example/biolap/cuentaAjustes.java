@@ -1,13 +1,18 @@
 package com.example.biolap;
 
+import static org.chromium.base.ContextUtils.getApplicationContext;
+
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -24,6 +29,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -40,10 +46,12 @@ import java.util.concurrent.Executor;
 
 public class cuentaAjustes extends AppCompatActivity {
 
-    TextView name_user, correo, contra;
     Button cambia;
-    ProgressBar cargar;
     ImageView error, sin_conexion;
+    EditText nuevaClave, repi;
+    String a, b;
+    int userId;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,38 +59,40 @@ public class cuentaAjustes extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_cuenta_ajustes);
 
-        // Inicializar los TextView y Button
-        name_user = findViewById(R.id.name_user);
-        correo = findViewById(R.id.correo_user);
-
         cambia = findViewById(R.id.cambiar_datos);
-        //cargar= findViewById(R.id.barradeprogreso);
-        error= findViewById(R.id.error);
-        sin_conexion=findViewById(R.id.sin_conexion);
-
+        error = findViewById(R.id.error);
+        sin_conexion = findViewById(R.id.sin_conexion);
+        nuevaClave = findViewById(R.id.name_user);
+        repi=findViewById(R.id.correo_user);
+        // Recuperar el ID del usuario desde SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
-        int userId = sharedPreferences.getInt("USER_ID", -1);
+        userId = sharedPreferences.getInt("USER_ID", -1); // Obtener el ID del usuario almacenado
 
-        if (userId != -1) {
-            // URL con el ID del usuario
-            String url = "http://192.168.1.12/bio.lap/selec_user.php?id=" + userId;
-            fetchUserData(url);
-        } else {
-            // Manejar el caso de ID no válido
-            error.setVisibility(View.VISIBLE);
-            new android.os.Handler().postDelayed(() -> {
-                error.setVisibility(View.GONE);
-            }, 3000);
+        if (userId == -1) {
+            error.setVisibility(View.VISIBLE);  // Muestra la imagen de error
+            System.out.println("No se encontró el usuario");
             Toast.makeText(this, "Usuario no encontrado", Toast.LENGTH_SHORT).show();
+
+            // Crear un Handler para ocultar la imagen después de 4 segundos
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    error.setVisibility(View.GONE);  // Oculta la imagen después de 4 segundos
+                }
+            }, 4000);  // 4000 milisegundos = 4 segundos
+        } else {
+            // Si se encuentra el ID del usuario
+
+            System.out.println("Usuario encontrado con ID: " + userId);
+            Toast.makeText(this, "ID del usuario: " + userId, Toast.LENGTH_SHORT).show();
         }
 
-        // Verificación biométrica antes de permitir cambios
-        cambia.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                verificarAutenticacion();
-            }
-        });
+       cambia.setOnClickListener(new  View.OnClickListener(){
+           @Override
+           public void onClick(View v){
+               verificarAutenticacion();
+           }
+       });
 
         // Ajustar los márgenes del sistema
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -92,48 +102,89 @@ public class cuentaAjustes extends AppCompatActivity {
         });
     }
 
-    // Método para obtener los datos del usuario
-    private void fetchUserData(String url) {
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonResponse = new JSONObject(response);
-                            if (jsonResponse.getBoolean("success")) {
-                                JSONObject userData = jsonResponse.getJSONObject("user");
+    // Método para cambiar la contraseña
+    public void cambiarClave() {
+        a = nuevaClave.getText().toString();
+        b = repi.getText().toString();
+        boolean val = true;
 
-                                // Mostrar los datos del usuario en los TextView correspondientes
-                                name_user.setText(userData.getString("usuarios"));
-                                correo.setText(userData.getString("correo"));
-                                contra.setText(userData.getString("contra"));
-                            } else {
-                                Toast.makeText(getApplicationContext(), "Error: " + jsonResponse.getString("message"), Toast.LENGTH_SHORT).show();
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            Toast.makeText(getApplicationContext(), "Error al procesar los datos", Toast.LENGTH_SHORT).show();
-                        }
+        // Validar que ambos campos no estén vacíos
+        if (TextUtils.isEmpty(a)) {
+            nuevaClave.setError("Campo obligatorio");
+            val = false;
+        }
+        if (TextUtils.isEmpty(b)) {
+            repi.setError("Campo obligatorio");
+            val = false;
+        }
+
+        // Validar que las claves coincidan
+        if (!a.equals(b)) {
+            repi.setError("Las contraseñas no coinciden");
+            val = false;
+        }
+
+        // Si todo es válido, proceder con el cambio
+        if (val) {
+            cambios("http://192.168.1.11/bio.lap/modificar_clave.php?id=" + userId);
+        }
+    }
+
+
+    private void cambios(String url) {
+        StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonResponse = new JSONObject(response);
+                    boolean success = jsonResponse.getBoolean("success");
+                    if (success) {
+                        Toast.makeText(getApplicationContext(), "Se modificó con éxito", Toast.LENGTH_SHORT).show();
+
+                        finish();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Error en la modificación", Toast.LENGTH_SHORT).show();
                     }
-                }, new Response.ErrorListener() {
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(), "Error en el servidor", Toast.LENGTH_SHORT).show();
+                    sin_conexion.setVisibility(View.VISIBLE);
+                    // Crear un Handler para ocultar la imagen después de 4 segundos
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            sin_conexion.setVisibility(View.GONE);  // Oculta la imagen después de 4 segundos
+                        }
+                    }, 4000);
+                }
+            }
+        }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
                 sin_conexion.setVisibility(View.VISIBLE);
-                new android.os.Handler().postDelayed(() -> {
-                    sin_conexion.setVisibility(View.GONE);
-                }, 3000);
-                String errorMessage = "Error de red";
-                if (error.networkResponse != null) {
-                    errorMessage += " Código de respuesta: " + error.networkResponse.statusCode;
-                }
-                Toast.makeText(getApplicationContext(), errorMessage, Toast.LENGTH_LONG).show();
+                // Crear un Handler para ocultar la imagen después de 4 segundos
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        sin_conexion.setVisibility(View.GONE);  // Oculta la imagen después de 4 segundos
+                    }
+                }, 4000);
             }
-        });
-
-        // Añadir la solicitud a la cola de solicitudes
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> datos = new HashMap<String, String>();
+                datos.put("id", String.valueOf(userId)); // Enviar el ID del usuario
+                datos.put("clave", a);  // Nueva clave
+                return datos;
+            }
+        };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
+        requestQueue.add(sr);
     }
+
+
 
     private void verificarAutenticacion() {
         BiometricManager biometricManager = BiometricManager.from(this);
@@ -151,7 +202,9 @@ public class cuentaAjustes extends AppCompatActivity {
                 @Override
                 public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
                     super.onAuthenticationSucceeded(result);
-                    cambiar();  // Si la autenticación es exitosa, llama al método cambiar()
+                    // Si la autenticación es exitosa, llama al método cambiar()
+                    cambiarClave();
+
                 }
 
                 @Override
@@ -174,86 +227,5 @@ public class cuentaAjustes extends AppCompatActivity {
             Toast.makeText(this, "No se puede usar autenticación biométrica en este dispositivo", Toast.LENGTH_SHORT).show();
         }
     }
-
-    // Método cambiar() que actualiza los datos
-    private void cambiar() {
-        // Obtener el ID del usuario desde SharedPreferences
-        SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
-        int userId = sharedPreferences.getInt("USER_ID", -1);
-
-        if (userId == -1) {
-            Toast.makeText(this, "Usuario no encontrado", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        // URL del archivo PHP que se encargará de actualizar los datos
-        String url = "http://192.168.1.12/bio.lap/acc.php";
-
-        // Obtener los datos que el usuario desea cambiar
-        String user = name_user.getText().toString();
-        String corr = correo.getText().toString();
-        String con = contra.getText().toString();
-
-        // Crear la solicitud POST con Volley
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonResponse = new JSONObject(response);
-                            boolean success = jsonResponse.getBoolean("success");
-                            String message = jsonResponse.getString("message");
-
-                            if (success) {
-                                Toast.makeText(getApplicationContext(), "Datos actualizados correctamente", Toast.LENGTH_SHORT).show();
-                            } else {
-                                Toast.makeText(getApplicationContext(), "Error: " + message, Toast.LENGTH_SHORT).show();
-                            }
-                        } catch (JSONException e) {
-                            sin_conexion.setVisibility(View.VISIBLE);
-                            new android.os.Handler().postDelayed(() -> {
-                                sin_conexion.setVisibility(View.GONE);
-                            }, 3000);
-                            e.printStackTrace();
-                            Toast.makeText(getApplicationContext(), "Error al procesar la respuesta del servidor", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        sin_conexion.setVisibility(View.VISIBLE);
-                        new android.os.Handler().postDelayed(() -> {
-                            sin_conexion.setVisibility(View.GONE);
-                        }, 3000);
-                        Toast.makeText(getApplicationContext(), "Error al conectar con el servidor", Toast.LENGTH_LONG).show();
-                    }
-                }) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                params.put("usuarios", user);
-                params.put("correo", corr);
-                params.put("contra", con);
-                params.put("id", String.valueOf(userId)); // Pasar el ID del usuario
-                return params;
-            }
-        };
-
-        // Añadir la solicitud a la cola de solicitudes
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
-    }
-    public void mostra(View view){
-        if (contra.getInputType() == (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD)) {
-            // Si está en formato de contraseña, mostrar el texto normal
-            contra.setInputType(InputType.TYPE_CLASS_TEXT);
-        } else {
-            // Si el texto está visible, volver a ocultarlo como contraseña
-            contra.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        }
-
-        // Mueve el cursor al final del texto
-       // contra.setSelection(contra.getText().length());
-    }
 }
+

@@ -141,7 +141,7 @@ public class analisisRutina extends AppCompatActivity {
             dni = rg.getDni();
             telefono = rg.getTelefono();
             medico = rg.getMedico();
-            guardar("http://192.168.0.108/bio.lap/insertar_paciente.php");
+            guardar("http://192.168.1.11/bio.lap/insertar_paciente.php");
         }
     }
 

@@ -12,6 +12,8 @@ drawable fondo
 drawable fondo_menu
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ojo_abierto
+drawable ojo_cerrado
 drawable spinner_arrow
 id DNIPasienteE
 id DatosPaciente
@@ -22,6 +24,7 @@ id NombreNomenclatura
 id NombrePaciente
 id ObraSocialPaciente
 id RutinaPaciente
+id as
 id b_buscar
 id b_r
 id barradeprogreso
@@ -64,6 +67,7 @@ id flow
 id formNom
 id formNomTXT
 id formResult
+id group
 id iconoPaciente
 id idNom
 id idNomenclatura
@@ -101,6 +105,8 @@ id nombreTXT
 id nu_p
 id nuser_r
 id obra_socialS
+id ojos
+id ojosa
 id pacientes_listado
 id rutinaFormTXT
 id rutinaTXT
@@ -125,7 +131,6 @@ id textView23
 id textView24
 id textView25
 id textView26
-id textView29
 id textView3
 id textView5
 id textView6
@@ -165,6 +170,7 @@ mipmap foto_perfil
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap microscopio
 mipmap mostrar
 mipmap no_carga
 mipmap no_encontrado

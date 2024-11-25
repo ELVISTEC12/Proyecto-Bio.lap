@@ -1,5 +1,7 @@
 package com.example.biolap;
 import android.content.ContentValues;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.provider.MediaStore;
 import java.io.OutputStream;
@@ -50,6 +52,9 @@ import java.util.Locale;
 import java.util.Map;
 
 import com.itextpdf.io.IOException;
+import com.itextpdf.io.image.ImageData;
+import com.itextpdf.io.image.ImageDataFactory;
+import com.itextpdf.io.source.ByteArrayOutputStream;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
@@ -259,7 +264,7 @@ public class paciente_dato extends AppCompatActivity {
         String obraP = obra_social.getText().toString();
         String dniP = dni.getText().toString();
         String edadP = edad.getText().toString();
-        String telefonoP = telefono.getText().toString();
+        //String telefonoP = telefono.getText().toString();
         String medicoP = medico.getText().toString();
         String rutinaP = rutina.getText().toString();
 
@@ -269,11 +274,11 @@ public class paciente_dato extends AppCompatActivity {
         try {
             Uri pdfUri;
             OutputStream outputStream;
-
+            int i=0;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 // Usar MediaStore para Android 10 y superior (API 29+)
                 ContentValues values = new ContentValues();
-                values.put(MediaStore.Downloads.DISPLAY_NAME, "paciente_" + dniP + ".pdf");
+                values.put(MediaStore.Downloads.DISPLAY_NAME, "paciente_" + dniP +(i)+".pdf");
                 values.put(MediaStore.Downloads.MIME_TYPE, "application/pdf");
                 values.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS);
 
@@ -284,7 +289,7 @@ public class paciente_dato extends AppCompatActivity {
                 outputStream = getContentResolver().openOutputStream(pdfUri);
             } else {
                 // Para Android 9 y versiones anteriores
-                File pdfFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "paciente_" + dniP + ".pdf");
+                File pdfFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "paciente_" + dniP +(i)+".pdf");
                 pdfUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", pdfFile);
                 outputStream = new FileOutputStream(pdfFile);
             }
@@ -294,6 +299,19 @@ public class paciente_dato extends AppCompatActivity {
             PdfDocument pdfDoc = new PdfDocument(writer);
             Document document = new Document(pdfDoc);
 
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.microscopio); // Asegúrate de que "microscopio" sea el nombre correcto
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            byte[] bitmapData = stream.toByteArray();
+            ImageData imageData = ImageDataFactory.create(bitmapData);
+            com.itextpdf.layout.element.Image image = new com.itextpdf.layout.element.Image(imageData);
+
+            // Ajustar el tamaño de la imagen (opcional)
+            image.setWidth(50); // Cambia el tamaño según tus necesidades
+            image.setHeight(50);
+
+            // Agregar la imagen al documento
+            document.add(image);
             // Encabezado del documento
             document.add(new Paragraph("CENTRO DE ESPECIALIDADES MEDICAS \"SAN GREGORIO\"").setBold().setFontSize(12));
             document.add(new Paragraph("LABORATORIO DE ANALISIS CLINICOS").setFontSize(10));
@@ -307,21 +325,21 @@ public class paciente_dato extends AppCompatActivity {
             document.add(new Paragraph("______________________________________________________________").setTextAlignment(TextAlignment.CENTER));
 
             // Resultados de hemoglobina glicosilada
-            document.add(new Paragraph("\nDETERMINACION DE HEMOGLOBINA GLICOSILADA:\n").setBold().setFontSize(10));
+           /* document.add(new Paragraph("\nDETERMINACION DE HEMOGLOBINA GLICOSILADA:\n").setBold().setFontSize(10));
             document.add(new Paragraph("RESULTADO: ........................................: 6.03 %").setFontSize(10));
             document.add(new Paragraph("METODO: INMUNOTURBIDIMETRIA AUTOMATIZADO").setFontSize(10));
             document.add(new Paragraph("VALOR DE REFERENCIA: NIVELES NORMALES, NO DIABETICOS:\n"
                     + "    EXCELENTE CONTROL DE DIABETES ............... 4 a 6 %\n"
                     + "    BUEN CONTROL DE DIABETES .................... 6.5 a 7.5 %\n"
                     + "    FALLA EN EL CONTROL DE DIABETES ............. > a 7.5 %\n"
-                    + "    NIVELES DE HIPOGLUCEMIA ..................... < a 4.0 %").setFontSize(10));
+                    + "    NIVELES DE HIPOGLUCEMIA ..................... < a 4.0 %").setFontSize(10));*/
 
             // Línea separadora
-            document.add(new Paragraph("______________________________________________________________").setTextAlignment(TextAlignment.CENTER));
+            //document.add(new Paragraph("______________________________________________________________").setTextAlignment(TextAlignment.CENTER));
 
             // Química clínica y otros detalles
-            document.add(new Paragraph("\nQUIMICA CLINICA\n").setBold().setFontSize(10));
-            document.add(new Paragraph("GLUCOSA: 93 mg/dl                   VR: 70-110").setFontSize(10));
+           // document.add(new Paragraph("\nQUIMICA CLINICA\n").setBold().setFontSize(10));
+            //document.add(new Paragraph("GLUCOSA: 93 mg/dl                   VR: 70-110").setFontSize(10));
 
             // Rutina
             document.add(new Paragraph("\nRUTINA: " + rutinaP).setFontSize(10));

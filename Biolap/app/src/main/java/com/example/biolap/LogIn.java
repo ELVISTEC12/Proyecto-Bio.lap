@@ -5,10 +5,13 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.AnimationDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -48,9 +51,10 @@ public class LogIn extends AppCompatActivity {
     EditText contraTXT;
     TextView errorT;
     ProgressBar n;
-    ImageView no, inter, sinconex;
+    ImageView no, inter, sinconex, mostrar, ocultar;
     usuarioData ud = usuarioData.getInstance();
     Button sin_in;
+
     private SharedPreferences sharedPreferences;
 
     @SuppressLint("MissingInflatedId")
@@ -59,6 +63,11 @@ public class LogIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+//ojo
+        ocultar = findViewById(R.id.ojos);
+        mostrar=findViewById(R.id.ojosa);
+
+
 
         usuarioTXT = findViewById(R.id.usuarioTXT);
         contraTXT = findViewById(R.id.contrasenaTXT);
@@ -81,6 +90,8 @@ public class LogIn extends AppCompatActivity {
                 salir();
             }
         });
+        // Iniciar la animación al hacer clic
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -106,15 +117,10 @@ public class LogIn extends AppCompatActivity {
             }
             if (val) {
                 n.setVisibility(View.VISIBLE);
-<<<<<<< HEAD
-//<<<<<<< HEAD
-                //enviarDatos("http://192.168.237.162/bio.lap/validar_usuario.php");
-//=======
+
+
                 enviarDatos("http://192.168.1.11/bio.lap/validar_usuario.php");
-//>>>>>>> e730d200bd77c76dd33a5d153031fefbdc82a662
-=======
-                enviarDatos("http://192.168.0.108/bio.lap/validar_usuario.php");
->>>>>>> f8
+
             }
         }
     }
@@ -132,8 +138,17 @@ public class LogIn extends AppCompatActivity {
                         boolean success = jsonResponse.getBoolean("success");
 
                         if (success) {
+                            // Guardar el ID del usuario en SharedPreferences
+                            SharedPreferences sharedPreferences = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putInt("USER_ID", jsonResponse.getInt("id")); // Obtener el ID desde la respuesta
+                            editor.apply();
+
+                            // Guardar el nombre de usuario en la instancia ud
                             ud.setUsuario_nombre(jsonResponse.getString("nombre"));
                             ud.setId_usuario(jsonResponse.getString("id"));
+
+                            // Redirigir al menú principal
                             Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
                             startActivity(mp);
                             finish();
@@ -145,7 +160,6 @@ public class LogIn extends AppCompatActivity {
                                 no.setVisibility(View.GONE);
                             }, 3000);
                         }
-
                     } catch (JSONException e) {
                         n.setVisibility(View.GONE);
                         sinconex.setVisibility(View.VISIBLE);
@@ -156,6 +170,7 @@ public class LogIn extends AppCompatActivity {
                         Toast.makeText(LogIn.this, "Error en el servidor", Toast.LENGTH_SHORT).show();
                     }
                 }
+
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
@@ -169,18 +184,21 @@ public class LogIn extends AppCompatActivity {
             }) {
 
                 @Override
+
                 protected Map<String, String> getParams() throws AuthFailureError {
                     Map<String, String> parametros = new HashMap<>();
                     String nombre = usuarioTXT.getText().toString();
                     String clave = contraTXT.getText().toString();
+
                     parametros.put("nombre", nombre);
                     parametros.put("clave", clave);
 
-                    // Guardar datos en SharedPreferences
+                    // Guardar temporalmente los datos de nombre y clave, si es necesario
                     guardarDatos(nombre, clave);
 
                     return parametros;
                 }
+
             };
             RequestQueue requestQueue = Volley.newRequestQueue(this);
             requestQueue.add(stringRequest);
@@ -220,5 +238,30 @@ public class LogIn extends AppCompatActivity {
     public void salir() {
         System.exit(0);
     }
+
+    private boolean isPasswordVisible = false; // Declara la variable al inicio
+
+
+    public void contraseña(View view){
+
+        if(isPasswordVisible) {
+            // Si la contraseña está visible, ocultarla
+            contraTXT.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            ocultar.setVisibility(View.VISIBLE);
+            mostrar.setVisibility(View.GONE);
+        } else {
+            // Si la contraseña está oculta, mostrarla
+            contraTXT.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+            ocultar.setVisibility(View.GONE);
+            mostrar.setVisibility(View.VISIBLE);
+        }
+
+        // Alternar el estado de la variable booleana
+        isPasswordVisible = !isPasswordVisible;
+
+        // Para mover el cursor al final del texto
+        contraTXT.setSelection(contraTXT.getText().length());
+    }
+
 }
 
