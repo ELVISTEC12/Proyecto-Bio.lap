@@ -362,8 +362,4 @@ public class paciente_dato extends AppCompatActivity {
         }
     }
 
-
-
-
-
 }
