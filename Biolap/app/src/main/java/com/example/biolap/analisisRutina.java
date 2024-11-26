@@ -34,13 +34,10 @@ import java.util.Map;
 public class analisisRutina extends AppCompatActivity {
     private EditText rutinasTXT;
     private EditText form;
-    private String pasiente;
     private String obra;
-    private String edad;
-    private String dni;
-    private String telefono;
     private String medico;
     private String nom = "";
+    private String id;
     private ProgressBar carga;
     private ImageView no_encontrado, sin_servidor;
 
@@ -135,13 +132,10 @@ public class analisisRutina extends AppCompatActivity {
             val = false;
         }
         if(val) {
-            pasiente = rg.getNombreC();
+            id = rg.getId();
             obra = rg.getObra_social();
-            edad = rg.getEdad();
-            dni = rg.getDni();
-            telefono = rg.getTelefono();
             medico = rg.getMedico();
-            guardar("http://192.168.1.11/bio.lap/insertar_paciente.php");
+            guardar("http://192.168.0.108/bio.lap/insertar_paciente.php");
         }
     }
 
@@ -185,11 +179,8 @@ public class analisisRutina extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> datos = new HashMap<String, String>();
-                datos.put("nombre",pasiente);
+                datos.put("nombre",id);
                 datos.put("obra_social",obra);
-                datos.put("edad",edad);
-                datos.put("dni",dni);
-                datos.put("telefono",telefono);
                 datos.put("medico",medico);
                 datos.put("rutina",form.getText().toString());
                 return datos;

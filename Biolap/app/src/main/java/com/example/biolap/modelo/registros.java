@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class registros implements Serializable {
     private static registros instancia;
+    private String id;
     private String nombreC;
     private String edad;
     private String obra_social;
@@ -18,6 +19,10 @@ public class registros implements Serializable {
             instancia = new registros();
         }
         return instancia;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setDni(String dni) {
@@ -42,6 +47,10 @@ public class registros implements Serializable {
 
     public void setNombreC(String nombre) {
         this.nombreC = nombre;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getDni() {

@@ -117,9 +117,9 @@ public class ajustes extends AppCompatActivity {
         id = ud.getId_usuario();
 
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
-        Button aceptar = dialogFView.findViewById(R.id.boton_aceptar);
+        Button aceptar = dialogFView.findViewById(R.id.boton_salir);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
-        Button cancelar = dialogFView.findViewById(R.id.boton_cancelar);
+        Button cancelar = dialogFView.findViewById(R.id.boton_seguir);
         AlertDialog dialog = builder.create();
 
         aceptar.setOnClickListener(new View.OnClickListener() {

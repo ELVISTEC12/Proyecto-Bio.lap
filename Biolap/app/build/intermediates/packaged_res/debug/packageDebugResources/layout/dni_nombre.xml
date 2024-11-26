@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="280dp"
+    android:layout_width="330dp"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#000000">
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--tools:context=".menuPrincipal">-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#FFFFFF"
+        android:text="Ingrese los datos del paciente"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:padding="10dp"
+
+        />
+
+    <EditText
+        android:id="@+id/NombrePacienteN"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bordes"
+        android:hint="Escriba el nombre y apellido"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#80FFFFFF" />
+
+    <EditText
+        android:id="@+id/DniPacienteN"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bordes"
+        android:hint="Escriba el DNI"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#80FFFFFF" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="2dp"
+        >
+
+        <Button
+            android:id="@+id/boton_salir"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#3F51B5"
+            android:text="Salir"
+            android:layout_marginEnd="16dp"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="7dp" />
+
+        <Button
+            android:id="@+id/boton_seguir"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#3F51B5"
+            android:text="Seguir"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="7dp" />
+
+    </LinearLayout>
+</LinearLayout>
+

@@ -22,6 +22,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.biolap.modelo.NomAdapter;
@@ -51,57 +52,65 @@ public class gestionarAnalisis extends AppCompatActivity {
         pacientes = findViewById(R.id.pacientes_listado);
         pacientes.setLayoutManager(new LinearLayoutManager(this));
 
+        String url = "http://192.168.0.108/bio.lap/lista_pac.php";
 
-        String url = "http://192.168.1.11/bio.lap/lista_pac.php";
-
-
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
                 url,
                 null,
-                new Response.Listener<JSONArray>() {
+                new Response.Listener<JSONObject>() {
                     @Override
-                    public void onResponse(JSONArray response) {
-                        List<PacienteLista> PacienteLista = new ArrayList<>();
-                        for (int i = 0; i < response.length(); i++) {
-                            try {
-                                JSONObject jsonObject = response.getJSONObject(i);
-                                String id = jsonObject.getString("id");
-                                String nombre = jsonObject.getString("nombre");
-                                String obra = jsonObject.getString("obra_social");
-                                String edad = jsonObject.getString("edad");
-                                String dni = jsonObject.getString("dni");
-                                String telefono = jsonObject.getString("telefono");
-                                String medico = jsonObject.getString("medico");
-                                String rutina = jsonObject.getString("rutina");
-                                String fecha = jsonObject.getString("fecha_creacion");
+                    public void onResponse(JSONObject response) {
+                        try {
+                            boolean success = response.getBoolean("success");
+                            if (success) {
+                                JSONArray data = response.getJSONArray("data");
+                                List<PacienteLista> pacienteLista = new ArrayList<>();
 
-                                PacienteLista pacientes = new PacienteLista(id, nombre, obra, edad, dni, telefono, medico, rutina, fecha);
-                                PacienteLista.add(pacientes);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
+                                for (int i = 0; i < data.length(); i++) {
+                                    JSONObject jsonObject = data.getJSONObject(i);
+
+                                    String id = jsonObject.getString("paciente_id");
+                                    String nombre = jsonObject.getString("paciente_nombre");
+                                    String obra = jsonObject.getString("obra_social_nombre");
+                                    String edad = jsonObject.getString("paciente_edad");
+                                    String dni = jsonObject.getString("paciente_dni");
+                                    String telefono = jsonObject.getString("paciente_telefono");
+                                    String medico = jsonObject.getString("medico_nombre");
+                                    String rutina = jsonObject.getString("rutina_detalle");
+                                    String fecha = jsonObject.getString("fecha_registro");
+
+                                    PacienteLista pacientes = new PacienteLista(id, nombre, obra, edad, dni, telefono, medico, rutina, fecha);
+                                    pacienteLista.add(pacientes);
+                                }
+
+                                PacienteAdapter adapter = new PacienteAdapter(pacienteLista, new PacienteAdapter.OnItemClickListener() {
+                                    @Override
+                                    public void OnItemClick(PacienteLista item) {
+                                        moverP(item);
+                                    }
+                                });
+
+                                pacientes.setAdapter(adapter);
+                            } else {
+                                Toast.makeText(gestionarAnalisis.this, response.getString("message"), Toast.LENGTH_SHORT).show();
                             }
+                        } catch (JSONException e) {
+                            Toast.makeText(gestionarAnalisis.this, "Error al procesar la respuesta", Toast.LENGTH_SHORT).show();
+                            e.printStackTrace();
                         }
-
-                        PacienteAdapter adapter = new PacienteAdapter(PacienteLista, new PacienteAdapter.OnItemClickListener() {
-                            @Override
-                            public void OnItemClick(PacienteLista item) {
-                                moverP(item);
-                            }
-                        });
-                        pacientes.setAdapter(adapter);
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(gestionarAnalisis.this, error.toString(), Toast.LENGTH_SHORT).show();
-                        ;
                     }
                 }
         );
+
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(jsonArrayRequest);
+        requestQueue.add(jsonObjectRequest);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

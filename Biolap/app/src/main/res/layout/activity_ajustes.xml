@@ -43,7 +43,7 @@
             android:layout_height="50dp"
             android:layout_marginBottom="10dp"
             android:onClick="cuenta"
-            app:srcCompat="@mipmap/cuenta_ajuste" />
+            app:srcCompat="@mipmap/ajustes" />
 
         <TextView
             android:id="@+id/cambio_correo"
@@ -60,11 +60,11 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:onClick="Contactanos"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            app:srcCompat="@mipmap/contactos" />
+            android:onClick="Contactanos"
+            app:srcCompat="@mipmap/analisis" />
 
         <Button
             android:id="@+id/as"
