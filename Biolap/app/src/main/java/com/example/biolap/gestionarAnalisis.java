@@ -1,6 +1,9 @@
 package com.example.biolap;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -52,8 +55,12 @@ public class gestionarAnalisis extends AppCompatActivity {
         pacientes = findViewById(R.id.pacientes_listado);
         pacientes.setLayoutManager(new LinearLayoutManager(this));
 
-        String url = "http://192.168.0.108/bio.lap/lista_pac.php";
-
+        String url = "http://192.168.1.11/bio.lap/lista_pac.php";
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
                 url,
@@ -122,5 +129,13 @@ public class gestionarAnalisis extends AppCompatActivity {
         Intent nn = new Intent(getApplicationContext(),paciente_dato.class);
         nn.putExtra("PacienteLista", item);
         startActivity(nn);
+    }
+    private boolean isConnectedToInternet() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            return networkInfo != null && networkInfo.isConnected();
+        }
+        return false;
     }
 }

@@ -1,7 +1,10 @@
 package com.example.biolap;
 import android.content.ContentValues;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Build;
 import android.provider.MediaStore;
 import java.io.OutputStream;
@@ -153,17 +156,22 @@ public class paciente_dato extends AppCompatActivity {
         }
 
         if(val){
-            modDatos("http://192.168.0.129/bio.lap/modificar_paciente.php");
+            modDatos("http://192.168.1.11/bio.lap/modificar_paciente.php");
         }
     }
     public void eliminarP(View view){
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         idP = id.getText().toString();
         nombreP = nombre.getText().toString();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage("¿Estás seguro que deseas eliminar '" + nombreP + "' ?")
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        eliDatos("http://192.168.237.162/bio.lap/eliminar_paciente.php");
+                        eliDatos("http://192.168.1.11/bio.lap/eliminar_paciente.php");
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -175,6 +183,11 @@ public class paciente_dato extends AppCompatActivity {
         alert.show();
     }
     private void eliDatos(String url) {
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -213,6 +226,11 @@ public class paciente_dato extends AppCompatActivity {
     }
 
     private void modDatos(String url) {
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -360,6 +378,14 @@ public class paciente_dato extends AppCompatActivity {
             Log.e("PDF_ERROR", "Error al generar PDF", e);
             Toast.makeText(this, "Error al generar el PDF: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+    }
+    private boolean isConnectedToInternet() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            return networkInfo != null && networkInfo.isConnected();
+        }
+        return false;
     }
 
 }

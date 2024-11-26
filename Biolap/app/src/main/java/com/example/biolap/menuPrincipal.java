@@ -1,7 +1,10 @@
 package com.example.biolap;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,6 +60,11 @@ public class menuPrincipal extends AppCompatActivity {
     }
 
     public void nuevoRegistro(View view){
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             LayoutInflater inflater = getLayoutInflater();
             View dialogFView = inflater.inflate(R.layout.dni_nombre, null);
@@ -74,7 +82,7 @@ public class menuPrincipal extends AppCompatActivity {
             aceptar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    busqueda("http://192.168.0.108/bio.lap/obtener_pacientes.php");
+                    busqueda("http://192.168.1.11/bio.lap/obtener_pacientes.php");
                     dialog.dismiss();
                 }
             });
@@ -89,22 +97,42 @@ public class menuPrincipal extends AppCompatActivity {
             dialog.show();
     }
     public void nomenclatura(View view){
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         Intent nu = new Intent(this, nomenclaturas.class);
         startActivity(nu);
         //finish();
     }
     public void buscar(View view){
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         Intent b = new Intent(this, gestionarAnalisis.class);
         startActivity(b);
         //finish();
     }
     public void ajustes(View view){
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         Intent intent = new Intent(this, ajustes.class);
         startActivity(intent);
         finish();
     }
 
     private void busqueda(String url) {
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -148,6 +176,14 @@ public class menuPrincipal extends AppCompatActivity {
         };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(sr);
+    }
+    private boolean isConnectedToInternet() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            return networkInfo != null && networkInfo.isConnected();
+        }
+        return false;
     }
 
 }

@@ -165,6 +165,7 @@ layout spinner_item
 mipmap ajustes
 mipmap analisis
 mipmap candado
+mipmap contacto
 mipmap footer
 mipmap ic_launcher
 mipmap ic_launcher_foreground
