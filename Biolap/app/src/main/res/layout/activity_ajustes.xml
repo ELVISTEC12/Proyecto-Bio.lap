@@ -54,7 +54,7 @@
             android:gravity="center"
             android:onClick="camCorreo"
             android:paddingLeft="10dp"
-            android:text="@string/cambiarN"
+            android:text="Cambiar nombre de usuario"
             android:textColor="#000000"
             android:textSize="20sp" />
 
@@ -64,7 +64,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:onClick="Contactanos"
-            app:srcCompat="@mipmap/analisis" />
+            app:srcCompat="@mipmap/contacto" />
 
         <Button
             android:id="@+id/as"
