@@ -48,7 +48,6 @@ public class gestionarAnalisis extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_gestionar_analisis);
 
-        b = findViewById(R.id.buscar_d);
         pacientes = findViewById(R.id.pacientes_listado);
         pacientes.setLayoutManager(new LinearLayoutManager(this));
 
@@ -70,7 +69,7 @@ public class gestionarAnalisis extends AppCompatActivity {
                                 for (int i = 0; i < data.length(); i++) {
                                     JSONObject jsonObject = data.getJSONObject(i);
 
-                                    String id = jsonObject.getString("paciente_id");
+                                    String id = jsonObject.getString("registro_id");
                                     String nombre = jsonObject.getString("paciente_nombre");
                                     String obra = jsonObject.getString("obra_social_nombre");
                                     String edad = jsonObject.getString("paciente_edad");

@@ -23,43 +23,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.036" />
 
-    <EditText
-        android:id="@+id/buscar_d"
-        android:layout_width="231dp"
-        android:layout_height="47dp"
-        android:background="@drawable/bordes"
-        android:ems="10"
-        android:hint="Escriba el DNI o nombre del paciente"
-        android:inputType="text"
-        android:textColor="#FFFFFF"
-        android:textColorHighlight="#80FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.088"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14" />
-
-    <Button
-        android:id="@+id/b_buscar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FFFFFF"
-        android:text="Aplicar"
-
-        android:textColor="@color/black"
-        app:cornerRadius="7dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
-        app:layout_constraintStart_toEndOf="@+id/buscar_d"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/pacientes_listado"
         android:layout_width="390dp"
-        android:layout_height="500dp"
+        android:layout_height="600dp"
         android:background="@drawable/bordes"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"

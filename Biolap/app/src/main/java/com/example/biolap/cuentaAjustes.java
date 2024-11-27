@@ -126,7 +126,7 @@ public class cuentaAjustes extends AppCompatActivity {
 
         // Si todo es válido, proceder con el cambio
         if (val) {
-            cambios("http://192.168.1.11/bio.lap/modificar_clave.php?id=" + userId);
+            cambios("http://192.168.74.162/bio.lap/modificar_clave.php?id=" + userId);
         }
     }
 

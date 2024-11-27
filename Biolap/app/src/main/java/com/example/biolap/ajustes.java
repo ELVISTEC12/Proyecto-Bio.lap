@@ -126,7 +126,7 @@ public class ajustes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 nombre = usuario.getText().toString();
-                modificar("http://192.168.0.108/bio.lap/modificar_usuario.php");
+                modificar("http://192.168.74.162/bio.lap/modificar_usuario.php");
                 dialog.dismiss();
             }
         });

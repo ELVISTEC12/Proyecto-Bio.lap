@@ -9,23 +9,6 @@
     android:screenOrientation="portrait"
     tools:context=".nomenclaturas" >
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/bordes"
-        android:ems="10"
-        android:hint="@string/buscNom"
-        android:inputType="text"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#80FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.108" />
-
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
@@ -59,13 +42,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/mostrar_nom"
         android:layout_width="390dp"
-        android:layout_height="500dp"
+        android:layout_height="550dp"
         android:background="@drawable/bordes"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.761"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.662" />
+        app:layout_constraintVertical_bias="0.497" />
 </androidx.constraintlayout.widget.ConstraintLayout>

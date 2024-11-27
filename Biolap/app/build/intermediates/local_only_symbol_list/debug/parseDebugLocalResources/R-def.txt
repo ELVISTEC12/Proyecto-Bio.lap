@@ -27,7 +27,6 @@ id NombrePacienteN
 id ObraSocialPaciente
 id RutinaPaciente
 id as
-id b_buscar
 id b_r
 id barradeprogreso
 id bo_sin_internet
@@ -35,7 +34,6 @@ id boton_ingresar
 id boton_registrar
 id boton_salir
 id boton_seguir
-id buscar_d
 id button
 id button2
 id button3
@@ -58,7 +56,6 @@ id correo_user
 id dniPaciente
 id dnipa
 id edad
-id editTextText
 id eli_pac
 id eliminar_nom
 id error
@@ -165,6 +162,7 @@ layout spinner_item
 mipmap ajustes
 mipmap analisis
 mipmap candado
+mipmap contacto
 mipmap footer
 mipmap ic_launcher
 mipmap ic_launcher_foreground

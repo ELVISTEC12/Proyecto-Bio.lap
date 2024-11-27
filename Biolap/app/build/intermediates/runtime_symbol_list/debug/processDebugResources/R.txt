@@ -3215,7 +3215,6 @@ int id auto 0x7f09005f
 int id autoComplete 0x7f090060
 int id autoCompleteToEnd 0x7f090061
 int id autoCompleteToStart 0x7f090062
-int id b_buscar 0x7f090063
 int id b_r 0x7f090064
 int id barradeprogreso 0x7f090065
 int id barrier 0x7f090066
@@ -3234,7 +3233,6 @@ int id bounce 0x7f090072
 int id bounceBoth 0x7f090073
 int id bounceEnd 0x7f090074
 int id bounceStart 0x7f090075
-int id buscar_d 0x7f090076
 int id button 0x7f090077
 int id button2 0x7f090078
 int id button3 0x7f090079
@@ -3330,7 +3328,6 @@ int id easeOut 0x7f0900d2
 int id east 0x7f0900d3
 int id edad 0x7f0900d4
 int id edge 0x7f0900d5
-int id editTextText 0x7f0900d6
 int id edit_query 0x7f0900d7
 int id edit_text_id 0x7f0900d8
 int id elastic 0x7f0900d9
@@ -3964,6 +3961,7 @@ int layout support_simple_spinner_dropdown_item 0x7f0c007e
 int mipmap ajustes 0x7f0e0000
 int mipmap analisis 0x7f0e0001
 int mipmap candado 0x7f0e0002
+int mipmap contacto 0x7f0e0011
 int mipmap footer 0x7f0e0003
 int mipmap ic_launcher 0x7f0e0004
 int mipmap ic_launcher_foreground 0x7f0e0005

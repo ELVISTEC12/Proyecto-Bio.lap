@@ -103,20 +103,10 @@ public class formPacientes extends AppCompatActivity {
             verificaded = false;
         }
         if (TextUtils.isEmpty(edad)) {
-            ed.setError("Ingrese la edad de " + nombre);
+            ed.setError("Ingrese la fecha de nacimiento de " + nombre);
             verificaded = false;
-        } else {
-            try {
-                int edadInt = Integer.parseInt(edad);
-                if (edadInt <= 0) {
-                    ed.setError("La edad debe ser mayor que 0");
-                    verificaded = false;
-                }
-            } catch (NumberFormatException e) {
-                ed.setError("Ingrese una edad válida");
-                verificaded = false;
-            }
         }
+
         if (TextUtils.isEmpty(numero)) {
             num.setError("Ingrese el número telefónico de " + nombre);
             verificaded = false;
@@ -134,9 +124,9 @@ public class formPacientes extends AppCompatActivity {
         if (verificaded) {
             Toast.makeText(this, idp, Toast.LENGTH_SHORT).show();
             if(idp.equals("0")){
+                rg.setMedico(medico);
+                rg.setObra_social(idO);
                 agregar("http://192.168.0.108/bio.lap/nuevo_paciente.php");
-                Intent ar = new Intent(getApplicationContext(), analisisRutina.class);
-                startActivity(ar);
             }
             else{
                 rg.setMedico(medico);
@@ -158,6 +148,8 @@ public class formPacientes extends AppCompatActivity {
                         rg.setId(jsonResponse.getString("id"));
 
                         Toast.makeText(getApplicationContext(), "Se guardó con exito", Toast.LENGTH_SHORT).show();
+                        Intent ar = new Intent(getApplicationContext(), analisisRutina.class);
+                        startActivity(ar);
 
                     } else {
                         Toast.makeText(getApplicationContext(), "Error en la carga", Toast.LENGTH_SHORT).show();

@@ -64,15 +64,6 @@
                             android:textColor="#000000"
                             android:textSize="24dp"
                             android:textStyle="bold"></TextView>
-
-                        <TextView
-                            android:id="@+id/idPaciente"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:text="1"
-                            android:textColor="#000000"
-                            android:textSize="24dp"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
@@ -100,6 +91,14 @@
                             android:textColor="#000000"
                             android:textSize="20dp"
                             android:textStyle="bold"></TextView>
+                        <TextView
+                            android:id="@+id/idPaciente"
+                            android:layout_width="7dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="1"
+                            android:textColor="#000000"
+                            android:textSize="24dp"></TextView>
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>

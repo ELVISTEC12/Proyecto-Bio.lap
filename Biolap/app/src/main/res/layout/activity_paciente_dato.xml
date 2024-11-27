@@ -114,15 +114,16 @@
                 android:text="Obra social:"
                 android:textSize="24dp"
                 android:textColor="#FFFFFF"/>
+
             <EditText
                 android:id="@+id/ObraSocialPaciente"
                 android:layout_width="220dp"
                 android:layout_height="50dp"
+                android:background="@drawable/bordes"
+                android:editable="false"
                 android:hint="Obra Social del paciente"
-                android:textColorHint="#80FFFFFF"
                 android:textColor="#FFFFFF"
-                android:background="@drawable/bordes">
-            </EditText>
+                android:textColorHint="#80FFFFFF"></EditText>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -191,12 +192,11 @@
 
             <Button
                 android:id="@+id/button4"
-                android:textColor="#FFFFFF"
                 android:layout_width="68dp"
                 android:layout_height="70dp"
-                android:text="imprimir"
-
-                android:onClick="generarPDF"/>
+                android:background="@android:drawable/stat_sys_download"
+                android:onClick="generarPDF"
+                app:iconTint="@color/black" />
 
             <Button
                 android:id="@+id/eli_pac"

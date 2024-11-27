@@ -85,7 +85,6 @@ public class menuPrincipal extends AppCompatActivity {
                     dialog.dismiss();
                 }
             });
-
             dialog.show();
     }
     public void nomenclatura(View view){
