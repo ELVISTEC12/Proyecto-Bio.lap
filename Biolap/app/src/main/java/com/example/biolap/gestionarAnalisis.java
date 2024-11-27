@@ -54,7 +54,7 @@ public class gestionarAnalisis extends AppCompatActivity {
         pacientes = findViewById(R.id.pacientes_listado);
         pacientes.setLayoutManager(new LinearLayoutManager(this));
 
-        String url = "http://192.168.1.11/bio.lap/lista_pac.php";
+        String url = "http://192.168.0.108/bio.lap/lista_pac.php";
         if (!isConnectedToInternet()) {
             // Si no hay conexión a Internet
             Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();

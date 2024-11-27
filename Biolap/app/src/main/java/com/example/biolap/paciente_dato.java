@@ -95,6 +95,12 @@ public class paciente_dato extends AppCompatActivity {
         rutina = findViewById(R.id.RutinaPaciente);
         id = findViewById(R.id.idPacienteE);
 
+        dni.setEnabled(false);
+        nombre.setEnabled(false);
+        telefono.setEnabled(false);
+        edad.setEnabled(false);
+        obra_social.setEnabled(false);
+
         PacienteLista element = (PacienteLista) getIntent().getSerializableExtra("PacienteLista");
         if (element != null) {
             dni.setText(element.getDni());
@@ -156,11 +162,7 @@ public class paciente_dato extends AppCompatActivity {
         }
 
         if(val){
-<<<<<<< HEAD
             modDatos("http://192.168.74.162/bio.lap/modificar_paciente.php");
-=======
-            modDatos("http://192.168.1.11/bio.lap/modificar_paciente.php");
->>>>>>> 6d4204bfd60272dbb0ab8d7974c24e814561e8ba
         }
     }
     public void eliminarP(View view){
@@ -175,11 +177,7 @@ public class paciente_dato extends AppCompatActivity {
         builder.setMessage("¿Estás seguro que deseas eliminar '" + nombreP + "' ?")
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-<<<<<<< HEAD
                         eliDatos("http://192.168.0.108/bio.lap/eliminar_paciente.php");
-=======
-                        eliDatos("http://192.168.1.11/bio.lap/eliminar_paciente.php");
->>>>>>> 6d4204bfd60272dbb0ab8d7974c24e814561e8ba
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {

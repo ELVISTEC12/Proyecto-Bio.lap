@@ -113,11 +113,7 @@ public class registrarUsuario extends AppCompatActivity {
                 return; // Salir para no enviar la solicitud
             }
             cr.setVisibility(View.VISIBLE);
-<<<<<<< HEAD
             String URL = "http://192.168.74.162/bio.lap/insertar.php";
-=======
-            String URL = "http://192.168.1.11/bio.lap/insertar.php";
->>>>>>> 6d4204bfd60272dbb0ab8d7974c24e814561e8ba
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
