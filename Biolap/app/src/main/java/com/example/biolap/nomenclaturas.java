@@ -1,7 +1,10 @@
 package com.example.biolap;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -43,8 +46,12 @@ public class nomenclaturas extends AppCompatActivity {
         lista_nom = findViewById(R.id.mostrar_nom);
         lista_nom.setLayoutManager(new LinearLayoutManager(this));
 
-        String url = "http://192.168.0.108/bio.lap/lista_nom.php";
-
+        String url = "http://192.168.1.11/bio.lap/lista_nom.php";
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
             Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
                 @Override
@@ -103,5 +110,13 @@ public class nomenclaturas extends AppCompatActivity {
         Intent an = new Intent(getApplicationContext(), nuevaNomenclatura.class);
         startActivity(an);
         finish();
+    }
+    private boolean isConnectedToInternet() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            return networkInfo != null && networkInfo.isConnected();
+        }
+        return false;
     }
 }

@@ -1,7 +1,10 @@
 package com.example.biolap;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -78,7 +81,7 @@ public class formPacientes extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         obra_social.setAdapter(adapter);
 
-        obras("http://192.168.0.108/bio.lap/obra_social.php");
+        obras("http://192.168.1.11/bio.lap/obra_social.php");
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -88,6 +91,11 @@ public class formPacientes extends AppCompatActivity {
     }
 
     public void rutina(View view) {
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         String nombre = n.getText().toString();
 
         obraLista pacienteSeleccionado = (obraLista) obra_social.getSelectedItem();
@@ -207,5 +215,13 @@ public class formPacientes extends AppCompatActivity {
         });
 
         queue.add(jsonArrayRequest);//Hoshigaoka yuri / 호시가오카 유리 (Nobunaga-sensei no Osanazuma / 노부나가 선생님의 어린 아내)
+    }
+    private boolean isConnectedToInternet() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            return networkInfo != null && networkInfo.isConnected();
+        }
+        return false;
     }
 }

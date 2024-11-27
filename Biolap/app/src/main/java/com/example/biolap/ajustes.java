@@ -1,9 +1,12 @@
 package com.example.biolap;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -107,6 +110,11 @@ public class ajustes extends AppCompatActivity {
 
 
     public void camCorreo(View view) {
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater inflater = getLayoutInflater();
         View dialogFView = inflater.inflate(R.layout.cambiar_correo, null);
@@ -126,7 +134,11 @@ public class ajustes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 nombre = usuario.getText().toString();
+<<<<<<< HEAD
                 modificar("http://192.168.74.162/bio.lap/modificar_usuario.php");
+=======
+                modificar("http://192.168.1.11/bio.lap/modificar_usuario.php");
+>>>>>>> 6d4204bfd60272dbb0ab8d7974c24e814561e8ba
                 dialog.dismiss();
             }
         });
@@ -145,8 +157,21 @@ public class ajustes extends AppCompatActivity {
         Intent c = new Intent(this, cuentaAjustes.class);
         startActivity(c);
     }
+    private boolean isConnectedToInternet() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            return networkInfo != null && networkInfo.isConnected();
+        }
+        return false;
+    }
 
     private void modificar(String url) {
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -185,30 +210,7 @@ public class ajustes extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(sr);
     }
-    public void Contactanos() {
-        // Crear un intent para enviar un correo
-        Intent emailIntent = new Intent(Intent.ACTION_SEND);
 
-        // Especificar el tipo de contenido
-        emailIntent.setType("message/rfc822");
-
-        // Añadir los correos destinatarios
-        String[] addresses = {"coronado@gmail.com", "pablo@gmail.com"};
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
-
-        // Asunto del correo
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Asunto del correo");
-
-        // Cuerpo del mensaje
-        emailIntent.putExtra(Intent.EXTRA_TEXT, "Este es el cuerpo del mensaje.");
-
-        // Comprobar si hay una aplicación para manejar el correo
-        try {
-            startActivity(Intent.createChooser(emailIntent, "Enviar correo..."));
-        } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(this, "No tienes ninguna aplicación de correo instalada.", Toast.LENGTH_SHORT).show();
-        }
-    }
     public void Contactanos(View view) {
         // Crear un intent para enviar un correo
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);

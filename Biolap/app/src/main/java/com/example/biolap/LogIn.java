@@ -67,6 +67,8 @@ public class LogIn extends AppCompatActivity {
         ocultar = findViewById(R.id.ojos);
         mostrar=findViewById(R.id.ojosa);
 
+
+
         usuarioTXT = findViewById(R.id.usuarioTXT);
         contraTXT = findViewById(R.id.contrasenaTXT);
         errorT = findViewById(R.id.textView23);
@@ -101,6 +103,8 @@ public class LogIn extends AppCompatActivity {
         if (!isConnected()) {
             inter.setVisibility(View.VISIBLE);
             sin_in.setVisibility(View.VISIBLE);
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+
         } else {
             boolean val = true;
             String nombre = usuarioTXT.getText().toString();
@@ -117,7 +121,7 @@ public class LogIn extends AppCompatActivity {
                 n.setVisibility(View.VISIBLE);
 
 
-                enviarDatos("http://192.168.0.108/bio.lap/validar_usuario.php");
+                enviarDatos("http://192.168.1.11/bio.lap/validar_usuario.php");
 
             }
         }
@@ -127,6 +131,9 @@ public class LogIn extends AppCompatActivity {
         if (!isConnected()) {
             inter.setVisibility(View.VISIBLE);
             sin_in.setVisibility(View.VISIBLE);
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+
         } else {
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override

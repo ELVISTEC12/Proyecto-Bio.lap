@@ -1,8 +1,11 @@
 package com.example.biolap;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -88,7 +91,7 @@ public class nom_datos extends AppCompatActivity {
             val = false;
         }
         if(val){
-            modDatos("http://192.168.0.108/bio.lap/modificar_nom.php");
+            modDatos("http://192.168.237.162/bio.lap/modificar_nom.php");
         }
     }
     public void eliminarN(View view){
@@ -97,7 +100,7 @@ public class nom_datos extends AppCompatActivity {
         builder.setMessage("¿Estás seguro que deseas eliminar '" + n + "' ?")
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        eliDatos("http://192.168.0.108/bio.lap/eliminar_nom.php");
+                        eliDatos("http://192.168.237.162/bio.lap/eliminar_nom.php");
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -148,6 +151,11 @@ public class nom_datos extends AppCompatActivity {
     }
 
     private void modDatos(String url) {
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -185,5 +193,13 @@ public class nom_datos extends AppCompatActivity {
         };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(sr);
+    }
+    private boolean isConnectedToInternet() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            return networkInfo != null && networkInfo.isConnected();
+        }
+        return false;
     }
 }

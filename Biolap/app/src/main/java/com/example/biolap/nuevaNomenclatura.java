@@ -1,7 +1,10 @@
 package com.example.biolap;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -71,11 +74,20 @@ public class nuevaNomenclatura extends AppCompatActivity {
             val = false;
         }
         if(val){
+<<<<<<< HEAD
             datos("http://192.168.0.108/bio.lap/insertar_nomenclatura.php");
+=======
+            datos("http://192.168.1.11/bio.lap/insertar_nomenclatura.php");
+>>>>>>> 6d4204bfd60272dbb0ab8d7974c24e814561e8ba
         }
     }
 
     private void datos(String url){
+        if (!isConnectedToInternet()) {
+            // Si no hay conexión a Internet
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return; // Salir para no enviar la solicitud
+        }
         StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -113,5 +125,13 @@ public class nuevaNomenclatura extends AppCompatActivity {
         };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(sr);
+    }
+    private boolean isConnectedToInternet() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            return networkInfo != null && networkInfo.isConnected();
+        }
+        return false;
     }
 }

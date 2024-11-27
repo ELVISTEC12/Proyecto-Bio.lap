@@ -1,8 +1,11 @@
 package com.example.biolap;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -104,17 +107,27 @@ public class registrarUsuario extends AppCompatActivity {
 
         // Solo procedemos si verificaded es verdadero
         if (verificaded) {
+            if (!isConnectedToInternet()) {
+                // Si no hay conexión a Internet
+                Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+                return; // Salir para no enviar la solicitud
+            }
             cr.setVisibility(View.VISIBLE);
+<<<<<<< HEAD
             String URL = "http://192.168.74.162/bio.lap/insertar.php";
+=======
+            String URL = "http://192.168.1.11/bio.lap/insertar.php";
+>>>>>>> 6d4204bfd60272dbb0ab8d7974c24e814561e8ba
             StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
                     try {
                         JSONObject jsonResponse = new JSONObject(response);
                         boolean success = jsonResponse.getBoolean("success");
+                        String message = jsonResponse.getString("message");
 
                         if (success) {
-                            // Registro exitoso, navega a la siguiente pantalla
+                            // Registro exitoso
                             cr.setVisibility(View.GONE);
                             Intent mp = new Intent(getApplicationContext(), menuPrincipal.class);
                             startActivity(mp);
@@ -124,37 +137,12 @@ public class registrarUsuario extends AppCompatActivity {
                             correo.setText("");
                             contra.setText("");
                             conta1.setText("");
-                            // Muestra mensaje de error
-                            Toast.makeText(getApplicationContext(), "Error al registrarse", Toast.LENGTH_SHORT).show();
-                            no.setVisibility(View.VISIBLE);
-                           // no.setVisibility(View.VISIBLE);
-                            new android.os.Handler().postDelayed(() -> {
-                                no.setVisibility(View.GONE);
-                            }, 3000);
+                            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
 
-
-                            String message = jsonResponse.getString("message");
-                            Log.e("RegisterError", message);
-
-
-                            getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
-                                    WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    // Desbloquear la pantalla y recargar actividad
-                                    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
-                                    recreate();
-                                }
-                            }, 3000);
                         }
                     } catch (JSONException e) {
+                        // Error al analizar la respuesta JSON
                         cr.setVisibility(View.GONE);
-                        nombre.setText("");
-                        correo.setText("");
-                        contra.setText("");
-                        conta1.setText("");
                         sinconex.setVisibility(View.VISIBLE);
                         new android.os.Handler().postDelayed(() -> {
                             sinconex.setVisibility(View.GONE);
@@ -167,10 +155,6 @@ public class registrarUsuario extends AppCompatActivity {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     cr.setVisibility(View.GONE);
-                    nombre.setText("");
-                    correo.setText("");
-                    contra.setText("");
-                    conta1.setText("");
                     sinconex.setVisibility(View.VISIBLE);
                     new android.os.Handler().postDelayed(() -> {
                         sinconex.setVisibility(View.GONE);
@@ -179,7 +163,6 @@ public class registrarUsuario extends AppCompatActivity {
                     if (error.networkResponse != null) {
                         errorMessage += " | Código de estado: " + error.networkResponse.statusCode;
                     }
-
                     Toast.makeText(registrarUsuario.this, errorMessage, Toast.LENGTH_SHORT).show();
                     Log.e("VolleyError", errorMessage);
                 }
@@ -198,8 +181,19 @@ public class registrarUsuario extends AppCompatActivity {
             RequestQueue requestQueue = Volley.newRequestQueue(this);
             requestQueue.add(stringRequest);
         } else {
-            // Si verificaded es falso, no se procede con la solicitud
             Toast.makeText(this, "Debe completar todos los campos correctamente", Toast.LENGTH_SHORT).show();
         }
+
+
+
+    }
+
+    private boolean isConnectedToInternet() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            return networkInfo != null && networkInfo.isConnected();
+        }
+        return false;
     }
 }
