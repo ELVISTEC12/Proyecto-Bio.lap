@@ -75,7 +75,7 @@ public class nuevaNomenclatura extends AppCompatActivity {
         }
         if(val){
 
-            datos("http://192.168.0.108/bio.lap/insertar_nomenclatura.php");
+            datos("http://192.168.1.88/bio.lap/insertar_nomenclatura.php");
 
         }
     }

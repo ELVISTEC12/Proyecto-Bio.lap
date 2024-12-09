@@ -65,12 +65,29 @@
         android:textColor="#FFFFFF"
         android:textColorHint="#80FFFFFF" />
 
-    <Spinner
-        android:id="@+id/obra_socialS"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/spinner_arrow" />
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+      <Spinner
+          android:id="@+id/obra_socialS"
+          android:layout_width="283dp"
+          android:layout_height="50dp"
+          android:layout_margin="10dp"
+          android:background="@drawable/spinner_arrow" />
+
+      <Button
+          android:id="@+id/button5"
+          android:layout_width="110dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:layout_weight="1"
+          android:backgroundTint="#22C55E"
+          android:onClick="obraNueva"
+          android:text="Agregar"
+          app:cornerRadius="7dp" />
+    </LinearLayout>
 
     <EditText
         android:id="@+id/edad"

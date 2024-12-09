@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -82,8 +83,21 @@ public class menuPrincipal extends AppCompatActivity {
             aceptar.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    busqueda("http://192.168.1.11/bio.lap/obtener_pacientes.php");
-                    dialog.dismiss();
+                    String paciente = nombre.getText().toString();
+                    String idn = dni.getText().toString();
+                    boolean val = true;
+                    if(TextUtils.isEmpty(paciente)){
+                        nombre.setError("Faltan datos");
+                        val = false;
+                    }
+                    if(TextUtils.isEmpty(idn)){
+                        dni.setError("Faltan datos");
+                        val = false;
+                    }
+                    if(val) {
+                        busqueda("http://192.168.1.88/bio.lap/obtener_pacientes.php");
+                        dialog.dismiss();
+                    }
                 }
             });
 

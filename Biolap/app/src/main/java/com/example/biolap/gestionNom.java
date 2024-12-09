@@ -67,7 +67,7 @@ public class gestionNom extends AppCompatActivity {
             verificar = false;
         }
         if (verificar) {
-            resultados("http://192.168.74.162/bio.lap/mostrar_nom.php");
+            resultados("http://192.168.1.88/bio.lap/mostrar_nom.php");
         }
     }
 
@@ -127,7 +127,7 @@ public class gestionNom extends AppCompatActivity {
             verificar = false;
         }
         if (verificar) {
-            modDatos("http://192.168.1.11/bio.lap/modificar_nom.php");
+            modDatos("http://192.168.1.88/bio.lap/modificar_nom.php");
         }
     }
 
@@ -177,7 +177,7 @@ public class gestionNom extends AppCompatActivity {
         builder.setMessage("¿Estás seguro que deseas eliminar '" + n + "' ?")
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        eliDatos("http://192.168.1.11/bio.lap/eliminar_nom.php");
+                        eliDatos("http://192.168.1.88/bio.lap/eliminar_nom.php");
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {

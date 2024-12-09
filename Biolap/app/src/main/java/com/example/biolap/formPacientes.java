@@ -8,15 +8,18 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -43,7 +46,7 @@ import java.util.List;
 import java.util.Map;
 
 public class formPacientes extends AppCompatActivity {
-    EditText n, ob, ed, dni, num, medi;
+    EditText n, ob, ed, dni, num, medi, nombre;
     boolean verificaded = true;
     private Spinner obra_social;
     private List<obraLista> itemList = new ArrayList<>();
@@ -75,19 +78,95 @@ public class formPacientes extends AppCompatActivity {
             ed.setText(rg.getEdad());
         }
 
-        //ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.spinner_item, listaPacientes);
-
         adapter = new ArrayAdapter<>(this, R.layout.spinner_item, itemList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         obra_social.setAdapter(adapter);
 
-        obras("http://192.168.1.11/bio.lap/obra_social.php");
+        obras("http://192.168.1.88/bio.lap/obra_social.php");
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void limpiar(){
+        ArrayAdapter<String> adapterVacio = new ArrayAdapter<>(getApplicationContext(),
+                android.R.layout.simple_spinner_item, new ArrayList<>());
+        obra_social.setAdapter(adapterVacio);
+    }
+
+    public void cont(){
+        adapter = new ArrayAdapter<>(this, R.layout.spinner_item, itemList);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        obra_social.setAdapter(adapter);
+
+        obras("http://192.168.1.88/bio.lap/obra_social.php");
+    }
+    public void obraNueva(View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+        View dialogFView = inflater.inflate(R.layout.obra_social, null);
+        builder.setView(dialogFView);
+
+        nombre = dialogFView.findViewById(R.id.cargarObrasSociales);
+
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        Button aceptar = dialogFView.findViewById(R.id.boton_agregar);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        Button cancelar = dialogFView.findViewById(R.id.boton_salida);
+        AlertDialog dialog = builder.create();
+
+        aceptar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                agregarObra("http://192.168.1.88/bio.lap/agregar_obra.php");
+            }
+        });
+
+        cancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                limpiar();
+                cont();
+            }
+        });
+        dialog.show();
+    }
+
+    public void agregarObra(String url){
+        StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonResponse = new JSONObject(response);
+                    boolean success = jsonResponse.getBoolean("success");
+                    if (success) {
+                        Toast.makeText(getApplicationContext(), "Se guardó con exito", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Error en la carga", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (JSONException e) {
+                    Toast.makeText(getApplicationContext(), e.toString(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> datos = new HashMap<String, String>();
+                datos.put("nombre",nombre.getText().toString());
+                return datos;
+            }
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(sr);
     }
 
     public void rutina(View view) {
@@ -134,7 +213,7 @@ public class formPacientes extends AppCompatActivity {
             if(idp.equals("0")){
                 rg.setMedico(medico);
                 rg.setObra_social(idO);
-                agregar("http://192.168.0.108/bio.lap/nuevo_paciente.php");
+                agregar("http://192.168.1.88/bio.lap/nuevo_paciente.php");
             }
             else{
                 rg.setMedico(medico);

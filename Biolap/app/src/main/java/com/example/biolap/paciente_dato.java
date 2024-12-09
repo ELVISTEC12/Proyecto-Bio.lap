@@ -162,7 +162,7 @@ public class paciente_dato extends AppCompatActivity {
         }
 
         if(val){
-            modDatos("http://192.168.74.162/bio.lap/modificar_paciente.php");
+            modDatos("http://192.168.1.88/bio.lap/modificar_paciente.php");
         }
     }
     public void eliminarP(View view){
@@ -177,7 +177,7 @@ public class paciente_dato extends AppCompatActivity {
         builder.setMessage("¿Estás seguro que deseas eliminar '" + nombreP + "' ?")
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        eliDatos("http://192.168.0.108/bio.lap/eliminar_paciente.php");
+                        eliDatos("http://192.168.1.88/bio.lap/eliminar_paciente.php");
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {

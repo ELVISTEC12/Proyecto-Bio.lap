@@ -1,6 +1,6 @@
-com.example.biolap.test.app-annotation-experimental-1.4.0-0 C:\Users\coron\.gradle\caches\transforms-4\2ad83f0b8106718dcf744909d3285738\transformed\annotation-experimental-1.4.0\res
-com.example.biolap.test.app-core-1.5.0-1 C:\Users\coron\.gradle\caches\transforms-4\b8ad24be017e149c778b01cd013e0e65\transformed\core-1.5.0\res
-com.example.biolap.test.app-androidTest-2 C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\build\generated\res\resValues\androidTest\debug
-com.example.biolap.test.app-mergeDebugAndroidTestResources-3 C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.example.biolap.test.app-mergeDebugAndroidTestResources-4 C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.example.biolap.test.app-debugAndroidTest-5 C:\Users\coron\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
+com.example.biolap.test.app-annotation-experimental-1.4.0-0 C:\Users\Usuario\.gradle\caches\transforms-4\2ad83f0b8106718dcf744909d3285738\transformed\annotation-experimental-1.4.0\res
+com.example.biolap.test.app-core-1.5.0-1 C:\Users\Usuario\.gradle\caches\transforms-4\b8ad24be017e149c778b01cd013e0e65\transformed\core-1.5.0\res
+com.example.biolap.test.app-androidTest-2 C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\build\generated\res\resValues\androidTest\debug
+com.example.biolap.test.app-mergeDebugAndroidTestResources-3 C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.biolap.test.app-mergeDebugAndroidTestResources-4 C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.biolap.test.app-debugAndroidTest-5 C:\Users\Usuario\AndroidStudioProjects\Proyecto-Bio.lap\Biolap\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

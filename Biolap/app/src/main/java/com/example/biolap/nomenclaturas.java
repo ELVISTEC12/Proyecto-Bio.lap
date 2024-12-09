@@ -46,7 +46,7 @@ public class nomenclaturas extends AppCompatActivity {
         lista_nom = findViewById(R.id.mostrar_nom);
         lista_nom.setLayoutManager(new LinearLayoutManager(this));
 
-        String url = "http://192.168.1.11/bio.lap/lista_nom.php";
+        String url = "http://192.168.1.88/bio.lap/lista_nom.php";
         if (!isConnectedToInternet()) {
             // Si no hay conexión a Internet
             Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();

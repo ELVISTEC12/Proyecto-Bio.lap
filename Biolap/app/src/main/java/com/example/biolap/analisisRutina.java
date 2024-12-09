@@ -72,7 +72,7 @@ public class analisisRutina extends AppCompatActivity {
             verificar = false;
         }
         if (verificar) {
-            resultadoss("http://192.168.1.11/bio.lap/mostrar_nom.php");
+            resultadoss("http://192.168.1.88/bio.lap/mostrar_nom.php");
             carga.setVisibility(View.GONE);
         }
     }
@@ -138,7 +138,7 @@ public class analisisRutina extends AppCompatActivity {
             id = rg.getId();
             obra = rg.getObra_social();
             medico = rg.getMedico();
-            guardar("http://192.168.0.108/bio.lap/insertar_paciente.php");
+            guardar("http://192.168.1.88/bio.lap/insertar_paciente.php");
         }
     }
 
