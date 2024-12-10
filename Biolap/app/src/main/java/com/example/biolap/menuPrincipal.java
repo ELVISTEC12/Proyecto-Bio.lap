@@ -59,7 +59,7 @@ public class menuPrincipal extends AppCompatActivity {
             return insets;
         });
     }
-
+/*
     public void nuevoRegistro(View view){
         if (!isConnectedToInternet()) {
             // Si no hay conexión a Internet
@@ -95,7 +95,7 @@ public class menuPrincipal extends AppCompatActivity {
                         val = false;
                     }
                     if(val) {
-                        busqueda("http://192.168.1.88/bio.lap/obtener_pacientes.php");
+                       busqueda("http://192.168.1.5/bio.lap/obtener_pacientes.php");
                         dialog.dismiss();
                     }
                 }
@@ -197,6 +197,129 @@ public class menuPrincipal extends AppCompatActivity {
             return networkInfo != null && networkInfo.isConnected();
         }
         return false;
+    }*/
+public void nuevoRegistro(View view) {
+    if (!isConnectedToInternet()) {
+        Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+        return;
     }
+
+    AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    LayoutInflater inflater = getLayoutInflater();
+    View dialogFView = inflater.inflate(R.layout.dni_nombre, null);
+    builder.setView(dialogFView);
+
+    nombre = dialogFView.findViewById(R.id.NombrePacienteN);
+    dni = dialogFView.findViewById(R.id.DniPacienteN);
+
+    Button aceptar = dialogFView.findViewById(R.id.boton_seguir);
+    Button cancelar = dialogFView.findViewById(R.id.boton_salir);
+    AlertDialog dialog = builder.create();
+
+    aceptar.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String paciente = nombre.getText().toString();
+            String idn = dni.getText().toString();
+            boolean val = true;
+
+            if (TextUtils.isEmpty(paciente)) {
+                nombre.setError("Faltan datos");
+                val = false;
+            }
+            if (TextUtils.isEmpty(idn)) {
+                dni.setError("Faltan datos");
+                val = false;
+            }
+
+            if (val) {
+                // Llamada a la búsqueda
+                busqueda("http://192.168.1.5/bio.lap/obtener_pacientes.php");
+                dialog.dismiss(); // Cierra el diálogo después de la búsqueda
+            }
+        }
+    });
+
+    cancelar.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            dialog.dismiss();
+        }
+    });
+
+    dialog.show();
+}
+
+    private void busqueda(String url) {
+        if (!isConnectedToInternet()) {
+            Toast.makeText(this, "Por favor, conéctese a Internet", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        StringRequest sr = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONObject jsonResponse = new JSONObject(response);
+                    boolean success = jsonResponse.getBoolean("success");
+
+                    if (success) {
+                        // Paciente encontrado, establecer datos en rg
+                        rg.setId(jsonResponse.getString("id"));
+                        rg.setNombreC(jsonResponse.getString("nombre"));
+                        rg.setDni(jsonResponse.getString("dni"));
+                        rg.setEdad(jsonResponse.getString("edad"));
+                        rg.setTelefono(jsonResponse.getString("telefono"));
+
+                        Toast.makeText(menuPrincipal.this, "Paciente encontrado: " + rg.getNombreC(), Toast.LENGTH_SHORT).show();
+
+                        // Ir a la pantalla del formulario de pacientes
+                        Intent fp = new Intent(getApplicationContext(), formPacientes.class);
+                        startActivity(fp);
+
+                    } else {
+                        // Paciente no encontrado, establecer datos predeterminados y continuar
+                        rg.setId("0");
+                        rg.setNombreC(nombre.getText().toString());
+                        rg.setDni(dni.getText().toString());
+
+                        Toast.makeText(menuPrincipal.this, "Paciente no encontrado, creando nuevo registro.", Toast.LENGTH_SHORT).show();
+
+                        // Ir a la pantalla del formulario de pacientes
+                        Intent fp = new Intent(getApplicationContext(), formPacientes.class);
+                        startActivity(fp);
+                    }
+                } catch (JSONException e) {
+                    Toast.makeText(getApplicationContext(), "Error procesando datos: " + e.toString(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), "Error en la conexión: " + error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> datos = new HashMap<>();
+                datos.put("dni", dni.getText().toString());
+                datos.put("nombre", nombre.getText().toString());
+                return datos;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(sr);
+    }
+
+    private boolean isConnectedToInternet() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivityManager != null) {
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            return networkInfo != null && networkInfo.isConnected();
+        }
+        return false;
+    }
+
 
 }

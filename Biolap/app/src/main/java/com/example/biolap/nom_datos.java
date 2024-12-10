@@ -91,7 +91,7 @@ public class nom_datos extends AppCompatActivity {
             val = false;
         }
         if(val){
-            modDatos("http://192.168.1.88/bio.lap/modificar_nom.php");
+            modDatos("http://192.168.1.5/bio.lap/modificar_nom.php");
         }
     }
     public void eliminarN(View view){
