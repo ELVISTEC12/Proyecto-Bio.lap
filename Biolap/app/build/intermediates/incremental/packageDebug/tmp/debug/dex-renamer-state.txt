@@ -1,4 +1,4 @@
-#Fri Dec 06 19:12:53 ART 2024
+#Wed Dec 11 19:51:24 ART 2024
 base.0=C\:\\Users\\Usuario\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Usuario\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\Usuario\\AndroidStudioProjects\\Proyecto-Bio.lap\\Biolap\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
