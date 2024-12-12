@@ -162,7 +162,7 @@ public class paciente_dato extends AppCompatActivity {
         }
 
         if(val){
-            modDatos("http://192.168.1.88/bio.lap/modificar_paciente.php");
+            modDatos("http://192.168.1.5/bio.lap/modificar_paciente.php");
         }
     }
     public void eliminarP(View view){
@@ -177,7 +177,7 @@ public class paciente_dato extends AppCompatActivity {
         builder.setMessage("¿Estás seguro que deseas eliminar '" + nombreP + "' ?")
                 .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        eliDatos("http://192.168.1.88/bio.lap/eliminar_paciente.php");
+                        eliDatos("http://192.168.1.5/bio.lap/eliminar_paciente.php");
                     }
                 })
                 .setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -280,15 +280,12 @@ public class paciente_dato extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(sr);
     }
-
-
     public void generarPDF(View view) {
         // Capturar los datos del paciente
         String nombreP = nombre.getText().toString();
         String obraP = obra_social.getText().toString();
         String dniP = dni.getText().toString();
         String edadP = edad.getText().toString();
-        //String telefonoP = telefono.getText().toString();
         String medicoP = medico.getText().toString();
         String rutinaP = rutina.getText().toString();
 
@@ -298,11 +295,10 @@ public class paciente_dato extends AppCompatActivity {
         try {
             Uri pdfUri;
             OutputStream outputStream;
-            int i=0;
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                // Usar MediaStore para Android 10 y superior (API 29+)
                 ContentValues values = new ContentValues();
-                values.put(MediaStore.Downloads.DISPLAY_NAME, "paciente_" + dniP +(i)+".pdf");
+                values.put(MediaStore.Downloads.DISPLAY_NAME, "paciente_" + dniP + ".pdf");
                 values.put(MediaStore.Downloads.MIME_TYPE, "application/pdf");
                 values.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS);
 
@@ -312,60 +308,44 @@ public class paciente_dato extends AppCompatActivity {
                 }
                 outputStream = getContentResolver().openOutputStream(pdfUri);
             } else {
-                // Para Android 9 y versiones anteriores
-                File pdfFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "paciente_" + dniP +(i)+".pdf");
+                File pdfFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "paciente_" + dniP + ".pdf");
                 pdfUri = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".provider", pdfFile);
                 outputStream = new FileOutputStream(pdfFile);
             }
 
-            // Crear y escribir el PDF
             PdfWriter writer = new PdfWriter(outputStream);
             PdfDocument pdfDoc = new PdfDocument(writer);
             Document document = new Document(pdfDoc);
 
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.microscopio); // Asegúrate de que "microscopio" sea el nombre correcto
+            // Cargar imagen de encabezado
+            Bitmap logoBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.microscopio); // Reemplazar "logo_mujer" por el recurso de la imagen del logo
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            logoBitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
             byte[] bitmapData = stream.toByteArray();
             ImageData imageData = ImageDataFactory.create(bitmapData);
-            com.itextpdf.layout.element.Image image = new com.itextpdf.layout.element.Image(imageData);
+            com.itextpdf.layout.element.Image logo = new com.itextpdf.layout.element.Image(imageData);
 
-            // Ajustar el tamaño de la imagen (opcional)
-            image.setWidth(50); // Cambia el tamaño según tus necesidades
-            image.setHeight(50);
+            // Ajustar el tamaño de la imagen
+            logo.setWidth(50);
+            logo.setHeight(50);
 
-            // Agregar la imagen al documento
-            document.add(image);
-            // Encabezado del documento
-            document.add(new Paragraph("CENTRO DE ESPECIALIDADES MEDICAS \"SAN GREGORIO\"").setBold().setFontSize(12));
-            document.add(new Paragraph("LABORATORIO DE ANALISIS CLINICOS").setFontSize(10));
-            document.add(new Paragraph("BIOQUIMICA: FABIOLA PANTOJA - M.P 311\nPEDRO GOYENA Nº 33    TELEFONO: 3888 - 426915    SAN PEDRO DE JUJUY").setFontSize(10));
+            // Crear encabezado similar al ejemplo proporcionado
+            Paragraph header = new Paragraph()
+                    .add(logo)
+                    .add(new Paragraph("FP - Laboratorio de analisis clinico").setFontSize(14).setBold().setTextAlignment(TextAlignment.CENTER))
+                    .add(new Paragraph("Bioquímica: Fabiola Pantoja").setFontSize(10).setTextAlignment(TextAlignment.CENTER))
+                    .add(new Paragraph("Pedro Goyena 33 - Tel.: 03888-480686 - San Pedro de Jujuy ").setFontSize(10).setTextAlignment(TextAlignment.CENTER));
+
+            document.add(header);
             document.add(new Paragraph("\n"));
-
+            int numeroIngreso = 1;
             // Información del paciente y médico
-            document.add(new Paragraph("PACIENTE: " + nombreP + "\nDR/A: " + medicoP + "\nD.N.I: " + dniP + "    EDAD: " + edadP + "    FECHA DE ANALISIS: " + fechaActual + "\n").setFontSize(10));
-
+            document.add(new Paragraph("PACIENTE: " + nombreP + "\nD.N.I: " + dniP + "  FECHA DE ANALISIS: " + fechaActual + "\n"+ "  INGRESO: " + numeroIngreso).setFontSize(10));
+            document.add(new Paragraph( "\nD.N.I: " + dniP + "    EDAD: " + edadP + " Obra Social : "+ obraP).setFontSize(10));
+            document.add(new Paragraph( "\nDR/A: " + medicoP ).setFontSize(10));numeroIngreso++;
             // Línea separadora
             document.add(new Paragraph("______________________________________________________________").setTextAlignment(TextAlignment.CENTER));
 
-            // Resultados de hemoglobina glicosilada
-           /* document.add(new Paragraph("\nDETERMINACION DE HEMOGLOBINA GLICOSILADA:\n").setBold().setFontSize(10));
-            document.add(new Paragraph("RESULTADO: ........................................: 6.03 %").setFontSize(10));
-            document.add(new Paragraph("METODO: INMUNOTURBIDIMETRIA AUTOMATIZADO").setFontSize(10));
-            document.add(new Paragraph("VALOR DE REFERENCIA: NIVELES NORMALES, NO DIABETICOS:\n"
-                    + "    EXCELENTE CONTROL DE DIABETES ............... 4 a 6 %\n"
-                    + "    BUEN CONTROL DE DIABETES .................... 6.5 a 7.5 %\n"
-                    + "    FALLA EN EL CONTROL DE DIABETES ............. > a 7.5 %\n"
-                    + "    NIVELES DE HIPOGLUCEMIA ..................... < a 4.0 %").setFontSize(10));*/
-
-            // Línea separadora
-            //document.add(new Paragraph("______________________________________________________________").setTextAlignment(TextAlignment.CENTER));
-
-            // Química clínica y otros detalles
-           // document.add(new Paragraph("\nQUIMICA CLINICA\n").setBold().setFontSize(10));
-            //document.add(new Paragraph("GLUCOSA: 93 mg/dl                   VR: 70-110").setFontSize(10));
-
-            // Rutina
             document.add(new Paragraph("\nRUTINA: " + rutinaP).setFontSize(10));
 
             // Cerrar el documento
@@ -385,6 +365,7 @@ public class paciente_dato extends AppCompatActivity {
             Toast.makeText(this, "Error al generar el PDF: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
+
     private boolean isConnectedToInternet() {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivityManager != null) {

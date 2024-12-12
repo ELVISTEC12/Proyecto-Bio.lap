@@ -67,7 +67,7 @@ public class gestionNom extends AppCompatActivity {
             verificar = false;
         }
         if (verificar) {
-            resultados("http://192.168.1.88/bio.lap/mostrar_nom.php");
+            resultados("http://192.168.1.5/bio.lap/mostrar_nom.php");
         }
     }
 

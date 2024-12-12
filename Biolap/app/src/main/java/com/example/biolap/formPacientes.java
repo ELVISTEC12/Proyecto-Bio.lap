@@ -82,7 +82,7 @@ public class formPacientes extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         obra_social.setAdapter(adapter);
 
-        obras("http://192.168.1.88/bio.lap/obra_social.php");
+        obras("http://192.168.1.5/bio.lap/obra_social.php");
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -102,7 +102,7 @@ public class formPacientes extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         obra_social.setAdapter(adapter);
 
-        obras("http://192.168.1.88/bio.lap/obra_social.php");
+        obras("http://192.168.1.5/bio.lap/obra_social.php");
     }
     public void obraNueva(View view){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -121,7 +121,7 @@ public class formPacientes extends AppCompatActivity {
         aceptar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                agregarObra("http://192.168.1.88/bio.lap/agregar_obra.php");
+                agregarObra("http://192.168.1.5/bio.lap/agregar_obra.php");
             }
         });
 
@@ -213,7 +213,7 @@ public class formPacientes extends AppCompatActivity {
             if(idp.equals("0")){
                 rg.setMedico(medico);
                 rg.setObra_social(idO);
-                agregar("http://192.168.1.88/bio.lap/nuevo_paciente.php");
+                agregar("http://192.168.1.5/bio.lap/nuevo_paciente.php");
             }
             else{
                 rg.setMedico(medico);
